@@ -1,0 +1,762 @@
+@import 'colors_fonts';
+@import 'base';
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: $Creme;
+    overflow-x: hidden;
+    position: relative;
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: all ease-in-out 0.15s;
+        .menu{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                height: 75%;
+                display: flex;
+                align-items: center;
+                margin-left: 0.5vw;
+                a{
+                    text-align: right;
+                    padding-left: 4vw;
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1.1vw;
+                    color: $Creme;
+                    transition: ease-in-out 0.25s all;
+                    &:hover{
+                        color: $Amarelo;
+                        transform: scale(1.1);
+                    }
+                }
+                &:first-child{
+                    margin: 0;
+                    margin-right: auto;
+                    width: 11vw;
+                    a{
+                        all: unset;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        svg, img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            path{
+                                fill: $Creme;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    .fixed{
+        background: $Creme;
+        .menu{
+            li{
+                a{
+                    color: $Azul;
+                    &:hover{
+                        color: $Laranja;
+                    }
+                }
+                &:first-child{
+                    a{
+                        svg, img{
+                            path{
+                                fill: $Azul;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+        position: relative;
+        section{
+            width: 90vw;
+            height: 100vh;
+        }
+        .divisor{
+            position: absolute;
+            left: -6%;
+            width: 111%;
+        }
+        .btns{
+            all: unset;
+            font-family: $Second-font;
+            font-weight: 700;
+            font-size: 1vw;
+            color: $Creme;
+            border-radius: 5vw;
+            transition: all ease-in-out 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 13vw;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+
+        #home{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-top: 150px;
+            video{
+                position: absolute;
+                width: auto;
+                height: 104%;
+                z-index: -1;
+                top: -4%;
+                left: -6%;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -6%;
+                width: 111%;
+                height: 100%;
+                background-color: $Azul;
+                opacity: 0.5;
+                z-index: 1;
+            }
+            h2,h3,#block_Btns,#block_redes,.divisor{
+                z-index: 2;
+            }
+            h2{
+                margin-top: 6vh;
+                font-family: $Second-font;
+                font-weight: 300;
+                font-size: 1.65vw;
+                color: $Creme;
+                letter-spacing: 0.1vw;
+            }
+            h3{
+                color: $Creme;
+                font-family: $Second-font;
+                font-size: 3vw;
+                font-weight: 700;
+                line-height: 8vh;
+                margin-top: 2vh;
+            }   
+            #block_Btns{
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 23vh;
+                p{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-weight: 400;
+                    color: $Creme;
+                    font-size: 1.2vw;
+                    margin-bottom: 2vh;
+                }
+                .btn_clinica{
+                    height: 3.5vh;
+                    background-color: $Roxo;
+                }
+                .btn_edu{
+                    height: 3.5vh;
+                    background-color: $Laranja;
+                    margin-left: 1.5vw;
+                }
+            }
+            #block_redes{
+                position: absolute;
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: right;
+                bottom: 13.5%;
+                right: 0;
+                p{
+                    text-align: right;
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-weight: 500;
+                    color: $Creme;
+                    font-size: 1.2vw;
+                    margin-bottom: 1vh;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.5vw;
+                    margin-left: 2vw;
+                    img, svg{
+                        width: 100%;
+                        height: auto;
+                    }
+                    &:hover{
+                        img,svg{
+                            path{
+                                fill: $Azul;
+                            }
+                        }
+                    }
+                }
+            }
+            .divisor{
+                bottom: 0;
+                height: auto;
+            }
+        }
+        #Psicologia{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 150vh;
+            padding-top:10vh;
+            .divisor{
+                transform: rotate(180deg);
+                top: -0.1%;
+                height: auto;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -6%;
+                width: 111%;
+                height: 100%;
+                background-color: $Roxo;
+                z-index: -1;
+            }
+            .img_Logo{
+                width: 100%;
+                height: 17vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 20%;
+                }
+            }
+            #block_img{
+                width: 45%;
+                height: 70vh;
+                .splide{
+                    width: 100%;
+                    height: 90%;
+                    margin-top: 5%;
+                    border-top-right-radius: 5vw;
+                    border-bottom-right-radius: 25vw;
+                    overflow: hidden;
+                    .splide__track{
+                        width: 100%;
+                        height: 100%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .splide__arrows, .splide__pagination {
+                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+            #block_texto{
+                width: 55%;
+                height: 70vh;
+                padding-left: 2vw;
+                h2{
+                    color: $Creme;
+                    font-family: $Second-font;
+                    font-size: 2.25vw;
+                    font-weight: 700;
+                    margin-top: 5vh;
+                }
+                p{
+                    margin-top: 1vh;
+                    padding-right: 7vw;
+                    font-family: $Second-font;
+                    font-weight: 300;
+                    font-size: 1.1vw;
+                    color: $Creme;
+                    line-height: 4vh;
+                }
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    width: 90%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: 33.3%;
+                        height: 6vh;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        font-family: $Second-font;
+                        font-weight: 400;
+                        font-size: 1.2vw;
+                        color: $Creme;
+                        padding-left: 1.1vw;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            left: 0.2vw;
+                            width: 0.2vw;
+                            height: 0.2vw;
+                            background: $Creme;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            h3{
+                width: 100%;
+                height: 7vh;
+                text-align: center;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Creme;
+            }
+            #caroussel{
+                width: 100%;
+                height:33vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .splide{
+                    width: 90%;
+                    height: 100%;
+                    .splide__track{
+                        width: 100%;
+                        height: 100%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                a{
+                                    width: 75%;
+                                    border: 5px solid $Creme;
+                                    border-top-left-radius: 25vw;
+                                    border-top-right-radius: 5vw;
+                                    border-bottom-right-radius: 25vw;
+                                    border-bottom-left-radius: 15vw;
+                                    overflow: hidden;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .splide__arrows{
+                        .splide__arrow {
+                            width: 2.5vw;
+                            height: 2.5vw;
+                            background: none;
+                            svg{
+                                width: 100%;
+                                height: 100%;
+                                path{
+                                    fill: $Amarelo;
+                                }
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -2.5vw;
+                        }
+                        .splide__arrow--next{
+                            right: -2.5vw;
+                        }
+                    }
+                    .splide__pagination {
+                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+            #block_btn{
+                width: 100%;
+                height: 13vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .btn_psico_clinica{
+                    height: 4vh;
+                    font-size: 1.2vw;
+                    background-color: $Laranja;
+                }
+            }
+        }
+        #Educacao{}
+
+        #sobre{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15vh;
+            .divisor{
+                top: 0;
+                height: auto;
+            }
+            h2{
+                width: 100%;
+                height: 7vh;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                text-align: center;
+            }
+            span{
+                width: 100%;
+                height: 3vh;
+                font-family: $Second-font;
+                font-size: 1vw;
+                color: $Azul;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 3vh;
+            }
+            .block_cards{
+                width: 49%;
+                height: 22vh;
+                margin: 1vh 0;
+                margin-right: auto;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    border-radius: 2vw;
+                    background-color: $Laranja;
+                    width: 85%;
+                    height: 75%;
+                    z-index: -1;
+                }
+                img{
+                    right: 0;
+                    position: absolute;
+                    height: 100%;
+                    width: auto;
+                    border-radius: 50%;
+                    border: 3px solid $Laranja;
+                }
+                h3, p{
+                    width: 75%;
+                    height: 37.5%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 1.75vw;
+                    text-align: left;
+                    color: $Creme;
+                    font-family: $Second-font;
+                }
+                h3{
+                    font-weight: 700;
+                    font-size: 1.5vw;
+                }
+                p{
+                    font-weight: 300;
+                    font-size: 0.9vw;
+                    align-items: flex-start;
+                    padding-right: 3vw;
+                }
+            }
+            .left{
+                margin-left: auto;
+                margin-right: 0;
+                &::before{
+                    left: 15%;
+                }
+                img{
+                    left: 0;
+                }
+                h3, p{
+                    margin-left: 25%;
+                }
+            }
+        }
+        #contato{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 9vh;
+            .infosBlock, .formBlock{
+                width: 50%;
+                height: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            h2{
+                width: 100%;
+                height: 15%;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .formBlock{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                form{
+                    width: 90%;
+                    height: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    background-color: $Roxo;
+                    border-radius: 2vw;
+                    padding: 2vh 3.5vw;
+                    margin-top: 7vh;
+                    .BlockBox{
+                        width: 100%;
+                        height: 15%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 1.5vh 0;
+                        input, textarea{
+                            width: 100% !important;
+                            height: 50%;
+                            border: none;
+                            background: none;
+                            outline: none;
+                            resize: none;
+                            padding: 0 1.25vw;
+                            font-family: $Second-font;
+                            font-weight: 300;
+                            font-size: 0.9vw;
+                            color: $Creme;
+                            border-bottom: 3px solid $Creme;
+                        }
+                        p, span{
+                            position: absolute;
+                            left: 1.25vw;
+                            top: 32%;
+                            font-family: $Second-font;
+                            font-weight: 700;
+                            font-size: 1.05vw;
+                            color: $Creme;
+                            transition: 0.5s;
+                            pointer-events: none;
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        &:nth-child(1){
+                            span{
+                                font-size: 1.1vw;
+                                left: 9.2vw;
+                                top: 32%;
+                                color: $Laranja;
+                            }
+                        }
+                        &:nth-child(2){
+                            span{
+                                font-size: 1.1vw;
+                                left: 4.4vw;
+                                top: 32%;
+                                color: $Laranja;
+                            }
+                        }
+                        &:nth-child(4){
+                            height: 25%;
+                            input, textarea{
+                                height: 75%;
+                                padding: 0.75vh 3vw 0.75vh 1.25vw;
+                                padding-right: 3vw;
+                                line-height: 3vh;
+                            }
+                            p{
+                                top: 20%;
+                            }
+                        }
+                    }
+                    .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                        transform:translate(-0.75vw, -3.25vh);
+                        font-size: 0.9vw;
+                    }
+                    .btn{
+                        all: unset;
+                        width: 12vw;
+                        margin-left: auto;
+                        margin-right: -2vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 1.1vw;
+                        color: $Creme;
+                        background-color: $Laranja;
+                        border-radius: 2vw;
+                        padding: 0.5vh 1.25vw;
+                        transition: ease-in-out 0.25s all;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                #msg_form{
+                    position: absolute;
+                    top: 90%;
+                    left: 0;
+                    width: 100%;
+                    height: 9vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1vw;
+                    text-align: center;
+                    color: $Azul;
+                }
+            }
+            .infosBlock{
+                padding-left: 4vw;
+                display: flex;
+                justify-content: flex-start;
+                h3{
+                    width: 100%;
+                    padding: 1vh 0;
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    font-weight: 400;
+                    color: $Azul;
+                    margin: 13vh 0 2vh;
+                }
+                .rede{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 10vh;
+                    margin: 2vh 0;
+                    img, svg{
+                        width: 10%;
+                        height: 100%;
+                        padding: 1vh 1.5vw 1vh 0;
+                        path{
+                            fill: $Azul;
+                        }
+                    }
+                    .infos{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 90%;
+                        p, span{
+                            all: unset;
+                            width: 100%;
+                            height: 50%;
+                            font-family: $Second-font;
+                            font-size: 1.05vw;
+                            font-weight: 700;
+                            color: $Azul;
+                        }
+                        span{
+                            font-size: 0.9vw;
+                            font-weight: 500;
+                            color: $Laranja;
+                            padding-top: 0.25vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 9vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $Roxo;
+        p{
+            font-family: $Second-font;
+            font-weight: 800;
+            font-size: 1vw;
+            color: $Creme;
+        }
+        a{
+            width: 7.5vw;
+            height: 65%;
+            margin-left: 0.75vw;
+            img, svg{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                path{
+                    fill: $Creme;
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){}

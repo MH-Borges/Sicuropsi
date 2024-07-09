@@ -1,0 +1,1115 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.7vw;
+  background: #E4754A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7364CB;
+  border-radius: 10vw;
+}
+
+p, span, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #EEE8DC;
+  overflow-x: hidden;
+  position: relative;
+}
+body header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-125px);
+  transition: 0.75s ease-in-out all;
+}
+body header .menu {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .menu li {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 0.35vw;
+}
+body header .menu li a {
+  padding: 0.75vh 0.5vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 1.1vw;
+  color: #0C1E8E;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu li a:hover {
+  color: #E4754A;
+  transform: scale(1.15);
+}
+body header .menu li:first-child {
+  margin: 0;
+  margin-right: auto;
+  width: 13vw;
+}
+body header .menu li:first-child a {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+body header .menu li:first-child a h1 {
+  font-family: "Aladin", system-ui;
+  font-size: 2.5vw;
+  line-height: 3.75vh;
+  color: #E4754A;
+}
+body header .menu li:first-child a h1:hover {
+  color: #0C1E8E;
+}
+body header .menu li:last-child {
+  margin: 0;
+  margin-left: 6vw;
+}
+body header .menu li:last-child a {
+  all: unset;
+  margin-right: -0.6vw;
+  display: flex;
+  align-items: center;
+  background-color: #7364CB;
+  height: 35%;
+  padding: 0 3.25vw 0 1vw;
+  border-radius: 2vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu li:last-child a img, body header .menu li:last-child a svg {
+  right: 0.75vw;
+  top: 5%;
+  position: absolute;
+  height: 90%;
+  width: 1.35vw;
+}
+body header .menu li:last-child a:hover {
+  transform: scale(1.05);
+}
+body header .menu::before {
+  content: "";
+  transition: ease-in-out 0.25s all;
+}
+body header .color::before {
+  content: "";
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  left: -6%;
+  top: 0;
+  background: #7364CB !important;
+  z-index: -1;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li a {
+  color: #EEE8DC;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li:first-child a h1 {
+  color: #EEE8DC;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li:last-child a {
+  background-color: #E4754A;
+  transition: ease-in-out 0.25s all;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body main section {
+  width: 90%;
+  height: 100vh;
+}
+body main #home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 125px;
+}
+body main #home #bg_home {
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #home .imgsBlock {
+  width: 32%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-35vw);
+  transition: 1s ease-in-out all;
+}
+body main #home .imgsBlock img {
+  width: 100%;
+  height: 100%;
+  padding: 7.5vh 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main #home .imgsBlock svg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vh;
+  left: 0;
+}
+body main #home .infosBlock {
+  width: 68%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(55vw);
+  transition: 1.25s ease-in-out all;
+}
+body main #home .infosBlock h2 {
+  height: 15%;
+  width: 100%;
+  text-align: right;
+  padding-left: 10vw;
+  font-family: "Jost", sans-serif;
+  font-size: 2.15vw;
+  color: #0C1E8E;
+  font-weight: 700;
+  margin-bottom: 8vh;
+  line-height: 7vh;
+}
+body main #home .infosBlock p {
+  padding-left: 20vw;
+  height: 25%;
+  width: 100%;
+  text-align: right;
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  color: #0C1E8E;
+  font-weight: 400;
+  line-height: 5vh;
+  margin-bottom: 5vh;
+}
+body main #home .infosBlock .btns {
+  height: 7%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+body main #home .infosBlock .btns a {
+  all: unset;
+  width: 12.5vw;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  background-color: #7364CB;
+  border-radius: 5vw;
+  transition: ease-in-out 0.25s all;
+}
+body main #home .infosBlock .btns a:first-child {
+  background-color: #E4754A;
+  margin-right: 2vw;
+}
+body main #home .infosBlock .btns a:hover {
+  transform: scale(1.1);
+}
+body main #servicos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main #servicos h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+  animation: appear-left 1ms ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 40%;
+}
+body main #servicos h3 {
+  width: 100%;
+  height: 15%;
+  padding: 2vh 15vw 0 15vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #0C1E8E;
+  text-align: center;
+  line-height: 3vh;
+}
+body main #servicos .cardBlock {
+  width: 100%;
+  height: 75%;
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body main #servicos .cardBlock .flip-card {
+  width: 25%;
+  height: 42%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all ease-in-out 0.75s;
+  margin: 1.5vw;
+}
+body main #servicos .cardBlock .flip-card:hover, body main #servicos .cardBlock .flip-card:focus-within {
+  transform: rotateY(180deg);
+}
+body main #servicos .cardBlock .flip-card .card-front, body main #servicos .cardBlock .flip-card .card-back {
+  width: 100%;
+  height: 82%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #7364CB;
+  backface-visibility: hidden;
+  border-radius: 1vw;
+}
+body main #servicos .cardBlock .flip-card .card-front {
+  z-index: 3;
+  transform: rotateY(0deg);
+}
+body main #servicos .cardBlock .flip-card .card-front img, body main #servicos .cardBlock .flip-card .card-front svg {
+  position: absolute;
+  top: -7%;
+  width: 4.25vw;
+  height: auto;
+  z-index: 3;
+}
+body main #servicos .cardBlock .flip-card .card-front img path, body main #servicos .cardBlock .flip-card .card-front svg path {
+  fill: #E4754A;
+}
+body main #servicos .cardBlock .flip-card .card-front::before {
+  content: "";
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 50%;
+  border: 3px solid #E4754A;
+  background-color: #EEE8DC;
+  top: -20%;
+  z-index: -1;
+}
+body main #servicos .cardBlock .flip-card .card-front h4 {
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  padding-top: 12vh;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: #EEE8DC;
+}
+body main #servicos .cardBlock .flip-card .card-back {
+  z-index: 2;
+  transform: rotateY(180deg);
+}
+body main #servicos .cardBlock .flip-card .card-back p {
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #EEE8DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+body main #servicos .cardBlock .flip-card .card-back::before {
+  content: "";
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 50%;
+  border: 3px solid #E4754A;
+  background-color: #EEE8DC;
+  top: -20%;
+  z-index: 1;
+}
+body main #servicos .cardBlock .flip-card .card-back::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #7364CB;
+  border-radius: 1vw;
+  z-index: 2;
+}
+body main #servicos .cardBlock .flip-card:nth-child(2), body main #servicos .cardBlock .flip-card:nth-child(5) {
+  margin-top: -8vh;
+}
+body main #sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body main #sobre .infosBlock {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+body main #sobre .infosBlock h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5vw;
+  color: #0C1E8E;
+}
+body main #sobre .infosBlock p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  color: #0C1E8E;
+  font-weight: 400;
+  padding: 2.5vh 14vw 2.5vh 0;
+  line-height: 4vh;
+}
+body main #sobre .infosBlock h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.25vw;
+  color: #0C1E8E;
+  font-weight: 600;
+}
+body main #sobre .infosBlock ul li {
+  list-style: disc;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  margin: 1vh 0;
+  margin-left: 2vw;
+}
+body main #sobre .infosBlock .btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 10.5vw;
+  margin-left: auto;
+  margin-right: 10vw;
+  border-radius: 2vw;
+  padding: 0.75vh 1.25vw;
+  background-color: #E4754A;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+}
+body main #sobre .infosBlock .btn img, body main #sobre .infosBlock .btn svg {
+  right: 0.75vw;
+  top: 5%;
+  position: absolute;
+  height: 90%;
+  width: 1.35vw;
+}
+body main #sobre .infosBlock .btn:hover {
+  transform: scale(1.05);
+}
+body main #sobre .imgsBlock {
+  width: 32%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body main #sobre .imgsBlock img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #sobre .imgsBlock svg {
+  width: 125%;
+  height: auto;
+  position: absolute;
+  bottom: 15%;
+  left: -12.5%;
+}
+body main #beneficios {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5vh;
+}
+body main #beneficios #bg_beneficios {
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #beneficios h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+}
+body main #beneficios span {
+  width: 100%;
+  height: 14%;
+  padding: 2vh 15vw 0 15vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #0C1E8E;
+  text-align: center;
+  line-height: 3vh;
+}
+body main #beneficios .splide {
+  width: 100%;
+  height: 63%;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow {
+  border-radius: 0;
+  width: 3.25vw;
+  height: 10vh;
+  background: none;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: #E4754A;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow--prev {
+  left: 0;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow--next {
+  right: 0;
+}
+body main #beneficios .splide .splide__track {
+  left: 5%;
+  width: 90%;
+  height: 100%;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock {
+  margin: 0 5%;
+  width: 90%;
+  height: 100%;
+  background-color: #7364CB;
+  border-radius: 2vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock h3 {
+  width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.65vw;
+  color: #EEE8DC;
+  margin-top: 2vh;
+  padding: 0 3vw;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock svg {
+  width: 100%;
+  margin: 1vh 0;
+  padding: 2.5vh 0;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock p {
+  width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  padding: 0 3.5vw;
+  margin-top: 1vh;
+}
+body main #beneficios .splide .splide__pagination {
+  display: none;
+}
+body main #sessoes {
+  position: relative;
+  padding-top: 13vh;
+  display: flex;
+  flex-direction: column;
+}
+body main #sessoes .divisor {
+  position: absolute;
+  width: 111%;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #sessoes::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -6%;
+  width: 111%;
+  height: 82%;
+  background-color: #7364CB;
+  z-index: -1;
+}
+body main #sessoes h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5vw;
+  color: #EEE8DC;
+}
+body main #sessoes p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  font-weight: 300;
+  padding: 4vh 20vw 4vh 0;
+  line-height: 4vh;
+}
+body main #sessoes ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 2vw;
+}
+body main #sessoes ul li {
+  list-style: decimal;
+  width: 21%;
+  height: auto;
+  margin: 5vh 2.5vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  position: relative;
+  padding-left: 0.5vw;
+}
+body main #sessoes ul li::before {
+  content: "";
+  position: absolute;
+  width: 2.1vw;
+  height: 2.1vw;
+  top: -0.4vh;
+  left: -2vw;
+  border: 2px solid #EEE8DC;
+  border-radius: 50%;
+}
+body main #sessoes ul li:nth-child(1), body main #sessoes ul li:nth-child(4), body main #sessoes ul li:nth-child(7) {
+  margin-left: 0;
+}
+body main #sessoes .btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 16vw;
+  border-radius: 2vw;
+  padding: 0.75vh 1.25vw;
+  background-color: #E4754A;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+  margin: 3vh 12vw 0 auto;
+}
+body main #sessoes .btn img, body main #sessoes .btn svg {
+  right: 0.75vw;
+  top: 5%;
+  position: absolute;
+  height: 90%;
+  width: 1.35vw;
+}
+body main #sessoes .btn:hover {
+  transform: scale(1.05);
+}
+body main #faq {
+  position: relative;
+  padding-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  padding-bottom: 5vh;
+}
+body main #faq .divisor {
+  position: absolute;
+  width: 111%;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+  transform: rotate(180deg);
+}
+body main #faq h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+}
+body main #faq .accordion {
+  height: 100%;
+  padding: 5vh 7.5vw 0;
+}
+body main #faq .accordion .accordion-item {
+  all: unset;
+}
+body main #faq .accordion .accordion-item h3 {
+  background-color: #7364CB;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.05vw;
+  color: #EEE8DC;
+  padding: 3vh 2vw;
+  border-top: 2px solid #EEE8DC;
+  border-bottom: 2px solid #EEE8DC;
+}
+body main #faq .accordion .accordion-item h3::after {
+  content: none;
+}
+body main #faq .accordion .accordion-item h3 img, body main #faq .accordion .accordion-item h3 svg {
+  width: 1.75vw;
+  height: 50%;
+  margin-left: auto;
+  transform: rotate(180deg);
+  transition: 0.25s ease-in-out all;
+}
+body main #faq .accordion .accordion-item h3[aria-expanded=true] img, body main #faq .accordion .accordion-item h3[aria-expanded=true] svg {
+  transform: rotate(0);
+  transition: 0.25s ease-in-out all;
+}
+body main #faq .accordion .accordion-item div {
+  background-color: none;
+  position: relative;
+  padding: 2vh 2vw;
+  padding-right: 4vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 0.95vw;
+  color: #0C1E8E;
+  line-height: 3vh;
+}
+body main #faq .accordion .accordion-item div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7364CB;
+  opacity: 0.5;
+  z-index: -1;
+}
+body main #faq .accordion .accordion-item:first-child h3 {
+  border-top-right-radius: 2vw;
+  border-top-left-radius: 2vw;
+  border-top: 0;
+}
+body main #faq .accordion .accordion-item:last-child h3 {
+  border-bottom-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  border-bottom: 0;
+}
+body main #faq .accordion .accordion-item:last-child div::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-color: #7364CB;
+  opacity: 0.5;
+  z-index: -1;
+  border-bottom-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+body main #agenda {
+  height: 50vh;
+  display: flex;
+  padding: 0 5vw;
+}
+body main #agenda .TitleBlock {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #agenda .TitleBlock h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 4vw;
+  color: #0C1E8E;
+  width: 100%;
+}
+body main #agenda .TitleBlock .btn {
+  all: unset;
+  width: 18vw;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  background-color: #E4754A;
+  border-radius: 2vw;
+  padding: 0.5vh 1.25vw;
+  transition: ease-in-out 0.25s all;
+}
+body main #agenda .TitleBlock .btn:hover {
+  transform: scale(1.1);
+}
+body main #agenda .infosBlock {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #agenda .infosBlock .card {
+  all: unset;
+  width: 85%;
+  height: 20vh;
+  margin: 1.5vh 0;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E4754A;
+  border-radius: 2vw;
+}
+body main #agenda .infosBlock .card h3 {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  padding: 1vh 0;
+  text-align: center;
+}
+body main #agenda .infosBlock .card p {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  padding: 1vh 5vw;
+  margin: 1vh 0;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+}
+body main #contato {
+  padding: 0 4vw 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #contato .infosBlock, body main #contato .formBlock {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main #contato .infosBlock h2 {
+  width: 100%;
+  padding: 1vh 0;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+}
+body main #contato .infosBlock p {
+  width: 100%;
+  padding: 1vh 0;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  margin: 4vh 0 2vh;
+}
+body main #contato .infosBlock .rede {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  margin: 2vh 0;
+}
+body main #contato .infosBlock .rede img, body main #contato .infosBlock .rede svg {
+  width: 10%;
+  height: 100%;
+  padding: 1vh 1.5vw 1vh 0;
+}
+body main #contato .infosBlock .rede img path, body main #contato .infosBlock .rede svg path {
+  fill: #0C1E8E;
+}
+body main #contato .infosBlock .rede .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+body main #contato .infosBlock .rede .infos p, body main #contato .infosBlock .rede .infos span {
+  all: unset;
+  width: 100%;
+  height: 50%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.05vw;
+  font-weight: 700;
+  color: #0C1E8E;
+}
+body main #contato .infosBlock .rede .infos span {
+  font-size: 0.9vw;
+  font-weight: 500;
+  color: #E4754A;
+  padding-top: 0.25vh;
+}
+body main #contato .formBlock {
+  position: relative;
+}
+body main #contato .formBlock h3 {
+  width: 100%;
+  font-family: "Aladin", system-ui;
+  font-size: 2.5vw;
+  color: #0C1E8E;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+body main #contato .formBlock form {
+  width: 90%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #7364CB;
+  border-radius: 2vw;
+  padding: 2vh 3.5vw;
+}
+body main #contato .formBlock form .BlockBox {
+  width: 100%;
+  height: 15%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5vh 0;
+}
+body main #contato .formBlock form .BlockBox input, body main #contato .formBlock form .BlockBox textarea {
+  width: 100% !important;
+  height: 50%;
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  padding: 0 1.25vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.9vw;
+  color: #EEE8DC;
+  border-bottom: 3px solid #EEE8DC;
+}
+body main #contato .formBlock form .BlockBox p, body main #contato .formBlock form .BlockBox span {
+  position: absolute;
+  left: 1.25vw;
+  top: 32%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.05vw;
+  color: #EEE8DC;
+  transition: 0.5s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+}
+body main #contato .formBlock form .BlockBox:nth-child(1) span {
+  font-size: 1.1vw;
+  left: 9.2vw;
+  top: 32%;
+  color: #E4754A;
+}
+body main #contato .formBlock form .BlockBox:nth-child(2) span {
+  font-size: 1.1vw;
+  left: 4.4vw;
+  top: 32%;
+  color: #E4754A;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) {
+  height: 25%;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) input, body main #contato .formBlock form .BlockBox:nth-child(4) textarea {
+  height: 75%;
+  padding: 0.75vh 3vw 0.75vh 1.25vw;
+  padding-right: 3vw;
+  line-height: 3vh;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) p {
+  top: 20%;
+}
+body main #contato .formBlock form .BlockBox input:focus ~ p, body main #contato .formBlock form input:valid ~ p, body main #contato .formBlock form input:focus ~ span, body main #contato .formBlock form input:valid ~ span, body main #contato .formBlock form textarea:focus ~ p, body main #contato .formBlock form textarea:valid ~ p {
+  transform: translate(-0.75vw, -3.25vh);
+  font-size: 0.9vw;
+}
+body main #contato .formBlock form .btn {
+  all: unset;
+  width: 12vw;
+  margin-left: auto;
+  margin-right: -2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  background-color: #E4754A;
+  border-radius: 2vw;
+  padding: 0.5vh 1.25vw;
+  transition: ease-in-out 0.25s all;
+}
+body main #contato .formBlock form .btn:hover {
+  transform: scale(1.1);
+}
+body main #contato .formBlock #msg_form {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  text-align: center;
+  color: #0C1E8E;
+}
+body footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7364CB;
+}
+body footer p {
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1vw;
+  color: #EEE8DC;
+}
+body footer a {
+  width: 7.5vw;
+  height: 65%;
+  margin-left: 0.75vw;
+}
+body footer a img, body footer a svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body footer a img path, body footer a svg path {
+  fill: #EEE8DC;
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE *//*# sourceMappingURL=style.css.map */

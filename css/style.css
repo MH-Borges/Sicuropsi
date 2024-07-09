@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.7vw;
+  background: #E4754A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7364CB;
+  border-radius: 10vw;
+}
+
+p, span, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #EEE8DC;
+  overflow-x: hidden;
+  position: relative;
+}
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all ease-in-out 0.15s;
+}
+body header .menu {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .menu li {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5vw;
+}
+body header .menu li a {
+  text-align: right;
+  padding-left: 4vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu li a:hover {
+  color: #F6D66F;
+  transform: scale(1.1);
+}
+body header .menu li:first-child {
+  margin: 0;
+  margin-right: auto;
+  width: 11vw;
+}
+body header .menu li:first-child a {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+body header .menu li:first-child a svg, body header .menu li:first-child a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body header .menu li:first-child a svg path, body header .menu li:first-child a img path {
+  fill: #EEE8DC;
+}
+body .fixed {
+  background: #EEE8DC;
+}
+body .fixed .menu li a {
+  color: #0C1E8E;
+}
+body .fixed .menu li a:hover {
+  color: #E4754A;
+}
+body .fixed .menu li:first-child a svg path, body .fixed .menu li:first-child a img path {
+  fill: #0C1E8E;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body main section {
+  width: 90vw;
+  height: 100vh;
+}
+body main .divisor {
+  position: absolute;
+  left: -6%;
+  width: 111%;
+}
+body main .btns {
+  all: unset;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  border-radius: 5vw;
+  transition: all ease-in-out 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13vw;
+}
+body main .btns:hover {
+  transform: scale(1.1);
+}
+body main #home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+}
+body main #home video {
+  position: absolute;
+  width: auto;
+  height: 104%;
+  z-index: -1;
+  top: -4%;
+  left: -6%;
+}
+body main #home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6%;
+  width: 111%;
+  height: 100%;
+  background-color: #0C1E8E;
+  opacity: 0.5;
+  z-index: 1;
+}
+body main #home h2, body main #home h3, body main #home #block_Btns, body main #home #block_redes, body main #home .divisor {
+  z-index: 2;
+}
+body main #home h2 {
+  margin-top: 6vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1.65vw;
+  color: #EEE8DC;
+  letter-spacing: 0.1vw;
+}
+body main #home h3 {
+  color: #EEE8DC;
+  font-family: "Jost", sans-serif;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 8vh;
+  margin-top: 2vh;
+}
+body main #home #block_Btns {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 23vh;
+}
+body main #home #block_Btns p {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  color: #EEE8DC;
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
+}
+body main #home #block_Btns .btn_clinica {
+  height: 3.5vh;
+  background-color: #7364CB;
+}
+body main #home #block_Btns .btn_edu {
+  height: 3.5vh;
+  background-color: #E4754A;
+  margin-left: 1.5vw;
+}
+body main #home #block_redes {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  bottom: 13.5%;
+  right: 0;
+}
+body main #home #block_redes p {
+  text-align: right;
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #EEE8DC;
+  font-size: 1.2vw;
+  margin-bottom: 1vh;
+}
+body main #home #block_redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5vw;
+  margin-left: 2vw;
+}
+body main #home #block_redes a img, body main #home #block_redes a svg {
+  width: 100%;
+  height: auto;
+}
+body main #home #block_redes a:hover img path, body main #home #block_redes a:hover svg path {
+  fill: #0C1E8E;
+}
+body main #home .divisor {
+  bottom: 0;
+  height: auto;
+}
+body main #Psicologia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  padding-top: 10vh;
+}
+body main #Psicologia .divisor {
+  transform: rotate(180deg);
+  top: -0.1%;
+  height: auto;
+}
+body main #Psicologia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6%;
+  width: 111%;
+  height: 100%;
+  background-color: #7364CB;
+  z-index: -1;
+}
+body main #Psicologia .img_Logo {
+  width: 100%;
+  height: 17vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #Psicologia .img_Logo img {
+  width: 20%;
+}
+body main #Psicologia #block_img {
+  width: 45%;
+  height: 70vh;
+}
+body main #Psicologia #block_img .splide {
+  width: 100%;
+  height: 90%;
+  margin-top: 5%;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 25vw;
+  overflow: hidden;
+}
+body main #Psicologia #block_img .splide .splide__track {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #block_img .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #block_img .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #block_img .splide .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #block_img .splide .splide__arrows, body main #Psicologia #block_img .splide .splide__pagination {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+body main #Psicologia #block_texto {
+  width: 55%;
+  height: 70vh;
+  padding-left: 2vw;
+}
+body main #Psicologia #block_texto h2 {
+  color: #EEE8DC;
+  font-family: "Jost", sans-serif;
+  font-size: 2.25vw;
+  font-weight: 700;
+  margin-top: 5vh;
+}
+body main #Psicologia #block_texto p {
+  margin-top: 1vh;
+  padding-right: 7vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  line-height: 4vh;
+}
+body main #Psicologia #block_texto ul {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main #Psicologia #block_texto ul li {
+  width: 33.3%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #EEE8DC;
+  padding-left: 1.1vw;
+}
+body main #Psicologia #block_texto ul li::before {
+  content: "";
+  position: absolute;
+  left: 0.2vw;
+  width: 0.2vw;
+  height: 0.2vw;
+  background: #EEE8DC;
+  border-radius: 50%;
+}
+body main #Psicologia h3 {
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #EEE8DC;
+}
+body main #Psicologia #caroussel {
+  width: 100%;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #Psicologia #caroussel .splide {
+  width: 90%;
+  height: 100%;
+}
+body main #Psicologia #caroussel .splide .splide__track {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #caroussel .splide .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #caroussel .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #Psicologia #caroussel .splide .splide__track .splide__list .splide__slide a {
+  width: 75%;
+  border: 5px solid #EEE8DC;
+  border-top-left-radius: 25vw;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 25vw;
+  border-bottom-left-radius: 15vw;
+  overflow: hidden;
+}
+body main #Psicologia #caroussel .splide .splide__track .splide__list .splide__slide a img {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #caroussel .splide .splide__arrows .splide__arrow {
+  width: 2.5vw;
+  height: 2.5vw;
+  background: none;
+}
+body main #Psicologia #caroussel .splide .splide__arrows .splide__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+body main #Psicologia #caroussel .splide .splide__arrows .splide__arrow svg path {
+  fill: #F6D66F;
+}
+body main #Psicologia #caroussel .splide .splide__arrows .splide__arrow--prev {
+  left: -2.5vw;
+}
+body main #Psicologia #caroussel .splide .splide__arrows .splide__arrow--next {
+  right: -2.5vw;
+}
+body main #Psicologia #caroussel .splide .splide__pagination {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+body main #Psicologia #block_btn {
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #Psicologia #block_btn .btn_psico_clinica {
+  height: 4vh;
+  font-size: 1.2vw;
+  background-color: #E4754A;
+}
+body main #sobre {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+}
+body main #sobre .divisor {
+  top: 0;
+  height: auto;
+}
+body main #sobre h2 {
+  width: 100%;
+  height: 7vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  text-align: center;
+}
+body main #sobre span {
+  width: 100%;
+  height: 3vh;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  color: #0C1E8E;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+body main #sobre .block_cards {
+  width: 49%;
+  height: 22vh;
+  margin: 1vh 0;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #sobre .block_cards::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 2vw;
+  background-color: #E4754A;
+  width: 85%;
+  height: 75%;
+  z-index: -1;
+}
+body main #sobre .block_cards img {
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+  border: 3px solid #E4754A;
+}
+body main #sobre .block_cards h3, body main #sobre .block_cards p {
+  width: 75%;
+  height: 37.5%;
+  display: flex;
+  align-items: center;
+  padding-left: 1.75vw;
+  text-align: left;
+  color: #EEE8DC;
+  font-family: "Jost", sans-serif;
+}
+body main #sobre .block_cards h3 {
+  font-weight: 700;
+  font-size: 1.5vw;
+}
+body main #sobre .block_cards p {
+  font-weight: 300;
+  font-size: 0.9vw;
+  align-items: flex-start;
+  padding-right: 3vw;
+}
+body main #sobre .left {
+  margin-left: auto;
+  margin-right: 0;
+}
+body main #sobre .left::before {
+  left: 15%;
+}
+body main #sobre .left img {
+  left: 0;
+}
+body main #sobre .left h3, body main #sobre .left p {
+  margin-left: 25%;
+}
+body main #contato {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9vh;
+}
+body main #contato .infosBlock, body main #contato .formBlock {
+  width: 50%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main #contato h2 {
+  width: 100%;
+  height: 15%;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #contato .formBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+body main #contato .formBlock form {
+  width: 90%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #7364CB;
+  border-radius: 2vw;
+  padding: 2vh 3.5vw;
+  margin-top: 7vh;
+}
+body main #contato .formBlock form .BlockBox {
+  width: 100%;
+  height: 15%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5vh 0;
+}
+body main #contato .formBlock form .BlockBox input, body main #contato .formBlock form .BlockBox textarea {
+  width: 100% !important;
+  height: 50%;
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  padding: 0 1.25vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.9vw;
+  color: #EEE8DC;
+  border-bottom: 3px solid #EEE8DC;
+}
+body main #contato .formBlock form .BlockBox p, body main #contato .formBlock form .BlockBox span {
+  position: absolute;
+  left: 1.25vw;
+  top: 32%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.05vw;
+  color: #EEE8DC;
+  transition: 0.5s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+}
+body main #contato .formBlock form .BlockBox:nth-child(1) span {
+  font-size: 1.1vw;
+  left: 9.2vw;
+  top: 32%;
+  color: #E4754A;
+}
+body main #contato .formBlock form .BlockBox:nth-child(2) span {
+  font-size: 1.1vw;
+  left: 4.4vw;
+  top: 32%;
+  color: #E4754A;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) {
+  height: 25%;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) input, body main #contato .formBlock form .BlockBox:nth-child(4) textarea {
+  height: 75%;
+  padding: 0.75vh 3vw 0.75vh 1.25vw;
+  padding-right: 3vw;
+  line-height: 3vh;
+}
+body main #contato .formBlock form .BlockBox:nth-child(4) p {
+  top: 20%;
+}
+body main #contato .formBlock form .BlockBox input:focus ~ p, body main #contato .formBlock form input:valid ~ p, body main #contato .formBlock form input:focus ~ span, body main #contato .formBlock form input:valid ~ span, body main #contato .formBlock form textarea:focus ~ p, body main #contato .formBlock form textarea:valid ~ p {
+  transform: translate(-0.75vw, -3.25vh);
+  font-size: 0.9vw;
+}
+body main #contato .formBlock form .btn {
+  all: unset;
+  width: 12vw;
+  margin-left: auto;
+  margin-right: -2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  background-color: #E4754A;
+  border-radius: 2vw;
+  padding: 0.5vh 1.25vw;
+  transition: ease-in-out 0.25s all;
+}
+body main #contato .formBlock form .btn:hover {
+  transform: scale(1.1);
+}
+body main #contato .formBlock #msg_form {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  text-align: center;
+  color: #0C1E8E;
+}
+body main #contato .infosBlock {
+  padding-left: 4vw;
+  display: flex;
+  justify-content: flex-start;
+}
+body main #contato .infosBlock h3 {
+  width: 100%;
+  padding: 1vh 0;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  margin: 13vh 0 2vh;
+}
+body main #contato .infosBlock .rede {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  margin: 2vh 0;
+}
+body main #contato .infosBlock .rede img, body main #contato .infosBlock .rede svg {
+  width: 10%;
+  height: 100%;
+  padding: 1vh 1.5vw 1vh 0;
+}
+body main #contato .infosBlock .rede img path, body main #contato .infosBlock .rede svg path {
+  fill: #0C1E8E;
+}
+body main #contato .infosBlock .rede .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+body main #contato .infosBlock .rede .infos p, body main #contato .infosBlock .rede .infos span {
+  all: unset;
+  width: 100%;
+  height: 50%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.05vw;
+  font-weight: 700;
+  color: #0C1E8E;
+}
+body main #contato .infosBlock .rede .infos span {
+  font-size: 0.9vw;
+  font-weight: 500;
+  color: #E4754A;
+  padding-top: 0.25vh;
+}
+body footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7364CB;
+}
+body footer p {
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1vw;
+  color: #EEE8DC;
+}
+body footer a {
+  width: 7.5vw;
+  height: 65%;
+  margin-left: 0.75vw;
+}
+body footer a img, body footer a svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body footer a img path, body footer a svg path {
+  fill: #EEE8DC;
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE *//*# sourceMappingURL=style.css.map */
