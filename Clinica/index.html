@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sicuro Psicologia</title>
+    <title>Clinica Sicuro</title>
 
-    <link rel="icon" href="assets/icon.svg" />
+    <link rel="icon" href="assets/icons/icon.svg" />
     <link rel="canonical" href="" />
 
     <meta name="author" content="">
@@ -21,9 +21,6 @@
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- Mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
     <!-- Splide Carousel -->
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
@@ -42,6 +39,7 @@
 
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="../js/Base_script.js"></script>
     <script defer src="js/script.js"></script>
 </head>
 
@@ -50,22 +48,243 @@
         <ul class="menu">
             <li>
                 <a class="links" href="#home">
-                    <h1 class="hide">Sicuro Psicologia</h1>
-                    <img src="assets/sicuro_psi.svg" onload="SVGInject(this)" alt="">
+                    <h1 class="hide">Clinica Sicuro</h1>
+                    <img src="assets/icons/sicuro_clinica.svg" onload="SVGInject(this)" alt="">
                 </a>
             </li>
-            <li><a class="links" href="#servicos">A Clinica</a></li>
-            <li><a class="links" href="#sobre">Os Cursos</a></li>
-            <li><a class="links" href="#beneficios">Contato</a></li>
+            <li><a href="clinica.html">A Sicuro</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="equipe.html">Nossa equipe</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contatos.html">Contato</a></li>
         </ul>
     </header>
     <main>
-        CLINICA
+        <section id="home">
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="assets/banner.webp" alt="">
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h3>
+                            <a class="btns btn_home" href="clinica.html">Conheça a clínica</a>
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/banner_2.webp" alt="">
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h3>
+                            <a class="btns btn_home btn_roxo" href="especialidades.html">Conheça os tratamentos</a>
+                        </li>
+                        <li class="splide__slide">
+                            <img src="assets/banner_3.webp" alt="">
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h3>
+                            <a class="btns btn_home" href="equipe.html">Conheça nossa equipe</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sobre">
+            <div id="Block_sobreTxt">
+                <h2>Sicuro, um lugar de cura e cuidado, para que você possa alçar voo.</h2>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien. 
+                    <br><br>
+                    Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Sem viverra aliquet eget sit. Non consectetur a erat nam at lectus urna duis.
+                    <br><br>
+                    <b>“Mattis molestie a iaculis at erat pellentesque adipiscing commodo”</b>
+                </h3>
+                <a class="btns btn_sobre" href="clinica.html">Conheça a clínica</a>
+            </div>
+            <div id="Block_sobreicons">
+                <img id="bg_icons" src="assets/sobre_vec.webp">
+                <div class="icons">
+                    <img src="assets/icons/video.svg" onload="SVGInject(this)">
+                    <h4>Agendamento online</h4>
+                </div>
+                <div class="icons">
+                    <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                    <h4>Ambiente acolhedor</h4>
+                </div>
+                <div class="icons">
+                    <img src="assets/icons/localizacao.svg" onload="SVGInject(this)">
+                    <h4>Fácil localização</h4>
+                </div>
+                <div class="icons">
+                    <img src="assets/icons/qualificados.svg" onload="SVGInject(this)">
+                    <h4>Profissionais qualificados</h4>
+                </div>
+            </div>
+        </section>
+        <section id="tratamentos">
+            <h2>Nossas especialidades</h2>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Clinico geral</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Psiquiatria</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Psicologia</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Nutrição</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Fonoaudiologia</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Psiquiatria</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Clinico geral</h3>
+                        </a>
+                        <a href="especialidades.html" class="splide__slide">
+                            <img src="assets/icons/acolhedor.svg" onload="SVGInject(this)">
+                            <h3>Nutrição</h3>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <a class="btns btn_tratamentos" href="especialidades.html">Veja mais detalhes</a>
+        </section>
+        <section id="equipe">
+            <h2>A equipe sicuro</h2>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac.</h3>
+            <div id="block_cardsEquipe">
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="Doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img src="assets/users/user_placeholder.webp" alt="">
+                    <h4>Marcela Schimaneski</h4>
+                    <p>Terapia Cognitiva-Comportamental</p>
+                    <span>Online e Presencial</span>
+                </a>
+            </div>
+            <a class="btns btn_tratamentos" href="especialidades.html">Veja mais detalhes</a>
+        </section>
+        <section id="local">
+
+        </section>
+
+        <section class="hide" id="Depoimentos"></section>
+
+        <section id="Blog">
+
+        </section>
+
+        <section class="hide" id="Edu"></section>
+
+        <section id="Contato">
+
+        </section>
     </main>
     <footer>
         <p>©<span id="data_footer"></span> SicuroPsi - Criação e desenvolvimento por:</p>
         <a aria-label="link para o site do universo farol" href="https://www.universofarol.com.br" target="_blank">
-            <img src="assets/Universo_Farol.svg" onload="SVGInject(this)">
+            <img src="assets/icons/Universo_Farol.svg" onload="SVGInject(this)">
         </a>
     </footer>
 </body>

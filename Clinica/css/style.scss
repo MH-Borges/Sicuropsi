@@ -1,0 +1,464 @@
+@import '../../css/colors_fonts';
+@import '../../css/base';
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: $Creme;
+    overflow-x: hidden;
+    position: relative;
+    header{
+        background-color: $Roxo;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: all ease-in-out 0.15s;
+        border-bottom: 2px solid $Laranja;
+        .menu{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                height: 75%;
+                display: flex;
+                align-items: center;
+                margin-left: 0.5vw;
+                a{
+                    text-align: right;
+                    padding-left: 3.5vw;
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1.05vw;
+                    color: $Creme;
+                    transition: ease-in-out 0.25s all;
+                    &:hover{
+                        color: $Amarelo;
+                        transform: scale(1.1);
+                    }
+                }
+                .active{
+                    color: $Amarelo;
+                    font-weight: 800;
+                    &:hover{
+                        color: $Laranja;
+                        transform: scale(1.1);
+                    }
+                }
+                &:first-child{
+                    margin: 0;
+                    margin-right: auto;
+                    width: 11vw;
+                    a{
+                        all: unset;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        svg, img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            path{
+                                fill: $Creme;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+        position: relative;
+        section{
+            width: 100vw;
+            height: 100vh;
+            padding: 0 5vw;
+            border: none;
+            outline: none;
+        }
+        .btns{
+            all: unset;
+            font-family: $Second-font;
+            font-weight: 700;
+            font-size: 1vw;
+            color: $Creme;
+            border-radius: 5vw;
+            transition: all ease-in-out 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14vw;
+            padding: 0.65vh 0;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        #home{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-top: 125px;
+            width: 100%;
+            padding: 0;
+            .splide{
+                height:100%;
+                width: 100%;
+                .splide__track{
+                    height:100%;
+                    width: 100%;
+                    .splide__list{
+                        height:100%;
+                        width: 100%;
+                        .splide__slide{
+                            height:100%;
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            img{
+                                position: absolute;
+                                width: 100%;
+                                height: auto;
+                                top: 125px;
+                                left: 0;
+                                object-fit: cover;
+                                z-index: -1;
+                            }
+                            h2{
+                                color: $Creme;
+                                font-family: $Second-font;
+                                font-weight: 600;
+                                font-size: 3.25vw;
+                                padding: 0 20vw;
+                                text-align: center;
+                            }
+                            h3{
+                                color: $Creme;
+                                font-family: $Second-font;
+                                font-weight: 400;
+                                font-size: 1.5vw;
+                                padding: 0 35vw;
+                                text-align: center;
+                                margin: 3vh 0 8vh;
+                            }
+                            .btn_home{
+                                background-color: $Laranja;
+                            }
+                            .btn_roxo{
+                                background-color: $Roxo;
+                            }
+                        }
+                    }
+                }
+                .splide__arrows{
+                    display: none;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                .splide__pagination {
+                    li{
+                        button{
+                            background-color: $Laranja;
+                            height: 0.55vw;
+                            width: 0.55vw;
+                            margin: 0 0.5vw;
+                            margin-bottom: 1vh;
+                            opacity: .5;
+                        }
+                        .is-active{
+                            background-color: $Amarelo;
+                            transform: scale(1.5);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        #sobre{
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10vw;
+            background-color: $Roxo;
+            #Block_sobreTxt{
+                width: 65%;
+                height: 100%;
+                padding-right: 7vw;
+                h2{
+                    font-family: $Main-font;
+                    font-size: 3vw;
+                    color: $Creme;
+                    letter-spacing: 0.2vw;
+                    margin: 7vh 0 10vh;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -3vh;
+                        left: 0;
+                        width: 14vw;
+                        height: 0.8vh;
+                        background-color: $Amarelo;
+                        border-radius: 10vw;
+                    }
+                }
+                h3{
+                    font-family: $Second-font;
+                    font-size: 1.15vw;
+                    font-weight: 300;
+                    color: $Creme;
+                    line-height: 3.5vh;
+                }
+                .btn_sobre{
+                    margin-top: 8vh;
+                    background-color: $Laranja;
+                }
+            }
+            #Block_sobreicons{
+                width: 35%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                #bg_icons{
+                    position: absolute;
+                    width: auto;
+                    height: 100%;
+                    object-fit: fill;
+                    opacity: .35;
+                    z-index: 1;
+                }
+                .icons{
+                    width: 50%;
+                    height: 20%;
+                    margin: 0.5vh 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    img, svg{
+                        width: 50%;
+                        height: 50%;
+                        padding: 0.6vw;
+                    }
+                    h4{
+                        font-family: $Second-font;
+                        font-weight: 600;
+                        font-size: 1.05vw;
+                        text-align: center;
+                        color: $Creme;
+                    }
+                }
+            }
+        }
+        #tratamentos{
+            height: 50vh;
+            width: 100%;
+            padding: 0 7.5vw;
+            z-index: 10;
+            box-shadow: 0 0 3vh rgba(49, 38, 113, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h2{
+                height: 15%;
+                width: 100%;
+                text-align: center;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .splide{
+                height: 65%;
+                width: 100%;
+                .splide__track{
+                    height:100%;
+                    width: 100%;
+                    .splide__list{
+                        height:100%;
+                        width: 100%;
+                        .splide__slide{
+                            height:100%;
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 9vw;
+                                height: 9vw;
+                                top: 10%;
+                                background-color: $Roxo;
+                                z-index: -1;
+                                border-radius: 50%;
+                            }
+                            img,svg{
+                                width: 30%;
+                                height: auto;
+                                top: 50px;
+                                left: 0;
+                                path{
+                                    fill: $Creme;
+                                    stroke: $Creme; 
+                                }
+                            }
+                            h3{
+                                color: $Azul;
+                                font-family: $Second-font;
+                                font-weight: 800;
+                                font-size: 1.25vw;
+                                text-align: center;
+                                margin-top: 7vh;
+                            }
+                        }
+                    }
+                }
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 3.5vw;
+                        height: 3.5vw;
+                        background: none;
+                        opacity: 1;
+                        svg{
+                            width: 100%;
+                            height: 100%;
+                            path{
+                                fill: $Laranja;
+                            }
+                        }
+                        &:disabled{
+                            opacity: .3;
+                        }
+                    }
+                    .splide__arrow--prev{
+                        left: -3vw;
+                    }
+                    .splide__arrow--next{
+                        right: -3vw;
+                    }
+                }
+                .splide__pagination {
+                    display: none;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            .btn_tratamentos{
+                background-color: $Laranja;
+            }
+        }
+        #equipe{
+            height: 150vh;
+            outline: 1px solid blue;
+            background-color: $Roxo;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                width: 100%;
+                outline: 1px solid green;
+            }
+            h3{
+                outline: 1px solid red;
+                width: 100%;
+            }
+            #block_cardsEquipe{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .card_equipe{
+                    outline: 1px solid red;
+                    width: 31.5%;
+                    height: 30vh;
+                    margin: 3.5vh 0;
+                    overflow: hidden;
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                        outline: 1px solid blue;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        #local{
+            height: 75vh;
+            outline: 1px solid green;
+
+        }
+        #Depoimentos{ display: none; }
+        #Blog{
+            outline: 1px solid red;
+        }
+        #Edu{ display: none; }
+        #Contato{
+            outline: 1px solid rgb(0, 255, 242);
+        }
+        
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 9vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $Roxo;
+        p{
+            font-family: $Second-font;
+            font-weight: 800;
+            font-size: 1vw;
+            color: $Creme;
+        }
+        a{
+            width: 7.5vw;
+            height: 65%;
+            margin-left: 0.75vw;
+            img, svg{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                path{
+                    fill: $Creme;
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){}
