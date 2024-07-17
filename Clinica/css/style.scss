@@ -94,6 +94,13 @@ body {
             border: none;
             outline: none;
         }
+        .divisor{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
         .btns{
             all: unset;
             font-family: $Second-font;
@@ -111,6 +118,7 @@ body {
                 transform: scale(1.1);
             }
         }
+
 
         #home{
             position: relative;
@@ -150,17 +158,18 @@ body {
                                 font-family: $Second-font;
                                 font-weight: 600;
                                 font-size: 3.25vw;
-                                padding: 0 20vw;
+                                padding: 0 15vw;
                                 text-align: center;
+                                margin-top: 7vh;
                             }
                             h3{
                                 color: $Creme;
                                 font-family: $Second-font;
                                 font-weight: 400;
                                 font-size: 1.5vw;
-                                padding: 0 35vw;
+                                padding: 0 32vw;
                                 text-align: center;
-                                margin: 3vh 0 8vh;
+                                margin: 3vh 0 10vh;
                             }
                             .btn_home{
                                 background-color: $Laranja;
@@ -318,15 +327,15 @@ body {
                             &::before{
                                 content: '';
                                 position: absolute;
-                                width: 9vw;
-                                height: 9vw;
-                                top: 10%;
+                                width: 7.5vw;
+                                height: 7.5vw;
+                                top: 15%;
                                 background-color: $Roxo;
                                 z-index: -1;
                                 border-radius: 50%;
                             }
                             img,svg{
-                                width: 30%;
+                                width: 25%;
                                 height: auto;
                                 top: 50px;
                                 left: 0;
@@ -341,7 +350,7 @@ body {
                                 font-weight: 800;
                                 font-size: 1.25vw;
                                 text-align: center;
-                                margin-top: 7vh;
+                                margin-top: 5vh;
                             }
                         }
                     }
@@ -382,50 +391,399 @@ body {
         }
         #equipe{
             height: 150vh;
-            outline: 1px solid blue;
             background-color: $Roxo;
             display: flex;
             flex-direction: column;
             align-items: center;
             h2{
                 width: 100%;
-                outline: 1px solid green;
+                height: 10vh;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Creme;
+                margin-top: 7vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             h3{
-                outline: 1px solid red;
                 width: 100%;
+                text-align: center;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 300;
+                color: $Creme;
+                padding: 0.5vh 9vw;
             }
             #block_cardsEquipe{
+                position: relative;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                margin-top: 5vh;
                 .card_equipe{
-                    outline: 1px solid red;
-                    width: 31.5%;
+                    width: 31%;
                     height: 30vh;
                     margin: 3.5vh 0;
                     overflow: hidden;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding-top: 4.5vh;
                     &:nth-child(1), &:nth-child(2), &:nth-child(3){
-                        outline: 1px solid blue;
                         margin-top: 0;
                     }
+                    &:nth-child(7), &:nth-child(8), &:nth-child(9){
+                        margin-bottom: 0;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 85%;
+                        width: 100%;
+                        background-color: $Creme;
+                        opacity: .25;
+                        border-radius: 2.5vw;
+                        z-index: 1;
+                        transition: all ease-in-out .2s;
+                    }
+                    .imgUser{
+                        z-index: 3;
+                        position: absolute;
+                        top: 0;
+                        width: 7vw;
+                        height: 7vw;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 5px solid $Laranja;
+                    }
+                    .doc{
+                        z-index: 2;
+                        width: 50%;
+                        height: 5vh;
+                        font-family: $Second-font;
+                        font-weight: 500;
+                        color: $Creme;
+                        font-size: 0.85vw;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 1.3vw;
+                        transition: all ease-in-out .2s;
+                    }
+                    .estado{
+                        z-index: 2;
+                        width: 50%;
+                        height: 5vh;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        color: $Roxo;
+                        font-size: 1vw;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        transition: all ease-in-out .2s;
+                        img, svg{
+                            position: absolute;
+                            right: 0.9vw;
+                            top: 1.6vh;
+                            height: 75%;
+                            z-index: 1;
+                            path{ transition: all ease-in-out .2s; }
+                        }
+                        span{
+                            width: 100%;
+                            height: 100%;
+                            text-align: right;
+                            display: flex;
+                            align-items: end;
+                            justify-content: right;
+                            padding-right: 1.75vw;
+                            z-index: 2;
+                        }
+                    }
+                    .nome{
+                        z-index: 2;
+                        width: 100%;
+                        height: 10.5vh;
+                        font-family: $Second-font;
+                        font-weight: 800;
+                        font-size: 1.5vw;
+                        color: $Creme;
+                        display: flex;
+                        align-items: end;
+                        justify-content: center;
+                        padding-bottom: 2vh;
+                        transition: all ease-in-out .2s;
+                    }
+                    .abordagem{
+                        z-index: 2;
+                        width: 100%;
+                        height: 5vh;
+                        font-family: $Second-font;
+                        font-weight: 800;
+                        font-size: 1vw;
+                        color: $Creme;
+                        display: flex;
+                        align-items: end;
+                        justify-content: center;
+                        padding-bottom: 0.5vh;
+                        letter-spacing: .03vw;
+                        transition: all ease-in-out .2s;
+                    }
+                    .tipo_consulta{
+                        z-index: 2;
+                        width: 100%;
+                        height: 5vh;
+                        font-family: $Second-font;
+                        font-weight: 300;
+                        font-size: 1vw;
+                        color: $Creme;
+                        display: flex;
+                        align-items: start;
+                        justify-content: center;
+                        letter-spacing: .03vw;
+                        transition: all ease-in-out .2s;
+                    }
+                    &:hover{
+                        &::before{ opacity: 1; }
+                        .doc{ color: $Laranja; }
+                        .estado{ color: $Creme; img, svg{ path{ fill: $Laranja; } } }
+                        .nome{ color: $Laranja; }
+                        .abordagem{ color: $Laranja; }
+                        .tipo_consulta{ color: $Laranja; }
+                    }
                 }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 101%;
+                    height: 25vh;
+                    background: linear-gradient(180deg, rgba(115,100,203,0) 0%, rgba(115,100,203,1) 100%);
+                    bottom: -0.5vh;
+                    left: 0;
+                    z-index: 5;
+                }
+            }
+            .btn_equipe{
+                background-color: $Laranja;
+                margin-top: 8vh;
             }
         }
         #local{
             height: 75vh;
-            outline: 1px solid green;
-
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 5vh;
+            h2{
+                width: 100%;
+                height: 10vh;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #Block_localTxt{
+                width: 50%;
+                height: 60vh;
+                position: relative;
+                font-family: $Second-font;
+                font-weight: 400;
+                font-size: 1.25vw;
+                color: $Creme;
+                padding: 0 7.5vw;
+                padding-top: 6vh;
+                line-height: 4.5vh;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 5%;
+                    left: 10%;
+                    width: 80%;
+                    height: 85%;
+                    border-top-left-radius: 2.5vw;
+                    border-top-right-radius: 7.5vw;
+                    border-bottom-left-radius: 7.5vw;
+                    border-bottom-right-radius: 2.5vw;
+                    background-color: $Roxo;
+                    z-index: -1;
+                }
+            }
+            #Block_localCarousel{
+                width: 50%;
+                height: 60vh;  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 3vh;
+                #Local-carousel{
+                    width: 80%;
+                    height: 42vh;
+                    border-radius: 2vw;
+                    overflow: hidden;
+                    .splide__track{
+                        width: 100%;
+                        height: 100%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                #thumbnail-Local-carousel{
+                    margin-top: 1.5vh;
+                    width: 80%;
+                    height: 7vh;
+                    .splide__arrows {
+                        .splide__arrow {
+                            background: none;
+                            width: 2vw;
+                            height: 2vw;
+                            svg{
+                                path{
+                                    fill: $Laranja;
+                                }
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .splide__arrow--prev{
+                            left: -0.5vw;
+                        }
+                        .splide__arrow--next{
+                            right: -0.5vw;
+                        }
+                    }
+                    .splide__track{
+                        width: 87.5%;
+                        height: 100%;
+                        margin-left: 6.25%;
+                        .splide__list{
+                            width: 100%;
+                            height: 100%;
+                            .splide__slide{
+                                width: 100%;
+                                height: 100%;
+                                border: none;
+                                position: relative;
+                                border-radius: 0.5vw;
+                                overflow: hidden;
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: $Roxo;
+                                    opacity: .6;
+                                    transition: ease-in-out all .2s;
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .is-active {
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: $Roxo;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        #Depoimentos{ display: none; }
+        #Depoimentos{ 
+            display: none; 
+        }
         #Blog{
-            outline: 1px solid red;
+            position: relative;
+            background-color: $Roxo;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 5vh;
+            .divisor{
+                path{
+                    fill: $Creme;
+                }
+            }
+            h2{
+                width: 100%;
+                height: 10vh;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Creme;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h3{
+                width: 100%;
+                height: 5vh;
+                text-align: center;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 300;
+                color: $Creme;
+                padding: 0.5vh 9vw;
+            }
+            #block_cardsBlog{
+                outline: 1px solid greenyellow;
+                width: 100%;
+                height: 70vh;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .card_blog{
+                    width: 28%;
+                    height: 90%;
+                    outline: 1px solid red;
+                    // backdrop-filter: blur(10px);
+                }
+            }
+            .btn_blog{
+                background-color: $Laranja;
+                margin-top: 4vh;
+            }
         }
-        #Edu{ display: none; }
+        #Edu{ 
+            display: none; 
+        }
         #Contato{
-            outline: 1px solid rgb(0, 255, 242);
+            position: relative;
+            padding-top: 5vh;
+            .divisor{
+                path{
+                    fill: $Roxo;
+                }
+            }
         }
-        
     }
     footer{
         position: absolute;

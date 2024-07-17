@@ -128,6 +128,13 @@ body main section {
   border: none;
   outline: none;
 }
+body main .divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
 body main .btns {
   all: unset;
   font-family: "Jost", sans-serif;
@@ -189,17 +196,18 @@ body main #home .splide .splide__track .splide__list .splide__slide h2 {
   font-family: "Jost", sans-serif;
   font-weight: 600;
   font-size: 3.25vw;
-  padding: 0 20vw;
+  padding: 0 15vw;
   text-align: center;
+  margin-top: 7vh;
 }
 body main #home .splide .splide__track .splide__list .splide__slide h3 {
   color: #EEE8DC;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 1.5vw;
-  padding: 0 35vw;
+  padding: 0 32vw;
   text-align: center;
-  margin: 3vh 0 8vh;
+  margin: 3vh 0 10vh;
 }
 body main #home .splide .splide__track .splide__list .splide__slide .btn_home {
   background-color: #E4754A;
@@ -354,15 +362,15 @@ body main #tratamentos .splide .splide__track .splide__list .splide__slide {
 body main #tratamentos .splide .splide__track .splide__list .splide__slide::before {
   content: "";
   position: absolute;
-  width: 9vw;
-  height: 9vw;
-  top: 10%;
+  width: 7.5vw;
+  height: 7.5vw;
+  top: 15%;
   background-color: #7364CB;
   z-index: -1;
   border-radius: 50%;
 }
 body main #tratamentos .splide .splide__track .splide__list .splide__slide img, body main #tratamentos .splide .splide__track .splide__list .splide__slide svg {
-  width: 30%;
+  width: 25%;
   height: auto;
   top: 50px;
   left: 0;
@@ -377,7 +385,7 @@ body main #tratamentos .splide .splide__track .splide__list .splide__slide h3 {
   font-weight: 800;
   font-size: 1.25vw;
   text-align: center;
-  margin-top: 7vh;
+  margin-top: 5vh;
 }
 body main #tratamentos .splide .splide__arrows .splide__arrow {
   width: 3.5vw;
@@ -411,7 +419,6 @@ body main #tratamentos .btn_tratamentos {
 }
 body main #equipe {
   height: 150vh;
-  outline: 1px solid blue;
   background-color: #7364CB;
   display: flex;
   flex-direction: column;
@@ -419,43 +426,400 @@ body main #equipe {
 }
 body main #equipe h2 {
   width: 100%;
-  outline: 1px solid green;
+  height: 10vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #EEE8DC;
+  margin-top: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body main #equipe h3 {
-  outline: 1px solid red;
   width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  padding: 0.5vh 9vw;
 }
 body main #equipe #block_cardsEquipe {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 5vh;
 }
 body main #equipe #block_cardsEquipe .card_equipe {
-  outline: 1px solid red;
-  width: 31.5%;
+  width: 31%;
   height: 30vh;
   margin: 3.5vh 0;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 4.5vh;
 }
 body main #equipe #block_cardsEquipe .card_equipe:nth-child(1), body main #equipe #block_cardsEquipe .card_equipe:nth-child(2), body main #equipe #block_cardsEquipe .card_equipe:nth-child(3) {
-  outline: 1px solid blue;
   margin-top: 0;
+}
+body main #equipe #block_cardsEquipe .card_equipe:nth-child(7), body main #equipe #block_cardsEquipe .card_equipe:nth-child(8), body main #equipe #block_cardsEquipe .card_equipe:nth-child(9) {
+  margin-bottom: 0;
+}
+body main #equipe #block_cardsEquipe .card_equipe::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 85%;
+  width: 100%;
+  background-color: #EEE8DC;
+  opacity: 0.25;
+  border-radius: 2.5vw;
+  z-index: 1;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .imgUser {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  width: 7vw;
+  height: 7vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #E4754A;
+}
+body main #equipe #block_cardsEquipe .card_equipe .doc {
+  z-index: 2;
+  width: 50%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #EEE8DC;
+  font-size: 0.85vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1.3vw;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .estado {
+  z-index: 2;
+  width: 50%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  color: #7364CB;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .estado img, body main #equipe #block_cardsEquipe .card_equipe .estado svg {
+  position: absolute;
+  right: 0.9vw;
+  top: 1.6vh;
+  height: 75%;
+  z-index: 1;
+}
+body main #equipe #block_cardsEquipe .card_equipe .estado img path, body main #equipe #block_cardsEquipe .card_equipe .estado svg path {
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .estado span {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  padding-right: 1.75vw;
+  z-index: 2;
+}
+body main #equipe #block_cardsEquipe .card_equipe .nome {
+  z-index: 2;
+  width: 100%;
+  height: 10.5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1.5vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 2vh;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .abordagem {
+  z-index: 2;
+  width: 100%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 0.5vh;
+  letter-spacing: 0.03vw;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe .tipo_consulta {
+  z-index: 2;
+  width: 100%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  letter-spacing: 0.03vw;
+  transition: all ease-in-out 0.2s;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover::before {
+  opacity: 1;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .doc {
+  color: #E4754A;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .estado {
+  color: #EEE8DC;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .estado img path, body main #equipe #block_cardsEquipe .card_equipe:hover .estado svg path {
+  fill: #E4754A;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .nome {
+  color: #E4754A;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .abordagem {
+  color: #E4754A;
+}
+body main #equipe #block_cardsEquipe .card_equipe:hover .tipo_consulta {
+  color: #E4754A;
+}
+body main #equipe #block_cardsEquipe::before {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 25vh;
+  background: linear-gradient(180deg, rgba(115, 100, 203, 0) 0%, rgb(115, 100, 203) 100%);
+  bottom: -0.5vh;
+  left: 0;
+  z-index: 5;
+}
+body main #equipe .btn_equipe {
+  background-color: #E4754A;
+  margin-top: 8vh;
 }
 body main #local {
   height: 75vh;
-  outline: 1px solid green;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5vh;
+}
+body main #local h2 {
+  width: 100%;
+  height: 10vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #local #Block_localTxt {
+  width: 50%;
+  height: 60vh;
+  position: relative;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  padding: 0 7.5vw;
+  padding-top: 6vh;
+  line-height: 4.5vh;
+}
+body main #local #Block_localTxt::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 85%;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 7.5vw;
+  border-bottom-left-radius: 7.5vw;
+  border-bottom-right-radius: 2.5vw;
+  background-color: #7364CB;
+  z-index: -1;
+}
+body main #local #Block_localCarousel {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3vh;
+}
+body main #local #Block_localCarousel #Local-carousel {
+  width: 80%;
+  height: 42vh;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+body main #local #Block_localCarousel #Local-carousel .splide__track {
+  width: 100%;
+  height: 100%;
+}
+body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+}
+body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel {
+  margin-top: 1.5vh;
+  width: 80%;
+  height: 7vh;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow {
+  background: none;
+  width: 2vw;
+  height: 2vw;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg path {
+  fill: #E4754A;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--prev {
+  left: -0.5vw;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--next {
+  right: -0.5vw;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track {
+  width: 87.5%;
+  height: 100%;
+  margin-left: 6.25%;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list {
+  width: 100%;
+  height: 100%;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7364CB;
+  opacity: 0.6;
+  transition: ease-in-out all 0.2s;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .is-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7364CB;
+  opacity: 0;
 }
 body main #Depoimentos {
   display: none;
 }
 body main #Blog {
+  position: relative;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5vh;
+}
+body main #Blog .divisor path {
+  fill: #EEE8DC;
+}
+body main #Blog h2 {
+  width: 100%;
+  height: 10vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #Blog h3 {
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  padding: 0.5vh 9vw;
+}
+body main #Blog #block_cardsBlog {
+  outline: 1px solid greenyellow;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body main #Blog #block_cardsBlog .card_blog {
+  width: 28%;
+  height: 90%;
   outline: 1px solid red;
+}
+body main #Blog .btn_blog {
+  background-color: #E4754A;
+  margin-top: 4vh;
 }
 body main #Edu {
   display: none;
 }
 body main #Contato {
-  outline: 1px solid rgb(0, 255, 242);
+  position: relative;
+  padding-top: 5vh;
+}
+body main #Contato .divisor path {
+  fill: #7364CB;
 }
 body footer {
   position: absolute;
