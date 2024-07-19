@@ -36,7 +36,6 @@
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="../js/Base_script.js"></script>
-    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -55,10 +54,154 @@
             <li><a href="contatos.html">Contato</a></li>
         </ul>
     </header>
-    <main>
-        SOBRE A CLINICA
+    <main id="Main_clinica">
+        <section id="abertura">
+            <img id="folhas" src="assets/icons/folhas.svg" onload="SVGInject(this)">
+            <h1>“Clínica Sicuro: <br><br>
+                O seu lugar seguro <br>
+                para voltar a aprender <br>
+                a voar sozinho.”
+            </h1>
+            <img id="ninho" src="assets/icons/ninho.svg" onload="SVGInject(this)">
+            <div id="block_aberturaTxt">
+                <h2>Quem somos?</h2>
+                <span>Aqui você conhecerá mais da nossa clínica.</span>
+                <h3>Sobre nosso ninho</h3>
+                <p>
+                    A clínica que <b>abraça as jornadas únicas</b> de seus pacientes, <b>todos são acolhidos e protegidos</b> em seu ninho, em seu lugar seguro. E tal como um pássaro aprende
+                    a voar sozinho depois de ser nutrido no ninho, os pacientes
+                    da Clínica Sicuro, com as ferramentas adequadas,
+                    <b>serão capazes de atingir a sua autêntica liberdade e alçar voo.</b> Desejamos ser a representação da capacidade de cada indivíduo para a transformação e a superação.
+                </p>
+            </div>
+        </section>
+        <section id="MVV">
+            <div class="card_MVV">
+                <img src="assets/icons/missao.svg" onload="SVGInject(this)">
+                <h4>Missão</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Nulla pellue dignissim enim sit amet.</p>
+            </div>
+            <div class="card_MVV">
+                <img src="assets/icons/visao.svg" onload="SVGInject(this)">
+                <h4>Visão</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Nulla pellue dignissim enim sit amet.</p>
+            </div>
+            <div class="card_MVV">
+                <img src="assets/icons/valores.svg" onload="SVGInject(this)">
+                <h4>Valores</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Nulla pellue dignissim enim sit amet.</p>
+            </div>
+        </section>
+        <section id="historia">
+            <img id="arvore" src="assets/icons/arvore.svg" onload="SVGInject(this)">
+            <div id="block_checkpoints">
+                <div class="checkpoint">
+                    <h2>2010 - formação em psicologia pela FAE</h2>
+                    <img src="assets/icons/chapeu.svg" onload="SVGInject(this)">
+                </div>
+                <div class="checkpoint">
+                    <h2>2012 - curso de extensão em ansiedade e depressão</h2>
+                    <img src="assets/icons/cerebro.svg" onload="SVGInject(this)">
+                </div>
+                <div class="checkpoint">
+                    <h2>2020 - curso de extensão em terapia familiar</h2>
+                    <img src="assets/icons/estrela.svg" onload="SVGInject(this)">
+                </div>
+                <div class="checkpoint">
+                    <h2>2024 - formação em medicina pela FAE</h2>
+                    <img src="assets/icons/chapeu.svg" onload="SVGInject(this)">
+                </div>
+            </div>
+            <div id="block_Historiatxt">
+                <h2>Um pouco da nossa história</h2>
+                <span>Conheça um pouco da nossa história, desde o ovo.</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo. Viverra vitae congue eu consequat ac. Montes nascetur ridiculus mus mauris vitae. Massa tincidunt nunc pulvinar sapien.
+                    <br><br> 
+
+                    Diam vel quam elementum pulvinar etiam non quam lacus. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Sem viverra aliquet eget sit. Non consectetur a erat nam at lectus urna duis.
+                    <br><br>
+                    
+                    <b>“Mattis molestie a iaculis at erat pellentesque adipiscing commodo”</b>
+                </p>
+            </div>
+        </section>
+        <section id="equipe">
+            <img class="divisor" src="assets/divisor.svg" onload="SVGInject(this)">
+            <h2>A equipe sicuro</h2>
+            <h3>Nossa árvore é cheia de ninhos acolhedores, conheça alguns deles!</h3>
+            <div id="block_cardsEquipe">
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="../assets/Marcela_img.webp" alt="">
+                    <h4 class="nome">Marcela Schimaneski</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="../assets/Carlos_img.webp" alt="">
+                    <h4 class="nome">Carlos Aznar Blefari</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="assets/users/user_placeholder.webp" alt="">
+                    <h4 class="nome">Marcela Schimaneski</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="assets/users/user_placeholder.webp" alt="">
+                    <h4 class="nome">Marcela Schimaneski</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="assets/users/user_placeholder.webp" alt="">
+                    <h4 class="nome">Marcela Schimaneski</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+                <a class="card_equipe" href="">
+                    <span class="doc">CRP 99/99999</span>
+                    <div class="estado">
+                        <img src="assets/icons/folha.svg" onload="SVGInject(this)">
+                        <span>PR</span>
+                    </div>
+                    <img class="imgUser" src="assets/users/user_placeholder.webp" alt="">
+                    <h4 class="nome">Marcela Schimaneski</h4>
+                    <p class="abordagem">Terapia Cognitiva-Comportamental</p>
+                    <span class="tipo_consulta">Online e Presencial</span>
+                </a>
+            </div>
+            <a class="btns btn_equipe" href="equipe.html">Ver toda a equipe</a>
+        </section>
     </main>
-    <footer>
+    <footer style="border-top: 1px solid white;">
         <p>©<span id="data_footer"></span> SicuroPsi - Criação e desenvolvimento por:</p>
         <a aria-label="link para o site do universo farol" href="https://www.universofarol.com.br" target="_blank">
             <img src="assets/icons/Universo_Farol.svg" onload="SVGInject(this)">

@@ -79,7 +79,7 @@ body {
             }
         }        
     }
-    main{
+    #Main_home{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -124,8 +124,6 @@ body {
             position: relative;
             display: flex;
             flex-direction: column;
-            padding-top: 125px;
-            width: 100%;
             padding: 0;
             .splide{
                 height:100%;
@@ -753,18 +751,121 @@ body {
                 padding: 0.5vh 9vw;
             }
             #block_cardsBlog{
-                outline: 1px solid greenyellow;
                 width: 100%;
                 height: 70vh;
-                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
                 .card_blog{
                     width: 28%;
                     height: 90%;
-                    outline: 1px solid red;
-                    // backdrop-filter: blur(10px);
+                    border-top-left-radius: 2.5vw;
+                    border-top-right-radius: 7.5vw;
+                    border-bottom-left-radius: 7.5vw;
+                    border-bottom-right-radius: 2.5vw;
+                    overflow: hidden;
+                    position: relative;
+                    padding: 10vh 2vw;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(12, 29, 142, 0.4);
+                        backdrop-filter: blur(4px);
+                        z-index: 2;
+                        transition: all ease-in-out .2s;
+                    }
+                    img{
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    span, h4, p, button{
+                        position: relative;
+                        z-index: 10 !important;
+                        color: $Creme;
+                    }
+                    span{
+                        outline: 2px solid $Laranja;
+                        border-radius: 10vw;
+                        height: 3vh;
+                        padding: 0 0.75vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 0.9vw;
+                        color: $Laranja;
+                    }
+                    .tag{
+                        margin-left: auto;
+                    }
+                    h4{
+                        font-family: $Second-font;
+                        font-size: 2.5vw;
+                        font-weight: 700;
+                        color: $Creme;
+                        line-height: 6vh; 
+                    }
+                    p{
+                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all ease-in-out .2s;
+                    }
+                    button{
+                        width: 100%;
+                        height: 3.5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 700;
+                        color: $Laranja;
+                        position: absolute;
+                        bottom: 7vh;
+                        left: 0;
+                        img,svg{
+                            height: 100%;
+                            width: auto;
+                            margin-left: 0.5vw;
+                        }
+                    }
+                    &:hover{
+                        &::before{
+                            background-color: rgba(12, 29, 142, 0.6);
+                            backdrop-filter: blur(8px);
+                        }
+                        h4{
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            color: $Creme;
+                            line-height: normal;
+                        }
+                        p{
+                            display: block;
+                            opacity: 1;
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            font-weight: 400;
+                            color: $Creme;
+                            margin-top: -3vh;
+                            line-height: 3vh;
+                        }
+                    }
                 }
             }
             .btn_blog{
@@ -778,13 +879,174 @@ body {
         #Contato{
             position: relative;
             padding-top: 5vh;
+            display: flex;
+            flex-wrap: wrap;
             .divisor{
                 path{
                     fill: $Roxo;
                 }
             }
+            h2{
+                width: 100%;
+                height: 10vh;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h3{
+                width: 100%;
+                height: 5vh;
+                text-align: center;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 400;
+                color: $Azul;
+                padding: 0.5vh 9vw;
+            }
+            #Block_contatoMapa{
+                width: 50%;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 9vh;
+                #endereco{
+                    font-family: $Second-font;
+                    font-size: 1.15vw;
+                    font-weight: 700;
+                    color: $Laranja;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 2vh;
+                }
+                iframe{
+                    width: 90%;
+                    height: 50vh;
+                    border-top-left-radius: 2.5vw;
+                    border-top-right-radius: 7.5vw;
+                    border-bottom-left-radius: 7.5vw;
+                    border-bottom-right-radius: 2.5vw;
+                    border: $Laranja solid 5px;
+                    margin-top: 1vh;
+                }
+                #horarios{
+                    margin-top: 2vh;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    p{
+                        width: 100%;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 1.15vw;
+                        color: $Azul;
+                        text-align: center;
+                    }
+                    span{
+                        text-align: center;
+                        font-family: $Second-font;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Laranja;
+                        padding: 0 1.5vw;
+                        margin-top: 1vh;
+                    }
+                    
+                }
+            }
+            #Block_contatoRedes{
+                width: 50%;
+                height: 80vh;
+                padding-bottom: 9vh;
+                padding-left: 3vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h4{
+                    width: 100%;
+                    font-family: $Second-font;
+                    font-weight: 500;
+                    font-size: 1.5vw;
+                    color: $Azul;
+                    margin-top: -5vh;
+                    margin-bottom: 2vh;
+                }
+                .rede{
+                    width: 100%;
+                    height: 5.5vh;
+                    margin-bottom: 8vh;
+                    position: relative;
+                    padding-left: 4.5vw;
+                    img, svg {
+                        position: absolute;
+                        height: 80%;
+                        width: auto;
+                        left: 0;
+                        top: 10%;
+                    }
+                    h5, span{
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        font-family: $Second-font;
+                    }
+                    h5{
+                        font-size: 1.2vw;
+                        font-weight: 700;
+                        color: $Azul;
+                    }
+                    span{
+                        font-size: 1vw;
+                        font-weight: 400;
+                        color: $Laranja;
+                    }
+                    &:nth-child(2), &:nth-child(3){
+                        img, svg {
+                            left: 0.5vw;
+                        } 
+                    }
+                    &:hover{
+                        img, svg {
+                            path{
+                                stroke: $Laranja;
+                            }
+                        }
+                        span{
+                            font-weight: 600;
+                        }
+                    }
+                }
+                p{
+                    width: 100%;
+                    text-align: left;
+                    font-family: $Second-font;
+                    font-weight: 400;
+                    color: $Azul;
+                    font-size: 1vw;
+                    margin-top: 2vh;
+                    a{
+                        font-weight: 600;
+                        color: $Laranja;
+                        &:hover{
+                            font-weight: 700;
+                            color: $Roxo;
+                        }
+                    }
+                }
+            }
         }
     }
+
+    @import 'clinica';
+    @import 'especialidades';
+
+    
     footer{
         position: absolute;
         bottom: 0;
@@ -805,6 +1067,7 @@ body {
             width: 7.5vw;
             height: 65%;
             margin-left: 0.75vw;
+            transition: all ease-in-out .2s;
             img, svg{
                 width: 100%;
                 height: 100%;
@@ -812,6 +1075,9 @@ body {
                 path{
                     fill: $Creme;
                 }
+            }
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }

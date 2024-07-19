@@ -41,6 +41,10 @@ body {
   background: #EEE8DC;
   overflow-x: hidden;
   position: relative;
+  /*--------------------------------- Responsive Media Quaries -----------------------------*/
+  /* MOBILE */
+  /*--------------------------------- Responsive Media Quaries -----------------------------*/
+  /* MOBILE */
 }
 body header {
   background-color: #7364CB;
@@ -112,7 +116,7 @@ body header .menu li:first-child a svg, body header .menu li:first-child a img {
 body header .menu li:first-child a svg path, body header .menu li:first-child a img path {
   fill: #EEE8DC;
 }
-body main {
+body #Main_home {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -121,21 +125,21 @@ body main {
   overflow-x: hidden;
   position: relative;
 }
-body main section {
+body #Main_home section {
   width: 100vw;
   height: 100vh;
   padding: 0 5vw;
   border: none;
   outline: none;
 }
-body main .divisor {
+body #Main_home .divisor {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
 }
-body main .btns {
+body #Main_home .btns {
   all: unset;
   font-family: "Jost", sans-serif;
   font-weight: 700;
@@ -149,30 +153,28 @@ body main .btns {
   width: 14vw;
   padding: 0.65vh 0;
 }
-body main .btns:hover {
+body #Main_home .btns:hover {
   transform: scale(1.1);
 }
-body main #home {
+body #Main_home #home {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 125px;
-  width: 100%;
   padding: 0;
 }
-body main #home .splide {
+body #Main_home #home .splide {
   height: 100%;
   width: 100%;
 }
-body main #home .splide .splide__track {
+body #Main_home #home .splide .splide__track {
   height: 100%;
   width: 100%;
 }
-body main #home .splide .splide__track .splide__list {
+body #Main_home #home .splide .splide__track .splide__list {
   height: 100%;
   width: 100%;
 }
-body main #home .splide .splide__track .splide__list .splide__slide {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide {
   height: 100%;
   width: 100%;
   position: relative;
@@ -181,7 +183,7 @@ body main #home .splide .splide__track .splide__list .splide__slide {
   justify-content: center;
   flex-direction: column;
 }
-body main #home .splide .splide__track .splide__list .splide__slide img {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide img {
   position: absolute;
   width: 100%;
   height: auto;
@@ -191,7 +193,7 @@ body main #home .splide .splide__track .splide__list .splide__slide img {
      object-fit: cover;
   z-index: -1;
 }
-body main #home .splide .splide__track .splide__list .splide__slide h2 {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide h2 {
   color: #EEE8DC;
   font-family: "Jost", sans-serif;
   font-weight: 600;
@@ -200,7 +202,7 @@ body main #home .splide .splide__track .splide__list .splide__slide h2 {
   text-align: center;
   margin-top: 7vh;
 }
-body main #home .splide .splide__track .splide__list .splide__slide h3 {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide h3 {
   color: #EEE8DC;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -209,18 +211,18 @@ body main #home .splide .splide__track .splide__list .splide__slide h3 {
   text-align: center;
   margin: 3vh 0 10vh;
 }
-body main #home .splide .splide__track .splide__list .splide__slide .btn_home {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide .btn_home {
   background-color: #E4754A;
 }
-body main #home .splide .splide__track .splide__list .splide__slide .btn_roxo {
+body #Main_home #home .splide .splide__track .splide__list .splide__slide .btn_roxo {
   background-color: #7364CB;
 }
-body main #home .splide .splide__arrows {
+body #Main_home #home .splide .splide__arrows {
   display: none;
   opacity: 0;
   pointer-events: none;
 }
-body main #home .splide .splide__pagination li button {
+body #Main_home #home .splide .splide__pagination li button {
   background-color: #E4754A;
   height: 0.55vw;
   width: 0.55vw;
@@ -228,12 +230,12 @@ body main #home .splide .splide__pagination li button {
   margin-bottom: 1vh;
   opacity: 0.5;
 }
-body main #home .splide .splide__pagination li .is-active {
+body #Main_home #home .splide .splide__pagination li .is-active {
   background-color: #F6D66F;
   transform: scale(1.5);
   opacity: 1;
 }
-body main #sobre {
+body #Main_home #sobre {
   position: relative;
   height: 85vh;
   display: flex;
@@ -242,12 +244,12 @@ body main #sobre {
   padding: 0 10vw;
   background-color: #7364CB;
 }
-body main #sobre #Block_sobreTxt {
+body #Main_home #sobre #Block_sobreTxt {
   width: 65%;
   height: 100%;
   padding-right: 7vw;
 }
-body main #sobre #Block_sobreTxt h2 {
+body #Main_home #sobre #Block_sobreTxt h2 {
   font-family: "Aladin", system-ui;
   font-size: 3vw;
   color: #EEE8DC;
@@ -255,7 +257,7 @@ body main #sobre #Block_sobreTxt h2 {
   margin: 7vh 0 10vh;
   position: relative;
 }
-body main #sobre #Block_sobreTxt h2::before {
+body #Main_home #sobre #Block_sobreTxt h2::before {
   content: "";
   position: absolute;
   bottom: -3vh;
@@ -265,18 +267,18 @@ body main #sobre #Block_sobreTxt h2::before {
   background-color: #F6D66F;
   border-radius: 10vw;
 }
-body main #sobre #Block_sobreTxt h3 {
+body #Main_home #sobre #Block_sobreTxt h3 {
   font-family: "Jost", sans-serif;
   font-size: 1.15vw;
   font-weight: 300;
   color: #EEE8DC;
   line-height: 3.5vh;
 }
-body main #sobre #Block_sobreTxt .btn_sobre {
+body #Main_home #sobre #Block_sobreTxt .btn_sobre {
   margin-top: 8vh;
   background-color: #E4754A;
 }
-body main #sobre #Block_sobreicons {
+body #Main_home #sobre #Block_sobreicons {
   width: 35%;
   height: 100%;
   position: relative;
@@ -285,7 +287,7 @@ body main #sobre #Block_sobreicons {
   align-items: center;
   justify-content: center;
 }
-body main #sobre #Block_sobreicons #bg_icons {
+body #Main_home #sobre #Block_sobreicons #bg_icons {
   position: absolute;
   width: auto;
   height: 100%;
@@ -294,7 +296,7 @@ body main #sobre #Block_sobreicons #bg_icons {
   opacity: 0.35;
   z-index: 1;
 }
-body main #sobre #Block_sobreicons .icons {
+body #Main_home #sobre #Block_sobreicons .icons {
   width: 50%;
   height: 20%;
   margin: 0.5vh 0;
@@ -304,19 +306,19 @@ body main #sobre #Block_sobreicons .icons {
   justify-content: center;
   z-index: 2;
 }
-body main #sobre #Block_sobreicons .icons img, body main #sobre #Block_sobreicons .icons svg {
+body #Main_home #sobre #Block_sobreicons .icons img, body #Main_home #sobre #Block_sobreicons .icons svg {
   width: 50%;
   height: 50%;
   padding: 0.6vw;
 }
-body main #sobre #Block_sobreicons .icons h4 {
+body #Main_home #sobre #Block_sobreicons .icons h4 {
   font-family: "Jost", sans-serif;
   font-weight: 600;
   font-size: 1.05vw;
   text-align: center;
   color: #EEE8DC;
 }
-body main #tratamentos {
+body #Main_home #tratamentos {
   height: 50vh;
   width: 100%;
   padding: 0 7.5vw;
@@ -327,7 +329,7 @@ body main #tratamentos {
   justify-content: center;
   flex-direction: column;
 }
-body main #tratamentos h2 {
+body #Main_home #tratamentos h2 {
   height: 15%;
   width: 100%;
   text-align: center;
@@ -338,19 +340,19 @@ body main #tratamentos h2 {
   align-items: center;
   justify-content: center;
 }
-body main #tratamentos .splide {
+body #Main_home #tratamentos .splide {
   height: 65%;
   width: 100%;
 }
-body main #tratamentos .splide .splide__track {
+body #Main_home #tratamentos .splide .splide__track {
   height: 100%;
   width: 100%;
 }
-body main #tratamentos .splide .splide__track .splide__list {
+body #Main_home #tratamentos .splide .splide__track .splide__list {
   height: 100%;
   width: 100%;
 }
-body main #tratamentos .splide .splide__track .splide__list .splide__slide {
+body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide {
   height: 100%;
   width: 100%;
   position: relative;
@@ -359,7 +361,7 @@ body main #tratamentos .splide .splide__track .splide__list .splide__slide {
   justify-content: center;
   flex-direction: column;
 }
-body main #tratamentos .splide .splide__track .splide__list .splide__slide::before {
+body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide::before {
   content: "";
   position: absolute;
   width: 7.5vw;
@@ -369,17 +371,17 @@ body main #tratamentos .splide .splide__track .splide__list .splide__slide::befo
   z-index: -1;
   border-radius: 50%;
 }
-body main #tratamentos .splide .splide__track .splide__list .splide__slide img, body main #tratamentos .splide .splide__track .splide__list .splide__slide svg {
+body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide img, body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide svg {
   width: 25%;
   height: auto;
   top: 50px;
   left: 0;
 }
-body main #tratamentos .splide .splide__track .splide__list .splide__slide img path, body main #tratamentos .splide .splide__track .splide__list .splide__slide svg path {
+body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide img path, body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide svg path {
   fill: #EEE8DC;
   stroke: #EEE8DC;
 }
-body main #tratamentos .splide .splide__track .splide__list .splide__slide h3 {
+body #Main_home #tratamentos .splide .splide__track .splide__list .splide__slide h3 {
   color: #0C1E8E;
   font-family: "Jost", sans-serif;
   font-weight: 800;
@@ -387,44 +389,44 @@ body main #tratamentos .splide .splide__track .splide__list .splide__slide h3 {
   text-align: center;
   margin-top: 5vh;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow {
   width: 3.5vw;
   height: 3.5vw;
   background: none;
   opacity: 1;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow svg {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow svg {
   width: 100%;
   height: 100%;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow svg path {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow svg path {
   fill: #E4754A;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow:disabled {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow:disabled {
   opacity: 0.3;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow--prev {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow--prev {
   left: -3vw;
 }
-body main #tratamentos .splide .splide__arrows .splide__arrow--next {
+body #Main_home #tratamentos .splide .splide__arrows .splide__arrow--next {
   right: -3vw;
 }
-body main #tratamentos .splide .splide__pagination {
+body #Main_home #tratamentos .splide .splide__pagination {
   display: none;
   opacity: 0;
   pointer-events: none;
 }
-body main #tratamentos .btn_tratamentos {
+body #Main_home #tratamentos .btn_tratamentos {
   background-color: #E4754A;
 }
-body main #equipe {
+body #Main_home #equipe {
   height: 150vh;
   background-color: #7364CB;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body main #equipe h2 {
+body #Main_home #equipe h2 {
   width: 100%;
   height: 10vh;
   font-family: "Aladin", system-ui;
@@ -435,7 +437,7 @@ body main #equipe h2 {
   align-items: center;
   justify-content: center;
 }
-body main #equipe h3 {
+body #Main_home #equipe h3 {
   width: 100%;
   text-align: center;
   font-family: "Jost", sans-serif;
@@ -444,14 +446,14 @@ body main #equipe h3 {
   color: #EEE8DC;
   padding: 0.5vh 9vw;
 }
-body main #equipe #block_cardsEquipe {
+body #Main_home #equipe #block_cardsEquipe {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 5vh;
 }
-body main #equipe #block_cardsEquipe .card_equipe {
+body #Main_home #equipe #block_cardsEquipe .card_equipe {
   width: 31%;
   height: 30vh;
   margin: 3.5vh 0;
@@ -463,13 +465,13 @@ body main #equipe #block_cardsEquipe .card_equipe {
   justify-content: center;
   padding-top: 4.5vh;
 }
-body main #equipe #block_cardsEquipe .card_equipe:nth-child(1), body main #equipe #block_cardsEquipe .card_equipe:nth-child(2), body main #equipe #block_cardsEquipe .card_equipe:nth-child(3) {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(1), body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(2), body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(3) {
   margin-top: 0;
 }
-body main #equipe #block_cardsEquipe .card_equipe:nth-child(7), body main #equipe #block_cardsEquipe .card_equipe:nth-child(8), body main #equipe #block_cardsEquipe .card_equipe:nth-child(9) {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(7), body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(8), body #Main_home #equipe #block_cardsEquipe .card_equipe:nth-child(9) {
   margin-bottom: 0;
 }
-body main #equipe #block_cardsEquipe .card_equipe::before {
+body #Main_home #equipe #block_cardsEquipe .card_equipe::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -482,7 +484,7 @@ body main #equipe #block_cardsEquipe .card_equipe::before {
   z-index: 1;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .imgUser {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .imgUser {
   z-index: 3;
   position: absolute;
   top: 0;
@@ -493,7 +495,7 @@ body main #equipe #block_cardsEquipe .card_equipe .imgUser {
   border-radius: 50%;
   border: 5px solid #E4754A;
 }
-body main #equipe #block_cardsEquipe .card_equipe .doc {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .doc {
   z-index: 2;
   width: 50%;
   height: 5vh;
@@ -506,7 +508,7 @@ body main #equipe #block_cardsEquipe .card_equipe .doc {
   padding-left: 1.3vw;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .estado {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .estado {
   z-index: 2;
   width: 50%;
   height: 5vh;
@@ -519,17 +521,17 @@ body main #equipe #block_cardsEquipe .card_equipe .estado {
   position: relative;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .estado img, body main #equipe #block_cardsEquipe .card_equipe .estado svg {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .estado img, body #Main_home #equipe #block_cardsEquipe .card_equipe .estado svg {
   position: absolute;
   right: 0.9vw;
   top: 1.6vh;
   height: 75%;
   z-index: 1;
 }
-body main #equipe #block_cardsEquipe .card_equipe .estado img path, body main #equipe #block_cardsEquipe .card_equipe .estado svg path {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .estado img path, body #Main_home #equipe #block_cardsEquipe .card_equipe .estado svg path {
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .estado span {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .estado span {
   width: 100%;
   height: 100%;
   text-align: right;
@@ -539,7 +541,7 @@ body main #equipe #block_cardsEquipe .card_equipe .estado span {
   padding-right: 1.75vw;
   z-index: 2;
 }
-body main #equipe #block_cardsEquipe .card_equipe .nome {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .nome {
   z-index: 2;
   width: 100%;
   height: 10.5vh;
@@ -553,7 +555,7 @@ body main #equipe #block_cardsEquipe .card_equipe .nome {
   padding-bottom: 2vh;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .abordagem {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .abordagem {
   z-index: 2;
   width: 100%;
   height: 5vh;
@@ -568,7 +570,7 @@ body main #equipe #block_cardsEquipe .card_equipe .abordagem {
   letter-spacing: 0.03vw;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe .tipo_consulta {
+body #Main_home #equipe #block_cardsEquipe .card_equipe .tipo_consulta {
   z-index: 2;
   width: 100%;
   height: 5vh;
@@ -582,28 +584,28 @@ body main #equipe #block_cardsEquipe .card_equipe .tipo_consulta {
   letter-spacing: 0.03vw;
   transition: all ease-in-out 0.2s;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover::before {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover::before {
   opacity: 1;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .doc {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .doc {
   color: #E4754A;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .estado {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .estado {
   color: #EEE8DC;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .estado img path, body main #equipe #block_cardsEquipe .card_equipe:hover .estado svg path {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .estado img path, body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .estado svg path {
   fill: #E4754A;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .nome {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .nome {
   color: #E4754A;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .abordagem {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .abordagem {
   color: #E4754A;
 }
-body main #equipe #block_cardsEquipe .card_equipe:hover .tipo_consulta {
+body #Main_home #equipe #block_cardsEquipe .card_equipe:hover .tipo_consulta {
   color: #E4754A;
 }
-body main #equipe #block_cardsEquipe::before {
+body #Main_home #equipe #block_cardsEquipe::before {
   content: "";
   position: absolute;
   width: 101%;
@@ -613,18 +615,18 @@ body main #equipe #block_cardsEquipe::before {
   left: 0;
   z-index: 5;
 }
-body main #equipe .btn_equipe {
+body #Main_home #equipe .btn_equipe {
   background-color: #E4754A;
   margin-top: 8vh;
 }
-body main #local {
+body #Main_home #local {
   height: 75vh;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   padding-top: 5vh;
 }
-body main #local h2 {
+body #Main_home #local h2 {
   width: 100%;
   height: 10vh;
   font-family: "Aladin", system-ui;
@@ -634,7 +636,7 @@ body main #local h2 {
   align-items: center;
   justify-content: center;
 }
-body main #local #Block_localTxt {
+body #Main_home #local #Block_localTxt {
   width: 50%;
   height: 60vh;
   position: relative;
@@ -646,7 +648,7 @@ body main #local #Block_localTxt {
   padding-top: 6vh;
   line-height: 4.5vh;
 }
-body main #local #Block_localTxt::before {
+body #Main_home #local #Block_localTxt::before {
   content: "";
   position: absolute;
   top: 5%;
@@ -660,7 +662,7 @@ body main #local #Block_localTxt::before {
   background-color: #7364CB;
   z-index: -1;
 }
-body main #local #Block_localCarousel {
+body #Main_home #local #Block_localCarousel {
   width: 50%;
   height: 60vh;
   display: flex;
@@ -668,63 +670,63 @@ body main #local #Block_localCarousel {
   align-items: center;
   padding-top: 3vh;
 }
-body main #local #Block_localCarousel #Local-carousel {
+body #Main_home #local #Block_localCarousel #Local-carousel {
   width: 80%;
   height: 42vh;
   border-radius: 2vw;
   overflow: hidden;
 }
-body main #local #Block_localCarousel #Local-carousel .splide__track {
+body #Main_home #local #Block_localCarousel #Local-carousel .splide__track {
   width: 100%;
   height: 100%;
 }
-body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list {
+body #Main_home #local #Block_localCarousel #Local-carousel .splide__track .splide__list {
   width: 100%;
   height: 100%;
 }
-body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide {
+body #Main_home #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
 }
-body main #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide img {
+body #Main_home #local #Block_localCarousel #Local-carousel .splide__track .splide__list .splide__slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel {
   margin-top: 1.5vh;
   width: 80%;
   height: 7vh;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow {
   background: none;
   width: 2vw;
   height: 2vw;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg {
   width: 100%;
   height: 100%;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg path {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow svg path {
   fill: #E4754A;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--prev {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--prev {
   left: -0.5vw;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--next {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__arrows .splide__arrow--next {
   right: -0.5vw;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track {
   width: 87.5%;
   height: 100%;
   margin-left: 6.25%;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list {
   width: 100%;
   height: 100%;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
   border: none;
@@ -732,7 +734,7 @@ body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .
   border-radius: 0.5vw;
   overflow: hidden;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide::before {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -743,13 +745,13 @@ body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .
   opacity: 0.6;
   transition: ease-in-out all 0.2s;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide img {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .splide__slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .is-active::before {
+body #Main_home #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .splide__list .is-active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -759,10 +761,10 @@ body main #local #Block_localCarousel #thumbnail-Local-carousel .splide__track .
   background-color: #7364CB;
   opacity: 0;
 }
-body main #Depoimentos {
+body #Main_home #Depoimentos {
   display: none;
 }
-body main #Blog {
+body #Main_home #Blog {
   position: relative;
   background-color: #7364CB;
   display: flex;
@@ -770,10 +772,10 @@ body main #Blog {
   flex-direction: column;
   padding-top: 5vh;
 }
-body main #Blog .divisor path {
+body #Main_home #Blog .divisor path {
   fill: #EEE8DC;
 }
-body main #Blog h2 {
+body #Main_home #Blog h2 {
   width: 100%;
   height: 10vh;
   font-family: "Aladin", system-ui;
@@ -783,7 +785,7 @@ body main #Blog h2 {
   align-items: center;
   justify-content: center;
 }
-body main #Blog h3 {
+body #Main_home #Blog h3 {
   width: 100%;
   height: 5vh;
   text-align: center;
@@ -793,33 +795,839 @@ body main #Blog h3 {
   color: #EEE8DC;
   padding: 0.5vh 9vw;
 }
-body main #Blog #block_cardsBlog {
-  outline: 1px solid greenyellow;
+body #Main_home #Blog #block_cardsBlog {
   width: 100%;
   height: 70vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-body main #Blog #block_cardsBlog .card_blog {
+body #Main_home #Blog #block_cardsBlog .card_blog {
   width: 28%;
   height: 90%;
-  outline: 1px solid red;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 7.5vw;
+  border-bottom-left-radius: 7.5vw;
+  border-bottom-right-radius: 2.5vw;
+  overflow: hidden;
+  position: relative;
+  padding: 10vh 2vw;
+  display: flex;
+  flex-wrap: wrap;
 }
-body main #Blog .btn_blog {
+body #Main_home #Blog #block_cardsBlog .card_blog::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(12, 29, 142, 0.4);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 2;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog span, body #Main_home #Blog #block_cardsBlog .card_blog h4, body #Main_home #Blog #block_cardsBlog .card_blog p, body #Main_home #Blog #block_cardsBlog .card_blog button {
+  position: relative;
+  z-index: 10 !important;
+  color: #EEE8DC;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog span {
+  outline: 2px solid #E4754A;
+  border-radius: 10vw;
+  height: 3vh;
+  padding: 0 0.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 0.9vw;
+  color: #E4754A;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog .tag {
+  margin-left: auto;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog h4 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: #EEE8DC;
+  line-height: 6vh;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog p {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog button {
+  width: 100%;
+  height: 3.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+  color: #E4754A;
+  position: absolute;
+  bottom: 7vh;
+  left: 0;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog button img, body #Main_home #Blog #block_cardsBlog .card_blog button svg {
+  height: 100%;
+  width: auto;
+  margin-left: 0.5vw;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog:hover::before {
+  background-color: rgba(12, 29, 142, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+body #Main_home #Blog #block_cardsBlog .card_blog:hover h4 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: #EEE8DC;
+  line-height: normal;
+}
+body #Main_home #Blog #block_cardsBlog .card_blog:hover p {
+  display: block;
+  opacity: 1;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #EEE8DC;
+  margin-top: -3vh;
+  line-height: 3vh;
+}
+body #Main_home #Blog .btn_blog {
   background-color: #E4754A;
   margin-top: 4vh;
 }
-body main #Edu {
+body #Main_home #Edu {
   display: none;
 }
-body main #Contato {
+body #Main_home #Contato {
   position: relative;
   padding-top: 5vh;
+  display: flex;
+  flex-wrap: wrap;
 }
-body main #Contato .divisor path {
+body #Main_home #Contato .divisor path {
   fill: #7364CB;
+}
+body #Main_home #Contato h2 {
+  width: 100%;
+  height: 10vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_home #Contato h3 {
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  padding: 0.5vh 9vw;
+}
+body #Main_home #Contato #Block_contatoMapa {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 9vh;
+}
+body #Main_home #Contato #Block_contatoMapa #endereco {
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 700;
+  color: #E4754A;
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+body #Main_home #Contato #Block_contatoMapa iframe {
+  width: 90%;
+  height: 50vh;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 7.5vw;
+  border-bottom-left-radius: 7.5vw;
+  border-bottom-right-radius: 2.5vw;
+  border: #E4754A solid 5px;
+  margin-top: 1vh;
+}
+body #Main_home #Contato #Block_contatoMapa #horarios {
+  margin-top: 2vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #Main_home #Contato #Block_contatoMapa #horarios p {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.15vw;
+  color: #0C1E8E;
+  text-align: center;
+}
+body #Main_home #Contato #Block_contatoMapa #horarios span {
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #E4754A;
+  padding: 0 1.5vw;
+  margin-top: 1vh;
+}
+body #Main_home #Contato #Block_contatoRedes {
+  width: 50%;
+  height: 80vh;
+  padding-bottom: 9vh;
+  padding-left: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_home #Contato #Block_contatoRedes h4 {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 1.5vw;
+  color: #0C1E8E;
+  margin-top: -5vh;
+  margin-bottom: 2vh;
+}
+body #Main_home #Contato #Block_contatoRedes .rede {
+  width: 100%;
+  height: 5.5vh;
+  margin-bottom: 8vh;
+  position: relative;
+  padding-left: 4.5vw;
+}
+body #Main_home #Contato #Block_contatoRedes .rede img, body #Main_home #Contato #Block_contatoRedes .rede svg {
+  position: absolute;
+  height: 80%;
+  width: auto;
+  left: 0;
+  top: 10%;
+}
+body #Main_home #Contato #Block_contatoRedes .rede h5, body #Main_home #Contato #Block_contatoRedes .rede span {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+}
+body #Main_home #Contato #Block_contatoRedes .rede h5 {
+  font-size: 1.2vw;
+  font-weight: 700;
+  color: #0C1E8E;
+}
+body #Main_home #Contato #Block_contatoRedes .rede span {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #E4754A;
+}
+body #Main_home #Contato #Block_contatoRedes .rede:nth-child(2) img, body #Main_home #Contato #Block_contatoRedes .rede:nth-child(2) svg, body #Main_home #Contato #Block_contatoRedes .rede:nth-child(3) img, body #Main_home #Contato #Block_contatoRedes .rede:nth-child(3) svg {
+  left: 0.5vw;
+}
+body #Main_home #Contato #Block_contatoRedes .rede:hover img path, body #Main_home #Contato #Block_contatoRedes .rede:hover svg path {
+  stroke: #E4754A;
+}
+body #Main_home #Contato #Block_contatoRedes .rede:hover span {
+  font-weight: 600;
+}
+body #Main_home #Contato #Block_contatoRedes p {
+  width: 100%;
+  text-align: left;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  color: #0C1E8E;
+  font-size: 1vw;
+  margin-top: 2vh;
+}
+body #Main_home #Contato #Block_contatoRedes p a {
+  font-weight: 600;
+  color: #E4754A;
+}
+body #Main_home #Contato #Block_contatoRedes p a:hover {
+  font-weight: 700;
+  color: #7364CB;
+}
+body #Main_clinica {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body #Main_clinica section {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 5vw;
+  border: none;
+  outline: none;
+}
+body #Main_clinica .divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+body #Main_clinica .btns {
+  all: unset;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  border-radius: 5vw;
+  transition: all ease-in-out 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vw;
+  padding: 0.65vh 0;
+}
+body #Main_clinica .btns:hover {
+  transform: scale(1.1);
+}
+body #Main_clinica #abertura {
+  position: relative;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+}
+body #Main_clinica #abertura img, body #Main_clinica #abertura svg {
+  position: absolute;
+  opacity: 0.25;
+  z-index: -1;
+}
+body #Main_clinica #abertura #folhas {
+  width: 75%;
+  right: 2vw;
+  bottom: 1vh;
+}
+body #Main_clinica #abertura h1 {
+  order: 2;
+  margin-left: auto;
+  height: 65vh;
+  font-family: "Aladin", system-ui;
+  font-size: 4vw;
+  text-align: right;
+  color: #0C1E8E;
+  padding-left: 10vw;
+  padding-right: 3vw;
+}
+body #Main_clinica #abertura #ninho {
+  right: 9vw;
+  top: 26vh;
+  width: 18vw;
+}
+body #Main_clinica #abertura #block_aberturaTxt {
+  border: 5px solid #0C1E8E;
+  width: 45%;
+  height: 65vh;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 7.5vw;
+  border-bottom-left-radius: 7.5vw;
+  border-bottom-right-radius: 2.5vw;
+  padding: 2.75vw;
+  position: relative;
+}
+body #Main_clinica #abertura #block_aberturaTxt::before {
+  content: "";
+  position: absolute;
+  left: 2.75vw;
+  top: 17vh;
+  width: 11vw;
+  height: 0.75vh;
+  border-radius: 10vw;
+  background-color: #E4754A;
+}
+body #Main_clinica #abertura #block_aberturaTxt h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+}
+body #Main_clinica #abertura #block_aberturaTxt span {
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+}
+body #Main_clinica #abertura #block_aberturaTxt h3 {
+  font-family: "Aladin", system-ui;
+  font-size: 2.25vw;
+  color: #0C1E8E;
+  margin-top: 8vh;
+}
+body #Main_clinica #abertura #block_aberturaTxt p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  margin-top: 2vh;
+  line-height: 4vh;
+}
+body #Main_clinica #MVV {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 10;
+}
+body #Main_clinica #MVV .card_MVV {
+  width: 26%;
+  height: 80%;
+  position: relative;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_clinica #MVV .card_MVV::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: #0C1E8E;
+  z-index: -1;
+  border-top-left-radius: 2.5vw;
+  border-top-right-radius: 7.5vw;
+  border-bottom-left-radius: 7.5vw;
+  border-bottom-right-radius: 2.5vw;
+}
+body #Main_clinica #MVV .card_MVV::after {
+  content: "";
+  position: absolute;
+  background-color: #EEE8DC;
+  z-index: -1;
+  width: 30%;
+  height: 13vh;
+  top: 0;
+  border-radius: 50%;
+  border: 5px solid #0C1E8E;
+}
+body #Main_clinica #MVV .card_MVV img, body #Main_clinica #MVV .card_MVV svg {
+  position: absolute;
+  width: 30%;
+  height: 13vh;
+  padding: 1.75vw;
+  top: 0;
+}
+body #Main_clinica #MVV .card_MVV img path, body #Main_clinica #MVV .card_MVV svg path {
+  fill: #0C1E8E;
+  stroke: #0C1E8E;
+}
+body #Main_clinica #MVV .card_MVV h4 {
+  width: 100%;
+  margin-top: 10vh;
+  font-family: "Jost", sans-serif;
+  font-size: 2vw;
+  font-weight: 700;
+  color: #EEE8DC;
+}
+body #Main_clinica #MVV .card_MVV p {
+  width: 100%;
+  margin-top: 4vh;
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #EEE8DC;
+  line-height: 4vh;
+}
+body #Main_clinica #historia {
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+body #Main_clinica #historia #arvore {
+  position: absolute;
+  height: 160%;
+  opacity: 0.25;
+  left: -4vw;
+  bottom: 0;
+  z-index: -1;
+}
+body #Main_clinica #historia #block_checkpoints {
+  width: 35%;
+  height: 100%;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint {
+  width: 100%;
+  height: 20%;
+  margin: 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint h2 {
+  width: 60%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.2vw;
+  text-align: right;
+  color: #0C1E8E;
+  padding-left: 3vw;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint img, body #Main_clinica #historia #block_checkpoints .checkpoint svg {
+  height: 75%;
+  width: 20%;
+  margin-left: 2vw;
+  padding: 1.25vw;
+  position: relative;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint img path, body #Main_clinica #historia #block_checkpoints .checkpoint svg path {
+  fill: #EEE8DC;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint::before {
+  content: "";
+  position: absolute;
+  height: 75%;
+  width: 20%;
+  right: 2.2vw;
+  background-color: #7364CB;
+  z-index: -1;
+  border-radius: 50%;
+}
+body #Main_clinica #historia #block_checkpoints .checkpoint:hover::before {
+  background-color: #E4754A;
+}
+body #Main_clinica #historia #block_Historiatxt {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-right: 7.5vw;
+}
+body #Main_clinica #historia #block_Historiatxt::before {
+  content: "";
+  position: absolute;
+  top: 20vh;
+  width: 11vw;
+  height: 0.75vh;
+  border-radius: 10vw;
+  background-color: #E4754A;
+}
+body #Main_clinica #historia #block_Historiatxt h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+}
+body #Main_clinica #historia #block_Historiatxt span {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  text-align: right;
+  width: 100%;
+}
+body #Main_clinica #historia #block_Historiatxt p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: #0C1E8E;
+  margin-top: 10vh;
+  line-height: 4vh;
+  text-align: right;
+  padding-left: 12vw;
+}
+body #Main_clinica #equipe {
+  height: 107vh;
+  background-color: #7364CB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8vh;
+  position: relative;
+}
+body #Main_clinica #equipe .divisor path {
+  fill: #EEE8DC;
+}
+body #Main_clinica #equipe h2 {
+  width: 100%;
+  height: 10vh;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #EEE8DC;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_clinica #equipe h3 {
+  width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  padding: 0.5vh 9vw;
+}
+body #Main_clinica #equipe #block_cardsEquipe {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe {
+  width: 31%;
+  height: 30vh;
+  margin: 3.5vh 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 4.5vh;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(1), body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(2), body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(3) {
+  margin-top: 0;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(7), body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(8), body #Main_clinica #equipe #block_cardsEquipe .card_equipe:nth-child(9) {
+  margin-bottom: 0;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 85%;
+  width: 100%;
+  background-color: #EEE8DC;
+  opacity: 0.25;
+  border-radius: 2.5vw;
+  z-index: 1;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .imgUser {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  width: 7vw;
+  height: 7vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .doc {
+  z-index: 2;
+  width: 50%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: #EEE8DC;
+  font-size: 0.85vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1.3vw;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado {
+  z-index: 2;
+  width: 50%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  color: #7364CB;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado img, body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado svg {
+  position: absolute;
+  right: 0.9vw;
+  top: 1.6vh;
+  height: 75%;
+  z-index: 1;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado img path, body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado svg path {
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .estado span {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  padding-right: 1.75vw;
+  z-index: 2;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .nome {
+  z-index: 2;
+  width: 100%;
+  height: 10.5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1.5vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 2vh;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .abordagem {
+  z-index: 2;
+  width: 100%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 800;
+  font-size: 1vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 0.5vh;
+  letter-spacing: 0.03vw;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe .tipo_consulta {
+  z-index: 2;
+  width: 100%;
+  height: 5vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1vw;
+  color: #EEE8DC;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  letter-spacing: 0.03vw;
+  transition: all ease-in-out 0.2s;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover::before {
+  opacity: 1;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .doc {
+  color: #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .estado {
+  color: #EEE8DC;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .estado img path, body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .estado svg path {
+  fill: #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .nome {
+  color: #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .abordagem {
+  color: #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe .card_equipe:hover .tipo_consulta {
+  color: #E4754A;
+}
+body #Main_clinica #equipe #block_cardsEquipe::before {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 25vh;
+  background: linear-gradient(180deg, rgba(115, 100, 203, 0) 0%, rgb(115, 100, 203) 100%);
+  bottom: -0.5vh;
+  left: 0;
+  z-index: 5;
+}
+body #Main_clinica #equipe .btn_equipe {
+  background-color: #E4754A;
+  margin-top: 2vh;
+  z-index: 10;
+}
+body #Main_especialidades {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body #Main_especialidades section {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 5vw;
+  border: none;
+  outline: none;
+}
+body #Main_especialidades .btns {
+  all: unset;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  border-radius: 5vw;
+  transition: all ease-in-out 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vw;
+  padding: 0.65vh 0;
+}
+body #Main_especialidades .btns:hover {
+  transform: scale(1.1);
+}
+body #Main_especialidades #mainBlock {
+  position: relative;
+  padding-top: 125px;
+  outline: 1px solid red;
+}
+body #Main_especialidades #mainBlock h1 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5vw;
+  text-align: center;
+  color: #0C1E8E;
+  margin-top: 5vh;
+  padding: 0 20vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+body #Main_especialidades #mainBlock h1::before {
+  content: "";
+  position: absolute;
+  bottom: -2vh;
+  width: 12vw;
+  height: 0.75vh;
+  background-color: #E4754A;
+  border-radius: 10vw;
 }
 body footer {
   position: absolute;
@@ -842,6 +1650,7 @@ body footer a {
   width: 7.5vw;
   height: 65%;
   margin-left: 0.75vw;
+  transition: all ease-in-out 0.2s;
 }
 body footer a img, body footer a svg {
   width: 100%;
@@ -851,6 +1660,9 @@ body footer a img, body footer a svg {
 }
 body footer a img path, body footer a svg path {
   fill: #EEE8DC;
+}
+body footer a:hover {
+  transform: scale(1.1);
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/

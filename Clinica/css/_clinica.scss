@@ -1,0 +1,488 @@
+#Main_clinica{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+    section{
+        width: 100vw;
+        height: 100vh;
+        padding: 0 5vw;
+        border: none;
+        outline: none;
+    }
+    .divisor{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+    .btns{
+        all: unset;
+        font-family: $Second-font;
+        font-weight: 700;
+        font-size: 1vw;
+        color: $Creme;
+        border-radius: 5vw;
+        transition: all ease-in-out 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14vw;
+        padding: 0.65vh 0;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+
+    #abertura{
+        position: relative;
+        padding-top: 125px;
+        display: flex;
+        align-items: center;
+        img, svg{
+            position: absolute;
+            opacity: .25;
+            z-index: -1;
+        }
+        #folhas{
+            width: 75%;
+            right: 2vw;
+            bottom: 1vh;
+        }
+        h1{
+            order: 2;
+            margin-left: auto;
+            height: 65vh;
+            font-family: $Main-font;
+            font-size: 4vw;
+            text-align: right;
+            color: $Azul;
+            padding-left: 10vw;
+            padding-right: 3vw;
+        }
+        #ninho{
+            right: 9vw;
+            top: 26vh;
+            width: 18vw;
+        }
+        #block_aberturaTxt{
+            border: 5px solid $Azul;
+            width: 45%;
+            height: 65vh;
+            border-top-left-radius: 2.5vw;
+            border-top-right-radius: 7.5vw;
+            border-bottom-left-radius: 7.5vw;
+            border-bottom-right-radius: 2.5vw;
+            padding: 2.75vw;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 2.75vw;
+                top: 17vh;
+                width: 11vw;
+                height: 0.75vh;
+                border-radius: 10vw;
+                background-color: $Laranja;
+            }
+            h2{
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+            }
+            span{
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 400;
+                color: $Azul;
+            }
+            h3{
+                font-family: $Main-font;
+                font-size: 2.25vw;
+                color: $Azul;
+                margin-top: 8vh;
+            }
+            p{
+                font-family: $Second-font;
+                font-size: 1.15vw;
+                font-weight: 400;
+                color: $Azul;
+                margin-top: 2vh;
+                line-height: 4vh;
+            }
+        }
+    }
+    #MVV{
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 10;
+        .card_MVV{
+            width: 26%;
+            height: 80%;
+            position: relative;
+            padding: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 90%;
+                background-color: $Azul;
+                z-index: -1;
+                border-top-left-radius: 2.5vw;
+                border-top-right-radius: 7.5vw;
+                border-bottom-left-radius: 7.5vw;
+                border-bottom-right-radius: 2.5vw;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: $Creme;
+                z-index: -1;
+                width: 30%;
+                height: 13vh;
+                top: 0;
+                border-radius: 50%;
+                border: 5px solid $Azul;
+            }
+            img,svg{
+                position: absolute;
+                width: 30%;
+                height: 13vh;
+                padding: 1.75vw;
+                top: 0;
+                path{
+                    fill: $Azul;
+                    stroke: $Azul;
+                }
+            }
+            h4{
+                width: 100%;
+                margin-top: 10vh;
+                font-family: $Second-font;
+                font-size: 2vw;
+                font-weight: 700;
+                color: $Creme;
+            }
+            p{
+                width: 100%;
+                margin-top: 4vh;
+                font-family: $Second-font;
+                font-size: 1.1vw;
+                font-weight: 400;
+                color: $Creme;
+                line-height: 4vh;
+            }
+        }
+    }
+    #historia{
+        height: 75vh;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        #arvore{
+            position: absolute;
+            height: 160%;
+            opacity: .25;
+            left: -4vw;
+            bottom: 0;
+            z-index: -1;
+        }
+        #block_checkpoints{
+            width: 35%;
+            height: 100%;
+            .checkpoint{
+                width: 100%;
+                height: 20%;
+                margin: 5% 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                h2{
+                    width: 60%;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.2vw;
+                    text-align: right;
+                    color: $Azul;
+                    padding-left: 3vw;
+                }
+                img, svg{
+                    height: 75%;
+                    width: 20%;
+                    margin-left: 2vw;
+                    padding: 1.25vw;
+                    position: relative;
+                    path{
+                        fill: $Creme;
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 75%;
+                    width: 20%;
+                    right: 2.2vw;
+                    background-color: $Roxo;
+                    z-index: -1;
+                    border-radius: 50%;
+                }
+                &:hover{
+                    &::before{
+                        background-color: $Laranja;
+                    }
+                }
+            }
+        }
+        #block_Historiatxt{
+            width: 65%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            padding-right: 7.5vw;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 20vh;
+                width: 11vw;
+                height: 0.75vh;
+                border-radius: 10vw;
+                background-color: $Laranja;
+            }
+            h2{
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+            }
+            span{
+                font-family: $Second-font;
+                font-size: 1.1vw;
+                font-weight: 400;
+                color: $Azul;
+                text-align: right;
+                width: 100%;
+            }
+            p{
+                font-family: $Second-font;
+                font-size: 1.1vw;
+                font-weight: 500;
+                color: $Azul;
+                margin-top: 10vh;
+                line-height: 4vh;
+                text-align: right;
+                padding-left: 12vw;
+            }
+        }
+    }
+    #equipe{
+        height: 107vh;
+        background-color: $Roxo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8vh;
+        position: relative;
+        .divisor{
+            path{
+                fill: $Creme;
+            }
+        }
+        h2{
+            width: 100%;
+            height: 10vh;
+            font-family: $Main-font;
+            font-size: 3vw;
+            color: $Creme;
+            margin-top: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h3{
+            width: 100%;
+            text-align: center;
+            font-family: $Second-font;
+            font-size: 1vw;
+            font-weight: 300;
+            color: $Creme;
+            padding: 0.5vh 9vw;
+        }
+        #block_cardsEquipe{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5vh;
+            .card_equipe{
+                width: 31%;
+                height: 30vh;
+                margin: 3.5vh 0;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-top: 4.5vh;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                    margin-top: 0;
+                }
+                &:nth-child(7), &:nth-child(8), &:nth-child(9){
+                    margin-bottom: 0;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 85%;
+                    width: 100%;
+                    background-color: $Creme;
+                    opacity: .25;
+                    border-radius: 2.5vw;
+                    z-index: 1;
+                    transition: all ease-in-out .2s;
+                }
+                .imgUser{
+                    z-index: 3;
+                    position: absolute;
+                    top: 0;
+                    width: 7vw;
+                    height: 7vw;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 5px solid $Laranja;
+                }
+                .doc{
+                    z-index: 2;
+                    width: 50%;
+                    height: 5vh;
+                    font-family: $Second-font;
+                    font-weight: 500;
+                    color: $Creme;
+                    font-size: 0.85vw;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 1.3vw;
+                    transition: all ease-in-out .2s;
+                }
+                .estado{
+                    z-index: 2;
+                    width: 50%;
+                    height: 5vh;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    color: $Roxo;
+                    font-size: 1vw;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    transition: all ease-in-out .2s;
+                    img, svg{
+                        position: absolute;
+                        right: 0.9vw;
+                        top: 1.6vh;
+                        height: 75%;
+                        z-index: 1;
+                        path{ transition: all ease-in-out .2s; }
+                    }
+                    span{
+                        width: 100%;
+                        height: 100%;
+                        text-align: right;
+                        display: flex;
+                        align-items: end;
+                        justify-content: right;
+                        padding-right: 1.75vw;
+                        z-index: 2;
+                    }
+                }
+                .nome{
+                    z-index: 2;
+                    width: 100%;
+                    height: 10.5vh;
+                    font-family: $Second-font;
+                    font-weight: 800;
+                    font-size: 1.5vw;
+                    color: $Creme;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                    padding-bottom: 2vh;
+                    transition: all ease-in-out .2s;
+                }
+                .abordagem{
+                    z-index: 2;
+                    width: 100%;
+                    height: 5vh;
+                    font-family: $Second-font;
+                    font-weight: 800;
+                    font-size: 1vw;
+                    color: $Creme;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                    padding-bottom: 0.5vh;
+                    letter-spacing: .03vw;
+                    transition: all ease-in-out .2s;
+                }
+                .tipo_consulta{
+                    z-index: 2;
+                    width: 100%;
+                    height: 5vh;
+                    font-family: $Second-font;
+                    font-weight: 300;
+                    font-size: 1vw;
+                    color: $Creme;
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    letter-spacing: .03vw;
+                    transition: all ease-in-out .2s;
+                }
+                &:hover{
+                    &::before{ opacity: 1; }
+                    .doc{ color: $Laranja; }
+                    .estado{ color: $Creme; img, svg{ path{ fill: $Laranja; } } }
+                    .nome{ color: $Laranja; }
+                    .abordagem{ color: $Laranja; }
+                    .tipo_consulta{ color: $Laranja; }
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 101%;
+                height: 25vh;
+                background: linear-gradient(180deg, rgba(115,100,203,0) 0%, rgba(115,100,203,1) 100%);
+                bottom: -0.5vh;
+                left: 0;
+                z-index: 5;
+            }
+        }
+        .btn_equipe{
+            background-color: $Laranja;
+            margin-top: 2vh;
+            z-index: 10;
+        }
+    }
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){}
