@@ -327,7 +327,7 @@ body {
                                 position: absolute;
                                 width: 7.5vw;
                                 height: 7.5vw;
-                                top: 15%;
+                                top: 16%;
                                 background-color: $Roxo;
                                 z-index: -1;
                                 border-radius: 50%;
@@ -477,7 +477,6 @@ body {
                         width: 50%;
                         height: 5vh;
                         font-family: $Second-font;
-                        font-weight: 700;
                         color: $Roxo;
                         font-size: 1vw;
                         display: flex;
@@ -487,7 +486,7 @@ body {
                         img, svg{
                             position: absolute;
                             right: 0.9vw;
-                            top: 1.6vh;
+                            top: 1.75vh;
                             height: 75%;
                             z-index: 1;
                             path{ transition: all ease-in-out .2s; }
@@ -501,6 +500,7 @@ body {
                             justify-content: right;
                             padding-right: 1.75vw;
                             z-index: 2;
+                            font-weight: 700;
                         }
                     }
                     .nome{
@@ -592,7 +592,7 @@ body {
                 height: 60vh;
                 position: relative;
                 font-family: $Second-font;
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 1.25vw;
                 color: $Creme;
                 padding: 0 7.5vw;
@@ -854,6 +854,7 @@ body {
                             font-weight: 700;
                             color: $Creme;
                             line-height: normal;
+                            padding-right: 0.75vw;
                         }
                         p{
                             display: block;
@@ -1045,6 +1046,8 @@ body {
 
     @import 'clinica';
     @import 'especialidades';
+    @import 'equipe';
+    @import 'medico';
 
     
     footer{
@@ -1059,14 +1062,17 @@ body {
         background-color: $Roxo;
         p{
             font-family: $Second-font;
-            font-weight: 800;
+            font-weight: 600;
             font-size: 1vw;
             color: $Creme;
+            span{
+                font-weight: 600;
+            }
         }
         a{
             width: 7.5vw;
             height: 65%;
-            margin-left: 0.75vw;
+            margin-left: 1vw;
             transition: all ease-in-out .2s;
             img, svg{
                 width: 100%;

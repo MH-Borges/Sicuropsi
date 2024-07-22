@@ -1,0 +1,208 @@
+#Main_equipe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+    section{
+        width: 100vw;
+        height: 100vh;
+        padding: 0 5vw;
+        border: none;
+        outline: none;
+    }
+    .btns{
+        all: unset;
+        font-family: $Second-font;
+        font-weight: 700;
+        font-size: 1vw;
+        color: $Creme;
+        border-radius: 5vw;
+        transition: all ease-in-out 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14vw;
+        padding: 0.65vh 0;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    #mainBlock{
+        position: relative;
+        height: auto;
+        padding-top: 125px;
+        padding-bottom: 15vh;
+        h1{
+            font-family: $Main-font;
+            font-size: 3vw;
+            color: $Azul;
+            margin-top: 2vh;
+            padding: 0 29vw;
+            text-align: center;
+        }
+        h2{
+            font-family: $Second-font;
+            font-size: 1vw;
+            color: $Azul;
+            margin-top: 1vh;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -2vh;
+                width: 12vw;
+                height: 0.6vh;
+                background-color: $Laranja;
+                border-radius: 10vw;
+            }
+        }
+
+        #Seletores{
+            margin-top: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .dropdown{
+                width: 20%;
+                .btns{
+                    width: 100%;
+                    height: 4vh;
+                    display: flex;
+                    justify-content: left;
+                    padding: 0 1.5vw;
+                    color: $Creme;
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1.1vw;
+                    position: relative;
+                    img,svg{
+                        position: absolute;
+                        path{ fill: $Creme;}
+                        height: 65%;
+                        right: 1vw;
+                        transform: rotate(90deg);
+                    }
+                }
+                .btn_especialidade{
+                    background-color: $Laranja;
+                }
+                .btn_abordagem{
+                    background-color: $Roxo;
+                }
+                .btn_estado{
+                    background-color: $Azul;
+                }
+                &:nth-child(2){
+                    margin: 0 3vw;
+                }
+            }
+        }
+        #block_equipeCards{
+            margin-top: 5vh;
+            display: flex;
+            flex-wrap: wrap;
+            .card{
+                width: 40%;
+                height: 22vh;
+                overflow: hidden;
+                margin: 3vh 5%;
+                border-radius: 0;
+                background: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                padding-left: 13.5vw;
+                border: none;
+                &::before{
+                    content: '';
+                    width: 80%;
+                    height: 85%;
+                    position: absolute;
+                    border: 4px solid $Azul;
+                    right: 0;
+                    border-radius: 2.5vw;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 11.8vw;
+                    background-color: $Azul;
+                    opacity: .2;
+                    border-radius: 50%;
+                }
+                .imgUser{
+                    height: 100%;
+                    width: auto;
+                    position: absolute;
+                    border-radius: 50%;
+                    border: 4px solid $Azul;
+                    left: 0;
+                    top: 0;
+                }
+                .estado{
+                    position: absolute;
+                    top: 2.5vh;
+                    right: 1.25vw;
+                    width: 2.5vw;
+                    height: 2.25vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img, svg{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        path{
+                            fill: $Azul;
+                        }
+                    }
+                    span{
+                        font-family: $Second-font;
+                        font-size: 0.8vw;
+                        font-weight: 700;
+                        color: $Creme;
+                    }
+                }
+                .nome, .doc, .abordagem, .tipo_consulta{
+                    width: 100%;
+                    font-family: $Second-font;
+                    color: $Azul;
+                }
+                .nome{
+                    font-weight: 700;
+                    font-size: 1.75vw;
+                }
+                .doc{
+                    font-weight: 400;
+                    font-size: 1vw;
+                }
+                .abordagem{
+                    margin-top: 2vh;
+                    font-weight: 600;
+                    font-size: 1.1vw;
+                }
+                .tipo_consulta{
+                    font-weight: 300;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+    
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){}

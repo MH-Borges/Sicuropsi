@@ -1,5 +1,4 @@
 document.addEventListener( 'DOMContentLoaded', function() {
-    // galeria
     var elms = document.getElementsByClassName( 'splide' );
     for ( var i = 0; i < elms.length; i++ ) {
         if(i == 0){

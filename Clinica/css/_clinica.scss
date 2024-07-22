@@ -169,7 +169,7 @@
             }
             h4{
                 width: 100%;
-                margin-top: 10vh;
+                margin-top: 8vh;
                 font-family: $Second-font;
                 font-size: 2vw;
                 font-weight: 700;
@@ -180,7 +180,7 @@
                 margin-top: 4vh;
                 font-family: $Second-font;
                 font-size: 1.1vw;
-                font-weight: 400;
+                font-weight: 300;
                 color: $Creme;
                 line-height: 4vh;
             }
@@ -386,7 +386,6 @@
                     width: 50%;
                     height: 5vh;
                     font-family: $Second-font;
-                    font-weight: 700;
                     color: $Roxo;
                     font-size: 1vw;
                     display: flex;
@@ -396,7 +395,7 @@
                     img, svg{
                         position: absolute;
                         right: 0.9vw;
-                        top: 1.6vh;
+                        top: 1.75vh;
                         height: 75%;
                         z-index: 1;
                         path{ transition: all ease-in-out .2s; }
@@ -410,6 +409,7 @@
                         justify-content: right;
                         padding-right: 1.75vw;
                         z-index: 2;
+                        font-weight: 700;
                     }
                 }
                 .nome{
