@@ -22,6 +22,9 @@
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
     <!-- SVG Inject -->
     <script src="../js/svg-inject.min.js"></script>
 
@@ -31,11 +34,11 @@
 </head>
 
 <body>
-    <header>
+    <header style="border-bottom: none;">
         <ul class="menu">
             <li>
                 <a href="index.html">
-                    <h1 class="hide">Clinica Sicuro</h1>
+                    <span class="hide">Clinica Sicuro</span>
                     <img src="assets/icons/sicuro_clinica.svg" onload="SVGInject(this)" alt="">
                 </a>
             </li>
@@ -46,8 +49,70 @@
             <li><a class="active" href="contatos.html">Contato</a></li>
         </ul>
     </header>
-    <main>
-        Contatos
+    <main id="Main_contato">
+        <section id="form_contato">
+            <img class="divisor" src="assets/divisor.svg" onload="SVGInject(this)">
+            <h1>Nossos canais de contato!</h1>
+            <h2>Se precisar de mais informações ou quiser marcar uma consulta, mande um e-mail ou entre em contato pelas nossas redes, responderemos o mais rápido possível.</h2>
+            <div id="formBlock">
+                <form id="formulario" method="POST">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" required>
+                        <p>Nome completo</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="email" id="email" required>
+                        <p>E-mail</p><span>*</span>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="telefone" id="telefone" required>
+                        <p>Telefone de contato</p>
+                    </div>
+                    <div class="BlockBox">
+                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+                        <p>Como posso te ajudar?</p>
+                    </div>
+                    <button id="btn_form" class="btns btn_from" type="submit">Enviar mensagem</button>
+                </form>
+
+                <div id="msg_form"></div> 
+            </div>
+            
+            <div id="Block_contatoRedes">
+                <h3>Nossas redes:</h3>
+                <a href="" target="_blank" class="rede">
+                    <img src="assets/icons/insta.svg" onload="SVGInject(this)">
+                    <h4>Instagram: @Sicuropsi</h4>
+                    <span>Mandar uma DM</span>
+                </a>
+                <a href="" target="_blank" class="rede">
+                    <img src="assets/icons/whats.svg" onload="SVGInject(this)">
+                    <h4>WhatsApp: +55 (41) 9 9139-2215</h4>
+                    <span>Mandar uma mensagem</span>
+                </a>
+                <a href="" target="_blank" class="rede">
+                    <img src="assets/icons/email.svg" onload="SVGInject(this)">
+                    <h4>E-mail: contato@sicuropsi.com.br</h4>
+                    <span>Mandar uma mensagem</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="Block_contatoMapa">
+            <div id="endereco">
+                <img src="assets/icons/mapa.svg" onload="SVGInject(this)">
+                <h4>Rua Portugal, 90 - São Francisco, Curitiba, Paraná</h4>
+            </div>
+            <div id="horarios">
+                <img src="assets/icons/horario.svg" onload="SVGInject(this)">
+                <h4>Nossos horários de atendimento</h4>
+                <span>de Seg - sex 08:00 - 19:00 e Sábado: 08:30 - 14:00</span>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378.8594315338403!2d-49.277833565468406!3d-25.424836477603638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce40f170be981%3A0x2227ff2284a8bd19!2sR.%20Portugal%2C%2090%20-%20S%C3%A3o%20Francisco%2C%20Curitiba%20-%20PR%2C%2080510-280!5e0!3m2!1spt-BR!2sbr!4v1721248246482!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            
+
+            
+        </section>
     </main>
     <footer>
         <p>©<span id="data_footer"></span> SicuroPsi - Criação e desenvolvimento por:</p>
@@ -55,5 +120,48 @@
             <img src="assets/icons/Universo_Farol.svg" onload="SVGInject(this)">
         </a>
     </footer>
+
+    <script>
+        //formulario
+        $(document).ready(function () {
+            $('#telefone').mask('(00) 00000 - 0000');
+
+            $('#btn_form').click(function (e) {
+                $('#nome').prop('required',false);
+                $('#email').prop('required',false);
+                $('#telefone').prop('required',false);
+                $('#mensagem').prop('required',false);
+            });
+
+            $('#formulario').submit(function (e) {
+                e.preventDefault();
+                $('#msg_form').text('');
+                $('#msg_form').removeClass('text-danger');
+                $('#msg_form').removeClass('text-success');
+                $.ajax({
+                    url: "email.php",
+                    method: "post",
+                    data: $('form').serialize(),
+                    dataType: "text",
+                    success: function (msg) {
+                        if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
+                            $('#msg_form').addClass('text-success');
+                            $('#msg_form').text(msg);
+                            setTimeout(() => { window.location.reload(); }, 5000)
+                        }
+                        else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!') {
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text(msg);
+                        }
+                        else{
+                            $('#msg_form').removeClass('text-success');
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
+                        }
+                    }
+                })
+            });
+        });
+    </script>
 </body>
 </html>

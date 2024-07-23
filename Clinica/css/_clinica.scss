@@ -1,44 +1,4 @@
 #Main_clinica{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow-x: hidden;
-    position: relative;
-    section{
-        width: 100vw;
-        height: 100vh;
-        padding: 0 5vw;
-        border: none;
-        outline: none;
-    }
-    .divisor{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-    }
-    .btns{
-        all: unset;
-        font-family: $Second-font;
-        font-weight: 700;
-        font-size: 1vw;
-        color: $Creme;
-        border-radius: 5vw;
-        transition: all ease-in-out 0.15s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 14vw;
-        padding: 0.65vh 0;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-
-
     #abertura{
         position: relative;
         padding-top: 125px;

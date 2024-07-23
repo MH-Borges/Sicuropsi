@@ -1,36 +1,4 @@
 #Main_equipe{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow-x: hidden;
-    position: relative;
-    section{
-        width: 100vw;
-        height: 100vh;
-        padding: 0 5vw;
-        border: none;
-        outline: none;
-    }
-    .btns{
-        all: unset;
-        font-family: $Second-font;
-        font-weight: 700;
-        font-size: 1vw;
-        color: $Creme;
-        border-radius: 5vw;
-        transition: all ease-in-out 0.15s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 14vw;
-        padding: 0.65vh 0;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-
     #mainBlock{
         position: relative;
         height: auto;
@@ -40,7 +8,7 @@
             font-family: $Main-font;
             font-size: 3vw;
             color: $Azul;
-            margin-top: 2vh;
+            margin-top: 4vh;
             padding: 0 29vw;
             text-align: center;
         }
@@ -65,7 +33,7 @@
         }
 
         #Seletores{
-            margin-top: 5vh;
+            margin-top: 8vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -200,7 +168,6 @@
             }
         }
     }
-    
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/

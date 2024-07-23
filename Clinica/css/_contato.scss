@@ -1,0 +1,263 @@
+#Main_contato{
+    #form_contato{
+        position: relative;
+        padding-top: 18vh;
+        display: flex;
+        flex-wrap: wrap;
+        .divisor{
+            top: 124px;
+            path{
+                fill: $Roxo;
+            }
+        }
+        h1{
+            width: 100%;
+            height: 7vh;
+            font-family: $Main-font;
+            font-size: 3vw;
+            color: $Azul;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            width: 100%;
+            height: 3vh;
+            text-align: center;
+            font-family: $Second-font;
+            font-size: 1vw;
+            font-weight: 400;
+            color: $Azul;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #formBlock{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 72vh;
+            form{
+                width: 75%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                background-color: $Roxo;
+                border-radius: 2vw;
+                padding: 2vh 3vw;
+                .BlockBox{
+                    width: 100%;
+                    height: 12%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 1.5vh 0;
+                    input, textarea{
+                        all: unset;
+                        width: 100% !important;
+                        height: 75%;
+                        padding: 0 1.25vw;
+                        font-family: $Second-font;
+                        font-weight: 300;
+                        font-size: 0.9vw;
+                        color: $Creme;
+                        border-bottom: 3px solid $Creme;
+                    }
+                    p, span{
+                        position: absolute;
+                        left: 1.25vw;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 1vw;
+                        color: $Creme;
+                        transition: 0.5s;
+                    }
+                    &:nth-child(1){
+                        span{
+                            font-size: 1.1vw;
+                            left: 8.75vw;
+                            color: $Laranja;
+                        }
+                    }
+                    &:nth-child(2){
+                        span{
+                            font-size: 1.1vw;
+                            left: 4.25vw;
+                            color: $Laranja;
+                        }
+                    }
+                    &:nth-child(4){
+                        height: 30%;
+                        input, textarea{
+                            height: 90%;
+                            padding: 2vh 3vw 2vh 1.25vw;
+                            padding-right: 2vw;
+                            line-height: 3vh;
+                        }
+                        p{
+                            top: 20%;
+                        }
+                    }
+                }
+                .BlockBox input:focus ~ p, input:valid ~ p, input:focus ~ span, input:valid ~ span, textarea:focus ~ p, textarea:valid ~ p{
+                    transform:translate(-0.75vw, -3.5vh);
+                    font-size: 0.9vw;
+                }
+                .btn_from{
+                    background-color: $Laranja;
+                    margin-left: auto;
+                    margin-right: -2vw;
+                    margin-top: 2vh;
+                }
+            }
+            #msg_form{
+                position: absolute;
+                top: 90%;
+                left: 0;
+                width: 100%;
+                height: 7vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1vw;
+                text-align: center;
+                color: $Azul;
+            }
+        }
+        #Block_contatoRedes{
+            width: 50%;
+            height: 72vh;
+            padding-left: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3{
+                width: 100%;
+                font-family: $Second-font;
+                font-weight: 500;
+                font-size: 1.5vw;
+                color: $Azul;
+            }
+            .rede{
+                width: 100%;
+                height: 5.5vh;
+                margin: 4vh 0;
+                position: relative;
+                padding-left: 4.5vw;
+                img, svg {
+                    position: absolute;
+                    height: 80%;
+                    width: auto;
+                    left: 0;
+                    top: 10%;
+                    path{
+                        fill: $Azul;
+                    }
+                }
+                h4, span{
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: center;
+                    font-family: $Second-font;
+                }
+                h4{
+                    font-size: 1.2vw;
+                    font-weight: 700;
+                    color: $Azul;
+                }
+                span{
+                    font-size: 1vw;
+                    font-weight: 400;
+                    color: $Laranja;
+                }
+                &:nth-child(2), &:nth-child(3){
+                    img, svg {
+                        left: 0.5vw;
+                    } 
+                }
+                &:hover{
+                    img, svg {
+                        transform: scale(1.1);
+                    }
+                    span{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    #Block_contatoMapa{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20vh;
+        justify-content: center;
+        #endereco, #horarios{
+            width: 40%;
+            height: 6.5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-left: 5vw;
+            img, svg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: auto;
+                height: 100%;
+            }
+        }
+        #endereco{
+            h4{
+                width: 100%;
+                font-family: $Second-font;
+                font-size: 1.15vw;
+                font-weight: 700;
+                color: $Laranja;
+            }
+        }
+        #horarios{
+            margin-left: 2vw;
+            h4{
+                text-align: left;
+                width: 100%;
+                font-family: $Second-font;
+                font-size: 1.15vw;
+                font-weight: 700;
+                color: $Azul;
+            }
+            span{
+                text-align: left;
+                width: 100%;
+                font-family: $Second-font;
+                font-size: 0.9vw;
+                font-weight: 400;
+                color: $Laranja;
+            }
+        }
+        iframe{
+            width: 100%;
+            height: 60vh;
+            border-top-left-radius: 2.5vw;
+            border-top-right-radius: 7.5vw;
+            border-bottom-left-radius: 7.5vw;
+            border-bottom-right-radius: 2.5vw;
+            border: $Laranja solid 5px;
+            margin-top: 2vh;
+        }
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 479px){}

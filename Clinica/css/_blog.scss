@@ -1,0 +1,448 @@
+#Main_Blog{
+    padding-bottom: 25vh;
+    #main_block{
+        position: relative;
+        padding-top: 17vh;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 15vh;
+            top: 12vh;
+            left: 0;
+            background-color: $Roxo;
+            z-index: -1;
+        }
+        .divisor{
+            top: 27vh;
+            z-index: -1;
+            path{
+                fill: $Roxo;
+            }
+        }
+        h1{
+            width: 100%;
+            height: 7vh;
+            font-family: $Main-font;
+            font-size: 3vw;
+            color: $Creme;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            width: 100%;
+            height: 4vh;
+            text-align: center;
+            font-family: $Second-font;
+            font-size: 1vw;
+            font-weight: 400;
+            color: $Creme;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5vh;
+        }
+        #menu_blog{
+            margin-top: 15vh;
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            position: relative;
+            .splide{
+                width: 80%;
+                height: 100%;
+                .splide__track{
+                    height:100%;
+                    width: 90%;
+                    margin-left: 5%;
+                    .splide__list{
+                        height:100%;
+                        width: 100%;
+                        .splide__slide{
+                            height:100%;
+                            width: 100%;
+                            position: relative;
+                            border-left: 2px solid $Laranja;
+                            border-right: 2px solid $Laranja;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $Second-font;
+                            font-weight: 500;
+                            font-size: 1.1vw;
+                            color: $Azul;
+                            &:first-child{
+                                border-left: none;
+                            }
+                            &:last-child{
+                                border-right: none;
+                            }
+                        }
+                        .active{
+                            font-weight: 800;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: $Laranja;
+                                opacity: .2;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+                .splide__arrows{
+                    .splide__arrow {
+                        width: 1.5vw;
+                        height: 1.5vw;
+                        background: none;
+                        opacity: 1;
+                        svg{
+                            width: 100%;
+                            height: 100%;
+                            path{
+                                fill: $Laranja;
+                            }
+                        }
+                        &:disabled{
+                            opacity: 0;
+                        }
+                    }
+                    .splide__arrow--prev{
+                        left: 1vw;
+                    }
+                    .splide__arrow--next{
+                        right: 1vw;
+                    }
+                }
+                .splide__pagination {
+                    display: none;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            .searchBar {
+                width: 20%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input {
+                    all: unset;
+                    width: 90%;
+                    height: 80%;
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    font-weight: 400;
+                    color: $Azul;
+                    padding-left: 1vw;
+                    outline: 3px solid $Laranja;
+                    border-radius: 10vw;
+                    &::placeholder{
+                        color: $Laranja;
+                        font-size: 1.1vw;
+                        font-weight: 500;
+                    }
+                }
+                img,svg{
+                    position: absolute;
+                    right: 1.75vw;
+                }
+            }
+            .Search_resultBox{
+                position: absolute;
+                top: 6vh;
+                right: 0;
+                width: 25%;
+                min-height: 5vh;
+                height: auto;
+                max-height: 40vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background: $Roxo;
+                z-index: 99 !important;
+                border-radius: 1vw;
+                .searchResult{
+                    position: relative;
+                    width: 100%;
+                    height: 14vh;
+                    border-top: 1px solid $Creme;
+                    border-bottom: 1px solid $Creme;
+                    margin: 1vh 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(12, 29, 142, 0.4);
+                        backdrop-filter: blur(2px);
+                        z-index: 2;
+                    }
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                    }
+                    span{
+                        position: absolute;
+                        z-index: 5;
+                        top: 1vh;
+                        left: 0.5vw;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 0.8vw;
+                        color: $Laranja;
+                    }
+                    .tag{
+                        left: auto;
+                        right: 0.5vw;
+                    }
+                    .titulo{
+                        z-index: 5;
+                        font-family: $Second-font;
+                        font-weight: 800;
+                        font-size: 1.2vw;
+                        color: $Creme;
+                        text-align: center;
+                        padding: 0 1vw;
+                        margin-top: 2vh;
+                    }
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .nullResult{
+                    width: 100%;
+                    height: 10vh;
+                    border: none;
+                    margin: 0;
+                    position: relative;
+                    &::before{
+                        display: none;
+                    }
+                    span{
+                        all: unset;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        font-family: $Second-font;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1vw;
+                        font-weight: 800;
+                        color: $Creme;
+                    }
+                }
+            }
+        }
+        .filter{
+            margin-top: 4vh;
+            width: 100%;
+            min-height: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .card_blog{
+                width: 28%;
+                height: 65vh;
+                border-top-left-radius: 2.5vw;
+                border-top-right-radius: 7.5vw;
+                border-bottom-left-radius: 7.5vw;
+                border-bottom-right-radius: 2.5vw;
+                overflow: hidden;
+                position: relative;
+                padding: 10vh 2vw;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 2vh 0;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(12, 29, 142, 0.4);
+                    backdrop-filter: blur(4px);
+                    z-index: 2;
+                    transition: all ease-in-out .2s;
+                }
+                img{
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                span, h4, p, button{
+                    position: relative;
+                    z-index: 10 !important;
+                    color: $Creme;
+                }
+                span{
+                    outline: 2px solid $Laranja;
+                    border-radius: 10vw;
+                    height: 3vh;
+                    padding: 0 0.75vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 0.9vw;
+                    color: $Laranja;
+                }
+                .tag{
+                    margin-left: auto;
+                }
+                h4{
+                    font-family: $Second-font;
+                    font-size: 2.5vw;
+                    font-weight: 700;
+                    color: $Creme;
+                    line-height: 6vh; 
+                }
+                p{
+                    display: none;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all ease-in-out .2s;
+                }
+                button{
+                    width: 100%;
+                    height: 3.5vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    font-family: $Second-font;
+                    font-size: 1vw;
+                    font-weight: 700;
+                    color: $Laranja;
+                    position: absolute;
+                    bottom: 7vh;
+                    left: 0;
+                    img,svg{
+                        height: 100%;
+                        width: auto;
+                        margin-left: 0.5vw;
+                    }
+                }
+                &:hover{
+                    &::before{
+                        background-color: rgba(12, 29, 142, 0.6);
+                        backdrop-filter: blur(8px);
+                    }
+                    h4{
+                        font-family: $Second-font;
+                        font-size: 1.5vw;
+                        font-weight: 700;
+                        color: $Creme;
+                        line-height: normal;
+                        padding-right: 0.75vw;
+                    }
+                    p{
+                        display: block;
+                        opacity: 1;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 400;
+                        color: $Creme;
+                        margin-top: -3vh;
+                        line-height: 3vh;
+                    }
+                }
+            }
+        }
+    }
+    #equipe_block{
+        margin-top: 10vh;
+        width: 100%;
+        height: 75vh;
+        background-color: $Roxo;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .divisor{
+            top: 0;
+            path{
+                fill: $Creme;
+            }
+        }
+        #block_equipeTxt{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            padding-right: 5vw;
+            h2{
+                width: 100%;
+                text-align: right;
+                font-family: $Second-font;
+                font-weight: 600;
+                font-size: 2.5vw;
+                color: $Creme;
+                margin-bottom: 2vh;
+            }
+            p{
+                width: 100%;
+                text-align: right;
+                font-family: $Second-font;
+                font-weight: 300;
+                font-size: 1.25vw;
+                color: $Creme;
+                padding-left: 15vw;
+                line-height: 4.5vh;
+            }
+            .btn_equipes{
+                background-color: $Laranja;
+                margin-top: 10vh;
+            }
+        }
+        #block_imgEquipe{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: left;
+            img{
+                width: 62%;
+            }
+        }
+        .bottomD{
+            top: 94%;
+            transform: rotate(180deg);
+            z-index: 9;
+        }
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 479px){}

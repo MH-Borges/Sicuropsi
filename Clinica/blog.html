@@ -19,6 +19,13 @@
     <meta name="og:image" property="og:image" content="">
     <meta property=”og:description” content=""/>
 
+    <!-- Splide Carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+   
+    <!-- Mixitup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    
     <!-- SVG Inject -->
     <script src="../js/svg-inject.min.js"></script>
 
@@ -28,11 +35,11 @@
 </head>
 
 <body>
-    <header>
+    <header style="border-bottom: none;">
         <ul class="menu">
             <li>
                 <a href="index.html">
-                    <h1 class="hide">Clinica Sicuro</h1>
+                    <span class="hide">Clinica Sicuro</span>
                     <img src="assets/icons/sicuro_clinica.svg" onload="SVGInject(this)" alt="">
                 </a>
             </li>
@@ -43,8 +50,219 @@
             <li><a href="contatos.html">Contato</a></li>
         </ul>
     </header>
-    <main>
-        Blog
+    <main id="Main_Blog">
+        <section id="main_block">
+            <img class="divisor" src="assets/divisor_blog.svg" onload="SVGInject(this)">
+            <h1>Sicuro blog</h1>
+            <h2>Conheça mais ninhos de informação em nossa árvore de possibilidades.</h2>
+            
+            <div id="menu_blog">
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="controls splide__list">
+                            <li class="splide__slide active" data-filter="*">Todos</li>
+                            <li class="splide__slide" data-filter=".Saude_BemEstar">Saúde e bem estar</li>
+                            <li class="splide__slide" data-filter=".Relacionamentos">Relacionamentos</li>
+                            <li class="splide__slide" data-filter=".Disturbios_Mentais">Distúrbios mentais</li>
+                            <li class="splide__slide" data-filter=".Infancia_Adolescencia">Infância e adolescência</li>
+                            <li class="splide__slide" data-filter=".Relacionamentos">Relacionamentos</li>
+                            <li class="splide__slide" data-filter=".Saude_BemEstar">Saúde e bem estar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="searchBar">
+                    <img class="lupa" src="assets/icons/lupa.svg" onload="SVGInject(this)">
+                    <input type="text" id="filter" placeholder="Buscar...">
+                </div>
+                <div class="Search_resultBox hide"></div>
+            </div>
+
+            <div class="filter">
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Saude_BemEstar card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder1.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder1.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Até aonde seus pensamentos podem te levar?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Relacionamentos card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder2.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder2.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Relacionamentos</span>
+                    <h4 class="titulo">Você não está sozinho!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+                <a class="mix Disturbios_Mentais card_blog" href="blog_post.html">
+                    <img src="assets/blog/blog_placeholder3.webp" alt="">
+                    <span class="hide">assets/blog/blog_placeholder3.webp</span>
+                    <span class="data">31/12/2024</span>
+                    <span class="tag">Saúde e bem estar</span>
+                    <h4 class="titulo">Você tem o controle de todo o seu tempo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis rhoncus urna neque viverra justo...</p>
+                    <button class="btn">Continuar lendo <img src="assets/icons/seta_fina.svg" onload="SVGInject(this)"></button>
+                </a>
+               
+            </div>
+        </section>
+
+        <section id="equipe_block">
+            <img class="divisor" src="assets/divisor.svg" onload="SVGInject(this)">
+           
+            <div id="block_equipeTxt">
+                <h2>Precisando de assistência medica?</h2>
+                <p>
+                    Temos uma equipe de profissionais capacitados em diversas áreas
+                    de atuação, prontos para te ajudar em qualquer situação que estiver passando! Te ajudaremos em nosso ninho restaurando suas asas para que você possa alçar lindos voos.
+                    <br><br>
+                    Entre em contato agora mesmo e iremos te auxiliar com todas suas dores!
+                </p>
+                <a class="btns btn_equipes" href="equipe.html">Conheça a equipe Sicuro</a>
+            </div>
+            <div id="block_imgEquipe">
+                <img src="assets/marcela_equipe.webp" alt="">
+            </div>
+
+            <img class="bottomD divisor" src="assets/divisor.svg" onload="SVGInject(this)">
+        </section>
     </main>
     <footer>
         <p>©<span id="data_footer"></span> SicuroPsi - Criação e desenvolvimento por:</p>
@@ -52,5 +270,97 @@
             <img src="assets/icons/Universo_Farol.svg" onload="SVGInject(this)">
         </a>
     </footer>
+
+    <script>
+        new Splide( '.splide', {
+            padding: { left: '0', right: '7.5vw' },
+            perPage: 4,
+            perMove: 1,
+            focus  : 0,
+            omitEnd: true,
+            drag   : 'free',
+            arrowPath: 'M28.6236 16.8294C31.0942 18.6647 31.0942 22.3353 28.6236 24.1706L7.88833 39.574C4.83451 41.8426 0.476562 39.6843 0.476562 35.9034L0.476564 5.09658C0.476564 1.31565 4.83451 -0.842576 7.88833 1.42598L28.6236 16.8294Z',
+        }).mount();
+
+        document.querySelectorAll('.controls li').forEach(function (li) {
+            li.addEventListener('click', function () {
+                document.querySelectorAll('.controls li').forEach(function (li) {
+                    li.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        if (document.querySelectorAll('.filter').length > 0) {
+            var containerEl = document.querySelector('.filter');
+            var mixer = mixitup(containerEl);
+        }
+
+        //BARRA DE PESQUISA
+        const filter = document.getElementById('filter');
+        const listPosts = [];
+        getData();
+        filter.addEventListener('input', (e) => {
+            filterData(e.target.value);
+            document.querySelector('.searchBar').addEventListener('click', () => {
+                if (filter.value !== "") {
+                    filter.value = "";
+                    filterData(e.target.value);
+                }
+            });
+        });
+
+        function getData() {
+            document.querySelectorAll('.card_blog').forEach(e => {
+                const img = e.children[1].innerHTML;
+                const data = e.children[2].innerHTML;
+                const tag = e.children[3].innerHTML;
+                const titulo = e.children[4].innerHTML;
+
+                listPosts.push({
+                    img: img,
+                    data: data,
+                    tag: tag,
+                    titulo: titulo
+                });
+            });
+        }
+
+        function filterData(searchTerm) {
+            document.querySelectorAll('.searchResult').forEach(e => e.remove());
+
+            listPosts.forEach(post => {
+                if (post.data.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    post.tag.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    post.titulo.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    
+                    document.querySelector('.Search_resultBox').classList.remove('hide');
+                    
+                    const resultElement = document.createElement('a');
+                    resultElement.classList.add('searchResult');
+                    resultElement.href = 'blog_post.html';
+                    resultElement.innerHTML = `
+                        <img src="${post.img}" alt="">
+                        <span class="data">${post.data}</span>
+                        <span class="tag">${post.tag}</span>
+                        <h4 class="titulo">${post.titulo}</h4>
+                    `;
+                    document.querySelector('.Search_resultBox').appendChild(resultElement);
+                }
+            });
+
+            if (document.querySelector('.Search_resultBox').innerHTML.trim() === "") {
+                const noResultElement = document.createElement('a');
+                noResultElement.classList.add('searchResult', 'nullResult');
+                noResultElement.innerHTML = `<span>Nenhum resultado encontrado</span>`;
+                document.querySelector('.Search_resultBox').appendChild(noResultElement);
+            }
+
+            if (searchTerm === "") {
+                document.querySelector('.Search_resultBox').classList.add('hide');
+                document.querySelector('.Search_resultBox').textContent = '';
+            }
+        }
+    </script>
 </body>
 </html>

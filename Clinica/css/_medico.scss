@@ -1,44 +1,133 @@
 #Main_medico{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    overflow-x: hidden;
-    position: relative;
-    section{
-        width: 100vw;
-        height: 100vh;
-        padding: 0 5vw;
-        border: none;
-        outline: none;
-    }
-    .btns{
-        all: unset;
-        font-family: $Second-font;
-        font-weight: 700;
-        font-size: 1vw;
-        color: $Creme;
-        border-radius: 5vw;
-        transition: all ease-in-out 0.15s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 14vw;
-        padding: 0.65vh 0;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-
     #mainBlock{
         position: relative;
         height: auto;
-        padding-top: 125px;
-        padding-bottom: 15vh;
-        
+        padding: 20vh 5vw 25vh;
+        display: flex;
+        #imgUser{
+            width: 40vw;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            img, svg{
+                width: 75%;
+                height: auto;
+                border-top-left-radius: 1.5vw;
+                border-top-right-radius: 7.5vw;
+                border-bottom-left-radius: 7.5vw;
+                border-bottom-right-radius: 1.5vw;
+                border: 5px solid $Azul;
+            }
+        }
+        #infos{
+            width: 60vw;
+            display: flex;
+            flex-wrap: wrap;
+            #especialidade{
+                all: unset;
+                width: 100%;
+                height: 3vh;
+                font-family: $Second-font;
+                font-size: 1vw;
+                font-weight: 700;
+                color: $Azul;
+                display: flex;
+                align-items: center;
+            }
+            #nome_user{
+                all: unset;
+                width: 100%;
+                height: 9vh;
+                font-family: $Second-font;
+                font-size: 3.5vw;
+                letter-spacing: 0.15vw;
+                font-weight: 900;
+                color: $Azul;
+                display: flex;
+                align-items: center;
+            }
+            #doc{
+                all: unset;
+                width: 100%;
+                height: 5vh;
+                font-family: $Second-font;
+                font-size: 2vw;
+                font-weight: 900;
+                letter-spacing: 0.15vw;
+                color: $Laranja;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -2vh;
+                    left: 0;
+                    width: 12vw;
+                    height: 0.8vh;
+                    border-radius: 10vw;
+                    background-color: $Laranja;
+                }
+            }
+            #estado, #atendimento, #abordagem, #publico, #bio{
+                all: unset;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0.75vh 0;
+                h3{
+                    font-family: $Second-font;
+                    font-weight: 400;
+                    font-size: 1.35vw;
+                    color: $Azul;
+                    padding: 0.5vh 0;
+                }
+                p{
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1vw;
+                    color: $Roxo;
+                    line-height: 3.5vh;
+                    padding: 0;
+                    padding-right: 5vw;
+                }
+            }
+            #estado, #atendimento{
+                width: 50%;
+                margin-top: 7vh;
+            }
+            #botoes{
+                width: 100%;
+                height: 6vh;
+                margin-top: 6vh;
+                display: flex;
+                align-items: center;
+                .redes{
+                    height: 100%;
+                    width: auto;
+                    margin: 0 1vw;
+                    transition: all ease-in-out .2s;
+                    img, svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                    &:hover{
+                        transform: scale(1.15);
+                    }
+                }
+                .btn_agendamento{
+                    background-color: $Laranja;
+                    margin-left: auto;
+                    margin-right: 2vw;
+                    height: 4vh;
+                }
+            }
+        }
     }
-    
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
