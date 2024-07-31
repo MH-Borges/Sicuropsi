@@ -1,5 +1,5 @@
 <?php
-require_once("../../configs/conexao.php"); 
+require_once("../../../configs/conexao.php"); 
 
 $senhaAntiga = $_POST['antigaSenha'];
 $novaSenha = $_POST['novaSenha'];
@@ -26,12 +26,12 @@ if($confirmaNovaSenha == ""){
 }
 
 if($senhaAntiga != $senhaUserSemAlteracoes){
-    echo 'Senha antiga não coicide com senhas cadastradas no banco de dados!';
+    echo 'Senha antiga não coicide com senha cadastrada no banco de dados!';
     exit();
 }
 
 if($novaSenha != $confirmaNovaSenha){
-    echo 'Nova senha e confirma nova senha não coicidem!';
+    echo 'Nova senha e confirmação de nova senha não coicidem!';
     exit();
 }
 
@@ -40,11 +40,10 @@ if($novaSenha == $senhaUserSemAlteracoes){
     exit();
 }
 
-$res = $pdo->prepare("UPDATE usuarios SET senha = :senha, senha_Crip = :senha_Crip WHERE id = :id");
+$res = $pdo->prepare("UPDATE medicos SET senha = :senha, senha_Crip = :senha_Crip WHERE id = :id");
 
 $res->bindValue(":senha", $novaSenha);
 $res->bindValue(":senha_Crip", $senha_crip);
-
 $res->bindValue(":id", $idUser);
 
 $res->execute();

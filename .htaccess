@@ -1,0 +1,30 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# RewriteRule ^produto_(.*)$ produto.php?nome=$1 [L]
+# RewriteRule ^produtos_(.*)$ produtos.php?nome=$1 [L]
+
+# RewriteRule ^produtos(.*)$ produtos.php [L]
+# RewriteRule ^categorias(.*)$ categorias.php [L]
+# RewriteRule ^carrinho(.*)$ carrinho.php [L]
+
+AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+# Um ano para arquivos de imagem
+<filesMatch ".(jpg|jpeg|png|gif|ico|svg|otf|woff2)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# Um mês para css e js
+<filesMatch ".(css|js|php)$">
+Header set Cache-Control "max-age=3000000, public"
+</filesMatch>

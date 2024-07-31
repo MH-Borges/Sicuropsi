@@ -1,0 +1,16 @@
+#Main_homeEdu{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    h1{
+        font-family: $Main-font;
+        font-size: 10vw;
+        font-weight: 700;
+        color: $Azul;
+        letter-spacing: 1vw;
+    }
+}

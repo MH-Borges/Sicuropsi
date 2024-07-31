@@ -16,7 +16,7 @@ function scrollToIdOnClick(event) {
         if(event.currentTarget.getAttribute('href') == '#home'){
             var targetOffset = targetElement.offsetTop;
         }else{
-            var targetOffset = targetElement.offsetTop - 150;
+            var targetOffset = targetElement.offsetTop - 100;
         }
         smoothScrollTo(0, targetOffset);
     }

@@ -1,0 +1,622 @@
+
+@import '../../css/colors_fonts';
+@import '../../css/base';
+
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: $Creme;
+    overflow-x: hidden;
+    position: relative;
+    header{
+        background-color: $Roxo;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: all ease-in-out 0.15s;
+        border-bottom: 2px solid $Laranja;
+        .menu{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                height: 75%;
+                display: flex;
+                align-items: center;
+                .dropdown{
+                    width: 4vw;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    #dropdownMenu, #dropdownMiniMenu{
+                        width: 100%;
+                        height: 100%;
+                        img, svg{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.75vw;
+                        }
+                    }
+                    .dropdown-menu{
+                        border: none;
+                        outline: 1px solid $Laranja;
+                        width: 15vw;
+                        padding: 0;
+                        border-radius: 1vw;
+                        overflow: hidden;
+                        transform: translate(0px, 85px) !important;
+                        background-color: $Creme;
+                        li{
+                            width: 100%;
+                            height: 8vh;
+                            &:nth-child(2){
+                                margin: 1vh 0;
+                            }
+                            button, a{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                font-family: $Second-font;
+                                font-weight: 700;
+                                font-size: 1.1vw;
+                                color: $Azul;
+                                img, svg{
+                                    height: 50%;
+                                    width: auto;
+                                    margin-right: 1vw;
+                                    path{
+                                        fill: $Roxo;
+                                    }
+                                }
+                            }
+                            a{
+                                position: relative;
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    width: 85%;
+                                    height: 1px;
+                                    background-color: $Azul;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #logo{
+                margin: 0;
+                margin-right: auto;
+                width: 11vw;
+                a{
+                    all: unset;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    transition: ease-in-out 0.25s all;
+                    svg, img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        path{
+                            fill: $Creme;
+                        }
+                    }
+                    &:hover{
+                        color: $Amarelo;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }        
+    }
+    .modal-backdrop
+    {
+        opacity: 0.85 !important;
+    }
+    .modal{
+        .modal-dialog{
+            .modal-content{
+                border: none;
+            }
+        }
+    }
+
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+        position: relative;
+        section{
+            width: 100vw;
+            height: 100vh;
+            padding: 0 5vw;
+            border: none;
+            outline: none;
+        }
+        .btns{
+            all: unset;
+            font-family: $Second-font;
+            font-weight: 700;
+            font-size: 1vw;
+            color: $Creme;
+            border-radius: 5vw;
+            transition: all ease-in-out 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14vw;
+            padding: 0.65vh 0;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }   
+    #Main_login{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        #login_sreen{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            video{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                object-fit: fill;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background-color: $Azul;
+                opacity: .3;
+            }
+            a{
+                z-index: 5;
+                height: 75%;
+                width: auto;
+                transition: all ease-in-out .25s;
+                img,svg{
+                    height: 100%;
+                    object-fit: cover;
+                    padding: 3vw;
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+            #LoginBox{
+                position: relative;
+                width: 40vw;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 5;
+                h2{
+                    font-family: $Second-font;
+                    color: $Creme;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 3vw;
+                    font-weight: 700;
+                    margin-bottom: 10vh;
+                }
+                .BlockBox{
+                    width: 100%;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    position: relative;
+                    margin: 2vh 0;
+                    input{
+                        width: 75%;
+                        border: none;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 300;
+                        color: $Creme;
+                        background: none;
+                        outline: 1px solid $Creme;
+                        z-index: 10 !important;
+                        border-radius: 2vw;
+                        padding: 0 1.5vw;
+                    }
+                    span{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        left: 16%;
+                        font-family: $Second-font;
+                        position: absolute;
+                        font-size: 1.25vw;
+                        color: $Creme;
+                        font-weight: 500;
+                        transition: 0.5s;
+                    }
+                }
+                .senhaInput{
+                    z-index: 4;
+                    transition: all ease-in-out .25s;
+                    #eye_box{
+                        position: absolute;
+                        height: 100%;
+                        width: 5vh;
+                        right: 5%;
+                        z-index: 12 !important;
+                        opacity: 0;
+                        transition: all ease-in-out .25s;
+                        img,svg{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.35vw;
+                            path{
+                                fill: $Amarelo;
+                            }
+                        }
+                    }
+                    &:hover{
+                        #eye_box{
+                            right: 14%;
+                            opacity: 1;
+                        } 
+                    }
+                }
+                .BlockBox input:focus ~ span, input:valid ~ span{
+                    transform:translate(-0.5vw, -3.75vh);
+                    font-size: 1vw;
+                    font-weight: 800;
+                }
+                #senhaRecoverBtn{
+                    position: absolute;
+                    width: 20%;
+                    height: 4vh;
+                    font-family: $Second-font;
+                    color: $Creme;
+                    font-weight: 400;
+                    font-size: 0.9vw;
+                    top: 63%;
+                    right: 3vw;
+                    z-index: 10;
+                    text-align: right;
+                    &:hover{
+                        color: $Laranja;
+                    }
+                }
+                .btn_login{
+                    margin-top: 10vh;
+                    background-color: $Laranja;
+                }
+            }
+            #Recupera_senha{
+                position: relative;
+                width: 45vw;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 5;
+                h2{
+                    font-family: $Second-font;
+                    color: $Creme;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 3vw;
+                    font-weight: 700;
+                    margin-bottom: 10vh;
+                }
+                .BlockBox{
+                    width: 100%;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    position: relative;
+                    margin: 3vh 0;
+                    input{
+                        width: 75%;
+                        border: none;
+                        font-family: $Second-font;
+                        font-size: 1vw;
+                        font-weight: 300;
+                        color: $Creme;
+                        background: none;
+                        outline: 1px solid $Creme;
+                        z-index: 10 !important;
+                        border-radius: 2vw;
+                        padding: 0 1.5vw;
+                    }
+                    span{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        left: 16%;
+                        font-family: $Second-font;
+                        position: absolute;
+                        font-size: 1.25vw;
+                        color: $Creme;
+                        font-weight: 500;
+                        transition: 0.5s;
+                    }
+                    .lengthInput{
+                        position: absolute;
+                        top: 100%;
+                        left: 81%;
+                        width: 3.5vw;
+                        height: 75%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Second-font;
+                        color: $Creme;
+                        font-size: 0.9vw;
+                        font-weight: 800;
+                    }
+                }
+                .senhaInput{
+                    z-index: 4;
+                    transition: all ease-in-out .25s;
+                    #eye_boxRecup, #eye_box_RecupRepet{
+                        position: absolute;
+                        height: 100%;
+                        width: 5vh;
+                        right: 5%;
+                        z-index: 12 !important;
+                        opacity: 0;
+                        transition: all ease-in-out .25s;
+                        img,svg{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.35vw;
+                            path{
+                                fill: $Amarelo;
+                            }
+                        }
+                    }
+                    &:hover{
+                        #eye_boxRecup, #eye_box_RecupRepet{
+                            right: 14%;
+                            opacity: 1;
+                        } 
+                    }
+                }
+                .BlockBox input:focus ~ span, input:valid ~ span{
+                    transform:translate(-0.5vw, -3.75vh);
+                    font-size: 1vw;
+                    font-weight: 800;
+                }
+                .btn_Resetlogin{
+                    margin-top: 10vh;
+                    background-color: $Laranja;
+                }
+            }
+            #msg_RecupSenha{
+                z-index: 5;
+                width: 35%;
+                min-height: 5vh;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1.25vw;
+                text-align: center;
+                position: absolute;
+                top: 10vh;
+            }
+            #voltaTela{
+                z-index: 5;
+                position: absolute;
+                bottom: 2vh;
+                left: 2vw;
+                font-family: $Second-font;
+                font-weight: 400;
+                font-size: 1.25vw;
+                color: $Creme;
+                a{
+                    color: $Laranja;
+                    font-weight: 700;
+                }
+            }
+        }
+        #ModalRecoverSenha{
+            padding: 0;
+            margin: 0;
+            .ModalRecoverSenha{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 40vh;
+                margin: 15vh auto;
+                #Form_ModalrecupSenha{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body{
+                        width: 100%;
+                        height: 75%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        h5{
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            padding: 0 1vw;
+                            font-weight: 500;
+                            text-align: center;
+                            margin-bottom: 8vh;
+                            width: 100%;
+                        }
+                        .BlockBox{
+                            width: 100%;
+                            height: 5vh;
+                            display: flex;
+                            justify-content: center;
+                            align-self: center;
+                            position: relative;
+                            margin: 2vh 0;
+                            input{
+                                width: 75%;
+                                border: none;
+                                font-family: $Second-font;
+                                font-size: 1vw;
+                                font-weight: 300;
+                                color: $Creme;
+                                background: none;
+                                outline: 1px solid $Creme;
+                                z-index: 10 !important;
+                                border-radius: 2vw;
+                                padding: 0 1.5vw;
+                            }
+                            span{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                left: 16%;
+                                font-family: $Second-font;
+                                position: absolute;
+                                font-size: 1.25vw;
+                                color: $Creme;
+                                font-weight: 500;
+                                transition: 0.5s;
+                            }
+                            .lengthInput{
+                                position: absolute;
+                                top: 100%;
+                                left: 81%;
+                                width: 3.5vw;
+                                height: 75%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-family: $Second-font;
+                                color: $Creme;
+                                font-size: 0.9vw;
+                                font-weight: 800;
+                            }
+                        }
+                        .BlockBox input:focus ~ span, input:valid ~ span{
+                            transform:translate(-0.5vw, -3.75vh);
+                            font-size: 1vw;
+                            font-weight: 800;
+                        }
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_salvar{
+                            background: $Laranja;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+                #msg_ModalRecupSenha{
+                    margin-top: 1vh;
+                    width: 100%;
+                    min-height: 4vh;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.25vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @import 'home_adm';
+    @import 'home_Edu';
+    @import 'home_Clinica';
+    @import 'home_Medicos';
+}

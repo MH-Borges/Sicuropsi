@@ -1,5 +1,5 @@
 <?php
-require_once("../../configs/conexao.php"); 
+require_once("../../../configs/conexao.php"); 
 
 $emailAntigo = $_POST['antigoEmail'];
 $novoEmail = filter_var($_POST['novoEmail'], FILTER_SANITIZE_EMAIL);
@@ -29,7 +29,7 @@ if($emailAntigo != $emailUserSemAlteracoes){
 }
 
 if($novoEmail != $confirmaNovoEmail){
-    echo 'Novo e-mail e confirma novo e-mail não coicidem!';
+    echo 'Novo e-mail e confirmação de novo e-mail não coicidem!';
     exit();
 }
 
@@ -38,7 +38,7 @@ if($novoEmail == $emailUserSemAlteracoes){
     exit();
 }
 
-$res = $pdo->prepare("UPDATE usuarios SET email = :email WHERE id = :id");
+$res = $pdo->prepare("UPDATE medicos SET email = :email WHERE id = :id");
 
 $res->bindValue(":email", $novoEmail);
 $res->bindValue(":id", $idUser);

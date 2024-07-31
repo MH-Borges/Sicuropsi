@@ -1,0 +1,2202 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.7vw;
+  background: #E4754A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7364CB;
+  border-radius: 10vw;
+}
+
+p, span, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #EEE8DC;
+  overflow-x: hidden;
+  position: relative;
+}
+body header {
+  background-color: #7364CB;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all ease-in-out 0.15s;
+  border-bottom: 2px solid #E4754A;
+}
+body header .menu {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .menu li {
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+body header .menu li .dropdown {
+  width: 4vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+body header .menu li .dropdown #dropdownMenu, body header .menu li .dropdown #dropdownMiniMenu {
+  width: 100%;
+  height: 100%;
+}
+body header .menu li .dropdown #dropdownMenu img, body header .menu li .dropdown #dropdownMenu svg, body header .menu li .dropdown #dropdownMiniMenu img, body header .menu li .dropdown #dropdownMiniMenu svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.75vw;
+}
+body header .menu li .dropdown .dropdown-menu {
+  border: none;
+  outline: 1px solid #E4754A;
+  width: 15vw;
+  padding: 0;
+  border-radius: 1vw;
+  overflow: hidden;
+  transform: translate(0px, 85px) !important;
+  background-color: #EEE8DC;
+}
+body header .menu li .dropdown .dropdown-menu li {
+  width: 100%;
+  height: 8vh;
+}
+body header .menu li .dropdown .dropdown-menu li:nth-child(2) {
+  margin: 1vh 0;
+}
+body header .menu li .dropdown .dropdown-menu li button, body header .menu li .dropdown .dropdown-menu li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #0C1E8E;
+}
+body header .menu li .dropdown .dropdown-menu li button img, body header .menu li .dropdown .dropdown-menu li button svg, body header .menu li .dropdown .dropdown-menu li a img, body header .menu li .dropdown .dropdown-menu li a svg {
+  height: 50%;
+  width: auto;
+  margin-right: 1vw;
+}
+body header .menu li .dropdown .dropdown-menu li button img path, body header .menu li .dropdown .dropdown-menu li button svg path, body header .menu li .dropdown .dropdown-menu li a img path, body header .menu li .dropdown .dropdown-menu li a svg path {
+  fill: #7364CB;
+}
+body header .menu li .dropdown .dropdown-menu li a {
+  position: relative;
+}
+body header .menu li .dropdown .dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 85%;
+  height: 1px;
+  background-color: #0C1E8E;
+}
+body header .menu #logo {
+  margin: 0;
+  margin-right: auto;
+  width: 11vw;
+}
+body header .menu #logo a {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu #logo a svg, body header .menu #logo a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body header .menu #logo a svg path, body header .menu #logo a img path {
+  fill: #EEE8DC;
+}
+body header .menu #logo a:hover {
+  color: #F6D66F;
+  transform: scale(1.1);
+}
+body .modal-backdrop {
+  opacity: 0.85 !important;
+}
+body .modal .modal-dialog .modal-content {
+  border: none;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body main section {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 5vw;
+  border: none;
+  outline: none;
+}
+body main .btns {
+  all: unset;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  border-radius: 5vw;
+  transition: all ease-in-out 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vw;
+  padding: 0.65vh 0;
+}
+body main .btns:hover {
+  transform: scale(1.1);
+}
+body #Main_login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_login #login_sreen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+body #Main_login #login_sreen video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+body #Main_login #login_sreen::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #0C1E8E;
+  opacity: 0.3;
+}
+body #Main_login #login_sreen a {
+  z-index: 5;
+  height: 75%;
+  width: auto;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #login_sreen a img, body #Main_login #login_sreen a svg {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 3vw;
+}
+body #Main_login #login_sreen a:hover {
+  transform: scale(1.05);
+}
+body #Main_login #login_sreen #LoginBox {
+  position: relative;
+  width: 40vw;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+body #Main_login #login_sreen #LoginBox h2 {
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 10vh;
+}
+body #Main_login #login_sreen #LoginBox .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_login #login_sreen #LoginBox .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_login #login_sreen #LoginBox .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_login #login_sreen #LoginBox .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #login_sreen #LoginBox .senhaInput #eye_box {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #login_sreen #LoginBox .senhaInput #eye_box img, body #Main_login #login_sreen #LoginBox .senhaInput #eye_box svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_login #login_sreen #LoginBox .senhaInput #eye_box img path, body #Main_login #login_sreen #LoginBox .senhaInput #eye_box svg path {
+  fill: #F6D66F;
+}
+body #Main_login #login_sreen #LoginBox .senhaInput:hover #eye_box {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_login #login_sreen #LoginBox .BlockBox input:focus ~ span, body #Main_login #login_sreen #LoginBox input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_login #login_sreen #LoginBox #senhaRecoverBtn {
+  position: absolute;
+  width: 20%;
+  height: 4vh;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-weight: 400;
+  font-size: 0.9vw;
+  top: 63%;
+  right: 3vw;
+  z-index: 10;
+  text-align: right;
+}
+body #Main_login #login_sreen #LoginBox #senhaRecoverBtn:hover {
+  color: #E4754A;
+}
+body #Main_login #login_sreen #LoginBox .btn_login {
+  margin-top: 10vh;
+  background-color: #E4754A;
+}
+body #Main_login #login_sreen #Recupera_senha {
+  position: relative;
+  width: 45vw;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+body #Main_login #login_sreen #Recupera_senha h2 {
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 10vh;
+}
+body #Main_login #login_sreen #Recupera_senha .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 3vh 0;
+}
+body #Main_login #login_sreen #Recupera_senha .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_login #login_sreen #Recupera_senha .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_login #login_sreen #Recupera_senha .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_login #login_sreen #Recupera_senha .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_boxRecup, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_box_RecupRepet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_boxRecup img, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_boxRecup svg, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_box_RecupRepet img, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_box_RecupRepet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_boxRecup img path, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_boxRecup svg path, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_box_RecupRepet img path, body #Main_login #login_sreen #Recupera_senha .senhaInput #eye_box_RecupRepet svg path {
+  fill: #F6D66F;
+}
+body #Main_login #login_sreen #Recupera_senha .senhaInput:hover #eye_boxRecup, body #Main_login #login_sreen #Recupera_senha .senhaInput:hover #eye_box_RecupRepet {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_login #login_sreen #Recupera_senha .BlockBox input:focus ~ span, body #Main_login #login_sreen #Recupera_senha input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_login #login_sreen #Recupera_senha .btn_Resetlogin {
+  margin-top: 10vh;
+  background-color: #E4754A;
+}
+body #Main_login #login_sreen #msg_RecupSenha {
+  z-index: 5;
+  width: 35%;
+  min-height: 5vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  position: absolute;
+  top: 10vh;
+}
+body #Main_login #login_sreen #voltaTela {
+  z-index: 5;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+}
+body #Main_login #login_sreen #voltaTela a {
+  color: #E4754A;
+  font-weight: 700;
+}
+body #Main_login #ModalRecoverSenha {
+  padding: 0;
+  margin: 0;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 40vh;
+  margin: 15vh auto;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .CloseBtn::before, body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body h5 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  padding: 0 1vw;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8vh;
+  width: 100%;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body .BlockBox input:focus ~ span, body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-body input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #Form_ModalrecupSenha .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_login #ModalRecoverSenha .ModalRecoverSenha #msg_ModalRecupSenha {
+  margin-top: 1vh;
+  width: 100%;
+  min-height: 4vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+}
+body #Main_homeAdm {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+  padding: 20vh 0;
+}
+body #Main_homeAdm a {
+  width: 30%;
+  height: 40%;
+  margin-bottom: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_homeAdm a img, body #Main_homeAdm a svg {
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+}
+body #Main_homeAdm a:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+body #Main_homeAdm a .blob {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  z-index: -1;
+}
+body #Main_homeEdu {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body #Main_homeEdu h1 {
+  font-family: "Aladin", system-ui;
+  font-size: 10vw;
+  font-weight: 700;
+  color: #0C1E8E;
+  letter-spacing: 1vw;
+}
+body #Main_Clinica {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body #Main_Clinica #alertaBD {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 700;
+}
+body #Main_Clinica #home {
+  padding: 0 7.5vw;
+  padding-top: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Clinica #home .itens {
+  width: 35%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  background-color: #7364CB;
+  border-radius: 2vw;
+  border: 5px solid #E4754A;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1.75vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #home .itens img, body #Main_Clinica #home .itens svg {
+  height: auto;
+  width: 25%;
+  margin: 0 2.5vw;
+}
+body #Main_Clinica #home .itens span {
+  position: absolute;
+  font-size: 1vw;
+  bottom: 10vh;
+  right: 8vw;
+}
+body #Main_Clinica #home .itens:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #ModalLogout {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #ModalLogout .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 40vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-body h5, body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5vw;
+  padding: 0 1vw;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-size: 1.25vw;
+  font-weight: 400;
+  margin-top: 4vh;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #ModalLogout .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_Clinica #ModalEditPerfil {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 35vw;
+  height: 70vh;
+  margin: 10vh auto;
+  border: 3px solid #E4754A;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  border-bottom: 3px solid #EEE8DC;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm .active {
+  color: #E4754A;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm {
+  outline: 1px solid green;
+  width: 100%;
+  height: 90%;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca {
+  width: 100%;
+  height: 100%;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca h4, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca h4 {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: #EEE8DC;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5% 0 2.5%;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox .lengthInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input:focus ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser input:valid ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input:focus ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser input:valid ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input:focus ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser input:valid ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input:focus ~ span, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path {
+  fill: #F6D66F;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .btn_salvar, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .btn_salvar, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .btn_salvar, body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .btn_salvar {
+  background-color: #E4754A;
+  margin-top: 7.5vh;
+}
+body #Main_Clinica #ModalEditPerfil #msgErro_EditUser {
+  position: absolute;
+  top: 80%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 18vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Clinica #Especialidades {
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Clinica #Especialidades .btn_cria {
+  z-index: 999 !important;
+  top: 4.5vh;
+  right: 15vw;
+  position: absolute;
+  background-color: #E4754A;
+}
+body #Main_Clinica #Especialidades #List_Espec {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card {
+  width: 20%;
+  height: 18vh;
+  margin: 2vh 1vw;
+  background-color: #7364CB;
+  border-radius: 1vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #E4754A;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card img, body #Main_Clinica #Especialidades #List_Espec .espec_card svg {
+  width: 100%;
+  height: 65%;
+  padding: 2vh 0;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card img path, body #Main_Clinica #Especialidades #List_Espec .espec_card svg path {
+  fill: #EEE8DC;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card p {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  color: #EEE8DC;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card .acoes {
+  position: absolute;
+  top: 0.75vh;
+  right: 0.5vw;
+  height: 20%;
+  width: 25%;
+  display: flex;
+  justify-content: end;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card .acoes a {
+  padding: 0;
+  width: 35%;
+  height: 100%;
+  margin-left: 0.5vw;
+  background-color: #E4754A;
+  border-radius: 0.35vw;
+  border: 1px solid #EEE8DC;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card .acoes a img, body #Main_Clinica #Especialidades #List_Espec .espec_card .acoes a svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.25vw;
+}
+body #Main_Clinica #Especialidades #List_Espec .espec_card .acoes a:last-child {
+  background-color: red;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 55vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 80%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body h4 {
+  width: 100%;
+  height: 20%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec {
+  margin: 0;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .img_espec_modal {
+  width: 80%;
+  height: 85%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .editPen {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  bottom: 0;
+  padding: 0.5vw;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec .editPen path {
+  fill: #EEE8DC;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body .Img_Espec::before {
+  content: "";
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  bottom: 0;
+  background: #E4754A;
+  border-radius: 50%;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox input, body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox textarea {
+  width: 85%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1vw;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox {
+  height: 20vh;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox textarea {
+  border-radius: 1vw;
+  resize: none;
+  padding: 1vh 1vw;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .descricaoBox span {
+  top: -8vh;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox input:focus ~ span, body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs input:valid ~ span, body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs .BlockBox textarea:focus ~ span, body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-body #inputs textarea:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Especialidades #ModalEspecialidade #msg_ModalEspecialidade {
+  position: absolute;
+  top: 70%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 28vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 35vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 80%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .modal-body h4 {
+  width: 100%;
+  height: 20%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade .modal-dialog .modal-content .modal-footer .btn_excluir {
+  background: red;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Especialidades #ModalDeletEspecialidade #msg_ModalDeletEspecialidade {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 45vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Clinica #Medicos {
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Clinica #Medicos .btn_cria {
+  z-index: 999 !important;
+  top: 4.5vh;
+  right: 15vw;
+  position: absolute;
+  background-color: #E4754A;
+}
+body #Main_Clinica #Medicos #List_Medicos {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card {
+  width: 40%;
+  height: 20vh;
+  overflow: hidden;
+  margin: 2vh 5%;
+  border-radius: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-left: 12vw;
+  border: none;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card::before {
+  content: "";
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  border: 4px solid #0C1E8E;
+  right: 0;
+  border-radius: 2.5vw;
+  z-index: -1;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10.8vw;
+  background-color: #0C1E8E;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .imgMedico {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #0C1E8E;
+  left: 0;
+  top: 0;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .nome, body #Main_Clinica #Medicos #List_Medicos .espec_card .email {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .nome {
+  font-weight: 700;
+  font-size: 1.35vw;
+  margin: -1.5vh 0 2vh;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .email {
+  font-weight: 500;
+  font-size: 1.1vw;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes {
+  position: absolute;
+  top: 3vh;
+  right: 1.5vw;
+  height: 18%;
+  width: 25%;
+  display: flex;
+  justify-content: end;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a {
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  margin-left: 0.5vw;
+  background-color: #E4754A;
+  border-radius: 0.25vw;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a img, body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a:last-child {
+  background-color: red;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 40vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 60%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body h4 {
+  width: 100%;
+  height: 20%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 1.5vh 0;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body .BlockBox input, body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body .BlockBox textarea {
+  width: 85%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1vw;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 11%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-body input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Medicos #ModalCriaMedico #msg_ModalCriaMedico {
+  position: absolute;
+  top: 57%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 35vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 35vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 80%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .modal-body h4 {
+  width: 100%;
+  height: 20%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog .modal-content .modal-footer .btn_excluir {
+  background: red;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog #msg_ModalDeletMedico {
+  position: absolute;
+  bottom: -7.5vh;
+  width: 100%;
+  min-height: 4vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+}
+body #Main_Medicos {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body #Main_Medicos #ModalCriaSenha {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 50vh;
+  margin: 15vh auto;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5vw;
+  padding: 0 1vw;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3vh;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 3vh 0;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box img, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box svg, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet img, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box img path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box svg path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet img path, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput #eye_box_Repet svg path {
+  fill: #F6D66F;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput:hover #eye_box, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .senhaInput:hover #eye_box_Repet {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body .BlockBox input:focus ~ span, body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-body input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalCriaSenha .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_Medicos #ModalCriaSenha #msg_ModalCriaMedico {
+  position: absolute;
+  top: 67%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 30vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
+}
+body #Main_Medicos #home {
+  padding: 0 7.5vw;
+  padding-top: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Medicos #home .Seletor {
+  width: 33.3%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Medicos #home .Seletor #especialidades-select, body #Main_Medicos #home .Seletor #estado-select, body #Main_Medicos #home .Seletor #atendimento-select, body #Main_Medicos #home .Seletor #abordagem-select {
+  position: relative;
+  width: 90%;
+  height: 4vh;
+}
+body #Main_Medicos #home .Seletor #especialidades-select #select_input_espec, body #Main_Medicos #home .Seletor #especialidades-select #select_input_estado, body #Main_Medicos #home .Seletor #especialidades-select #select_input_atendimento, body #Main_Medicos #home .Seletor #especialidades-select #select_input_abordagem, body #Main_Medicos #home .Seletor #estado-select #select_input_espec, body #Main_Medicos #home .Seletor #estado-select #select_input_estado, body #Main_Medicos #home .Seletor #estado-select #select_input_atendimento, body #Main_Medicos #home .Seletor #estado-select #select_input_abordagem, body #Main_Medicos #home .Seletor #atendimento-select #select_input_espec, body #Main_Medicos #home .Seletor #atendimento-select #select_input_estado, body #Main_Medicos #home .Seletor #atendimento-select #select_input_atendimento, body #Main_Medicos #home .Seletor #atendimento-select #select_input_abordagem, body #Main_Medicos #home .Seletor #abordagem-select #select_input_espec, body #Main_Medicos #home .Seletor #abordagem-select #select_input_estado, body #Main_Medicos #home .Seletor #abordagem-select #select_input_atendimento, body #Main_Medicos #home .Seletor #abordagem-select #select_input_abordagem {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  font-size: 1vw;
+  z-index: 5;
+}
+body #Main_Medicos #home .Seletor #especialidades-select #select-button, body #Main_Medicos #home .Seletor #estado-select #select-button, body #Main_Medicos #home .Seletor #atendimento-select #select-button, body #Main_Medicos #home .Seletor #abordagem-select #select-button {
+  width: 100%;
+  height: 100%;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: none;
+}
+body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_abordagem {
+  font-family: "Jost", sans-serif;
+  color: #0C1E8E;
+  font-size: 0.8vw;
+  font-weight: 900;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.75vw;
+  padding-top: 0.25vh;
+}
+body #Main_Medicos #home .Seletor #especialidades-select #select-button img, body #Main_Medicos #home .Seletor #especialidades-select #select-button svg, body #Main_Medicos #home .Seletor #estado-select #select-button img, body #Main_Medicos #home .Seletor #estado-select #select-button svg, body #Main_Medicos #home .Seletor #atendimento-select #select-button img, body #Main_Medicos #home .Seletor #atendimento-select #select-button svg, body #Main_Medicos #home .Seletor #abordagem-select #select-button img, body #Main_Medicos #home .Seletor #abordagem-select #select-button svg {
+  z-index: 99;
+  position: absolute;
+  right: 0.35vw;
+  width: 2vw;
+  height: 100%;
+  padding: 0.5vh;
+}
+body #Main_Medicos #home .Seletor #especialidades-select #select-button img path, body #Main_Medicos #home .Seletor #especialidades-select #select-button svg path, body #Main_Medicos #home .Seletor #estado-select #select-button img path, body #Main_Medicos #home .Seletor #estado-select #select-button svg path, body #Main_Medicos #home .Seletor #atendimento-select #select-button img path, body #Main_Medicos #home .Seletor #atendimento-select #select-button svg path, body #Main_Medicos #home .Seletor #abordagem-select #select-button img path, body #Main_Medicos #home .Seletor #abordagem-select #select-button svg path {
+  fill: #E4754A;
+}
+body #Main_Medicos #home .Seletor #options {
+  z-index: 999;
+  width: 90%;
+  height: auto;
+  max-height: 35vh;
+  top: 6vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #7364CB;
+  display: none;
+  position: absolute;
+  padding: 0.5vw;
+}
+body #Main_Medicos #home .Seletor #options .options_espec, body #Main_Medicos #home .Seletor #options .options_estado, body #Main_Medicos #home .Seletor #options .options_atendimento, body #Main_Medicos #home .Seletor #options .options_abordagem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  border-bottom: 1px solid #0C1E8E;
+}
+body #Main_Medicos #home .Seletor #options .options_espec span, body #Main_Medicos #home .Seletor #options .options_estado span, body #Main_Medicos #home .Seletor #options .options_atendimento span, body #Main_Medicos #home .Seletor #options .options_abordagem span {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.75vw;
+  font-family: "Jost", sans-serif;
+  font-size: 0.75vw;
+  font-weight: 800;
+  color: #0C1E8E;
+  z-index: 5;
+}
+body #Main_Medicos #home .Seletor #options .options_espec input[type=radio], body #Main_Medicos #home .Seletor #options .options_estado input[type=radio], body #Main_Medicos #home .Seletor #options .options_atendimento input[type=radio], body #Main_Medicos #home .Seletor #options .options_abordagem input[type=radio] {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+body #Main_Medicos #home .Seletor #options .options_espec:hover::before, body #Main_Medicos #home .Seletor #options .options_estado:hover::before, body #Main_Medicos #home .Seletor #options .options_atendimento:hover::before, body #Main_Medicos #home .Seletor #options .options_abordagem:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #7364CB;
+  opacity: 0.5;
+  z-index: -1;
+}
+body #Main_Medicos #home .Seletor #options .options_espec:last-child, body #Main_Medicos #home .Seletor #options .options_estado:last-child, body #Main_Medicos #home .Seletor #options .options_atendimento:last-child, body #Main_Medicos #home .Seletor #options .options_abordagem:last-child {
+  border: none;
+}
+body #Main_Medicos #home .Seletor #select_input_espec:checked + #select-button svg,
+body #Main_Medicos #home .Seletor #select_input_estado:checked + #select-button svg,
+body #Main_Medicos #home .Seletor #select_input_atendimento:checked + #select-button svg,
+body #Main_Medicos #home .Seletor #select_input_abordagem:checked + #select-button svg {
+  transform: rotate(180deg);
+}
+body #Main_Medicos #home .Seletor #especialidades-select:has(#select_input_espec:checked) + #options,
+body #Main_Medicos #home .Seletor #estado-select:has(#select_input_estado:checked) + #options,
+body #Main_Medicos #home .Seletor #atendimento-select:has(#select_input_atendimento:checked) + #options,
+body #Main_Medicos #home .Seletor #abordagem-select:has(#select_input_abordagem:checked) + #options {
+  display: block;
+}
+body #Main_Medicos #ModalLogout {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalLogout .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 40vh;
+  margin: 15vh auto;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::before, body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h5, body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5vw;
+  padding: 0 1vw;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-body h6 {
+  font-size: 1.25vw;
+  font-weight: 400;
+  margin-top: 4vh;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}/*# sourceMappingURL=style.css.map */

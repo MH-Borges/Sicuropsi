@@ -1,0 +1,35 @@
+#Main_homeAdm{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    padding: 20vh 0;
+    a{
+        width: 30%;
+        height: 40%;
+        margin-bottom: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img,svg{
+            width: 100%;
+            height: 100%;
+            padding: 1vw;
+        }
+        &:last-child{
+            margin-bottom: 0;
+            margin-top: auto;
+        }
+        .blob{
+            position: absolute;
+            width: 40vw;
+            height: auto;
+            z-index: -1;
+        }
+    }
+}

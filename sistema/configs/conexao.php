@@ -1,6 +1,14 @@
 <?php
 
-require_once("config.php");
+$servidor = 'localhost';
+$usuario = 'root';
+$senha = '';
+$banco = 'clinica_sicuro';
+
+// $servidor = 'localhost';
+// $usuario = 'univ9223_Main_autoInove';
+// $senha = 'Autoinove123@';
+// $banco = 'univ9223_Auto_Inove';
 
 date_default_timezone_set('America/Sao_Paulo');
 

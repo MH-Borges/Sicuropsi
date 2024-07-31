@@ -1,0 +1,1129 @@
+#Main_Clinica{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    #alertaBD{
+        position: absolute;
+        bottom: 2vh;
+        left: 2vw;
+        font-family: $Second-font;
+        font-size: 1vw;
+        font-weight: 700;
+    }
+    #home{
+        padding: 0 7.5vw;
+        padding-top: 125px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        .itens{
+            width: 35%;
+            height: 35%;
+            display: flex;
+            align-items: center;
+            background-color: $Roxo;
+            border-radius: 2vw;
+            border: 5px solid $Laranja;
+            font-family: $Second-font;
+            font-weight: 600;
+            font-size: 1.75vw;
+            color: $Creme;
+            position: relative;
+            transition: all ease-in-out .25s;
+            img,svg{
+                height: auto;
+                width: 25%;
+                margin: 0 2.5vw;
+            }
+            span{
+                position: absolute;
+                font-size: 1vw;
+                bottom: 10vh;
+                right: 8vw;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    #ModalLogout{
+        padding: 0;
+        margin: 0;
+        .modal-dialog{
+            border-radius: 1vw;
+            background-color: $Azul;
+            color: $Creme;
+            max-width: 100vw;
+            width: 40vw;
+            height: 40vh;
+            margin: 15vh auto;
+            .modal-content{
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-radius: 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .CloseBtn{
+                    width: 3vw;
+                    height: 3vw;
+                    position: absolute;
+                    right: -1.5vw;
+                    top: -1.5vw;
+                    border: none;
+                    background-color: $Roxo;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 0.75vw;
+                    z-index: 10 !important;
+                    transition: all ease-in-out .25s;
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        width: 60%;
+                        height: 0.6vh;
+                        border-radius: 10vw;
+                        background-color: $Creme;
+                        transform: rotate(45deg);
+                    }
+                    &::after{
+                        transform: rotate(-45deg);
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                .modal-body{
+                    width: 100%;
+                    height: 75%;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h5, h6{
+                        font-family: $Second-font;
+                        font-size: 2.5vw;
+                        padding: 0 1vw;
+                        font-weight: 700;
+                        text-align: center;
+                        width: 100%;
+                    }
+                    h6{
+                        font-size: 1.25vw;
+                        font-weight: 400;
+                        margin-top: 4vh;
+                    }
+                }
+                .modal-footer{
+                    border: none;
+                    width: 100%;
+                    height: 20%;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .btn_cancel{
+                        background: $Creme;
+                        color: $Azul;
+                    }
+                    .btn_salvar{
+                        background: $Laranja;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+        }
+    }
+    #ModalEditPerfil{
+        padding: 0;
+        margin: 0;
+        .modal-dialog{
+            border-radius: 1vw;
+            background-color: $Azul;
+            color: $Creme;
+            max-width: 100vw;
+            width: 35vw;
+            height: 70vh;
+            margin: 10vh auto;
+            border: 3px solid $Laranja;
+            .modal-content{
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-radius: 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .CloseBtn{
+                    width: 3vw;
+                    height: 3vw;
+                    position: absolute;
+                    right: -1.5vw;
+                    top: -1.5vw;
+                    border: none;
+                    background-color: $Roxo;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 0.75vw;
+                    z-index: 10 !important;
+                    transition: all ease-in-out .25s;
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        width: 60%;
+                        height: 0.6vh;
+                        border-radius: 10vw;
+                        background-color: $Creme;
+                        transform: rotate(45deg);
+                    }
+                    &::after{
+                        transform: rotate(-45deg);
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                .modal-body{
+                    width: 100%;
+                    height: 75%;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    #MenuAdm{
+                        width: 100%;
+                        height: 10%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        a{
+                            height: 100%;
+                            width: 35%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $Second-font;
+                            font-weight: 700;
+                            font-size: 1.25vw;
+                            color: $Creme;
+                            border-bottom: 3px solid $Creme;
+                            transition: all ease-in-out .25s;
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                        }
+                        .active{
+                            color: $Laranja;
+                        }
+                    }
+                    #TabsAdm{
+                        outline: 1px solid green;
+                        width: 100%;
+                        height: 90%;
+                        #EmailTroca, #SenhaTroca{
+                            width: 100%;
+                            height: 100%;
+                            h4{
+                                font-family: $Second-font;
+                                font-weight: 700;
+                                font-size: 1.5vw;
+                                color: $Creme;
+                                width: 100%;
+                                height: 10%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 7.5% 0 2.5%;
+                            }
+                            #formEditEmailUser, #formEditSenhaUser{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .BlockBox{
+                                    width: 100%;
+                                    height: 5vh;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-self: center;
+                                    position: relative;
+                                    margin: 2vh 0;
+                                    input{
+                                        width: 75%;
+                                        border: none;
+                                        font-family: $Second-font;
+                                        font-size: 1vw;
+                                        font-weight: 300;
+                                        color: $Creme;
+                                        background: none;
+                                        outline: 1px solid $Creme;
+                                        z-index: 10 !important;
+                                        border-radius: 2vw;
+                                        padding: 0 1.5vw;
+                                    }
+                                    span{
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        left: 16%;
+                                        font-family: $Second-font;
+                                        position: absolute;
+                                        font-size: 1.25vw;
+                                        color: $Creme;
+                                        font-weight: 500;
+                                        transition: 0.5s;
+                                    }
+                                    .lengthInput{
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 81%;
+                                        width: 3.5vw;
+                                        height: 75%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-family: $Second-font;
+                                        color: $Creme;
+                                        font-size: 0.9vw;
+                                        font-weight: 800;
+                                    }
+                                }
+                                .BlockBox input:focus ~ span, input:valid ~ span{
+                                    transform:translate(-0.5vw, -3.75vh);
+                                    font-size: 1vw;
+                                    font-weight: 800;
+                                }
+                                .senhaInput{
+                                    z-index: 4;
+                                    transition: all ease-in-out .25s;
+                                    #eye_box, #eye_boxRecup, #eye_box_RecupRepet{
+                                        position: absolute;
+                                        height: 100%;
+                                        width: 5vh;
+                                        right: 5%;
+                                        z-index: 12 !important;
+                                        opacity: 0;
+                                        transition: all ease-in-out .25s;
+                                        img,svg{
+                                            width: 100%;
+                                            height: 100%;
+                                            padding: 0.35vw;
+                                            path{
+                                                fill: $Amarelo;
+                                            }
+                                        }
+                                    }
+                                    &:hover{
+                                        #eye_box, #eye_boxRecup, #eye_box_RecupRepet{
+                                            right: 14%;
+                                            opacity: 1;
+                                        } 
+                                    }
+                                }
+                                .btn_salvar{
+                                    background-color: $Laranja;
+                                    margin-top: 7.5vh;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #msgErro_EditUser{
+            position: absolute;
+            top: 80%;
+            width: 50%;
+            left: 25%;
+            min-height: 5vh;
+            max-height: 18vh;
+            font-family: $Second-font;
+            font-weight: 700;
+            font-size: 1.25vw;
+            text-align: center;
+            overflow-y: auto;
+            z-index: 9999 !important;
+        }
+    }
+
+
+    #Especialidades{
+        padding-top: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .btn_cria{
+            z-index: 999 !important;
+            top: 4.5vh;
+            right: 15vw;
+            position: absolute;
+            background-color: $Laranja;
+        }
+        #List_Espec{
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            overflow-y: auto;
+            .espec_card{
+                width: 20%;
+                height: 18vh;
+                margin: 2vh 1vw;
+                background-color: $Roxo;
+                border-radius: 1vw;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $Laranja;
+                img,svg{
+                    width: 100%;
+                    height: 65%;
+                    padding: 2vh 0;
+                    path{
+                        fill: $Creme;
+                    }
+                }
+                p{
+                    width: 100%;
+                    height: 35%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: $Second-font;
+                    font-weight: 600;
+                    font-size: 1vw;
+                    color: $Creme;
+                }
+                .acoes{
+                    position: absolute;
+                    top: 0.75vh;
+                    right: 0.5vw;
+                    height: 20%;
+                    width: 25%;
+                    display: flex;
+                    justify-content: end;
+                    a{
+                        padding: 0;
+                        width: 35%;
+                        height: 100%;
+                        margin-left: 0.5vw;
+                        background-color: $Laranja;
+                        border-radius: 0.35vw;
+                        border: 1px solid $Creme;
+                        img, svg{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.25vw;
+                        }
+                        &:last-child{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+
+        #ModalEspecialidade{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 55vh;
+                margin: 15vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        width: 100%;
+                        height: 80%;
+                        padding: 1vw;
+                        padding-bottom: 0.5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            width: 100%;
+                            height: 20%;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .Img_Espec{
+                            margin: 0;
+                            width: 40%;
+                            height: 80%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            input{
+                                opacity: 0;
+                                pointer-events: none;
+                                display: none;
+                            }
+                            .img_espec_modal{
+                                width: 80%;
+                                height: 85%;
+                                object-fit: contain;
+                            }
+                            .editPen{
+                                position: absolute;
+                                width: 2.5vw;
+                                height: 2.5vw;
+                                bottom: 0;
+                                padding: 0.5vw;
+                                path{
+                                    fill: $Creme;
+                                }
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 2.5vw;
+                                height: 2.5vw;
+                                bottom: 0;
+                                background: $Laranja;
+                                border-radius: 50%;
+                            }
+                        }
+                        #inputs{
+                            width: 60%;
+                            height: 80%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            .BlockBox{
+                                width: 100%;
+                                height: 5vh;
+                                display: flex;
+                                justify-content: center;
+                                align-self: center;
+                                position: relative;
+                                margin: 2vh 0;
+                                input, textarea{
+                                    width: 85%;
+                                    border: none;
+                                    font-family: $Second-font;
+                                    font-size: 1vw;
+                                    font-weight: 300;
+                                    color: $Creme;
+                                    background: none;
+                                    outline: 1px solid $Creme;
+                                    z-index: 10 !important;
+                                    border-radius: 2vw;
+                                    padding: 0 1vw;
+                                }
+                                span{
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    left: 16%;
+                                    font-family: $Second-font;
+                                    position: absolute;
+                                    font-size: 1.25vw;
+                                    color: $Creme;
+                                    font-weight: 500;
+                                    transition: 0.5s;
+                                }
+                            }
+                            .descricaoBox{
+                                height: 20vh;
+                                textarea{
+                                    border-radius: 1vw;
+                                    resize: none;
+                                    padding: 1vh 1vw;
+                                }
+                                span{
+                                    top: -8vh;
+                                }
+                            }
+                            .BlockBox input:focus ~ span, input:valid ~ span, .BlockBox textarea:focus ~ span, textarea:valid ~ span{
+                                transform:translate(-0.5vw, -3.75vh);
+                                font-size: 1vw;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_salvar{
+                            background: $Laranja;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+            }
+            #msg_ModalEspecialidade{
+                position: absolute;
+                top: 70%;
+                width: 50%;
+                left: 25%;
+                min-height: 5vh;
+                max-height: 28vh;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1.25vw;
+                text-align: center;
+                overflow-y: auto;
+                z-index: 9999 !important;
+            }
+        }
+        #ModalDeletEspecialidade{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 35vh;
+                margin: 15vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        width: 100%;
+                        height: 80%;
+                        padding: 1vw;
+                        padding-bottom: 0.5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            width: 100%;
+                            height: 20%;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_excluir{
+                            background: red;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+            }
+            #msg_ModalDeletEspecialidade{
+                position: absolute;
+                top: 50%;
+                width: 50%;
+                left: 25%;
+                min-height: 5vh;
+                max-height: 45vh;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1.25vw;
+                text-align: center;
+                overflow-y: auto;
+                z-index: 9999 !important;
+            }
+        }
+    }
+    #Medicos{
+        padding-top: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .btn_cria{
+            z-index: 999 !important;
+            top: 4.5vh;
+            right: 15vw;
+            position: absolute;
+            background-color: $Laranja;
+        }
+        #List_Medicos{
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            overflow-y: auto;
+            .espec_card{
+                width: 40%;
+                height: 20vh;
+                overflow: hidden;
+                margin: 2vh 5%;
+                border-radius: 0;
+                background: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                padding-left: 12vw;
+                border: none;
+                &::before{
+                    content: '';
+                    width: 85%;
+                    height: 85%;
+                    position: absolute;
+                    border: 4px solid $Azul;
+                    right: 0;
+                    border-radius: 2.5vw;
+                    z-index: -1;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 10.8vw;
+                    background-color: $Azul;
+                    opacity: .2;
+                    border-radius: 50%;
+                }
+                .imgMedico{
+                    height: 100%;
+                    width: auto;
+                    position: absolute;
+                    border-radius: 50%;
+                    border: 4px solid $Azul;
+                    left: 0;
+                    top: 0;
+                }
+                .nome, .email{
+                    width: 100%;
+                    font-family: $Second-font;
+                    color: $Azul;
+                }
+                .nome{
+                    font-weight: 700;
+                    font-size: 1.35vw;
+                    margin: -1.5vh 0 2vh;
+                }
+                .email{
+                    font-weight: 500;
+                    font-size: 1.1vw;
+                }
+                .acoes{
+                    position: absolute;
+                    top: 3vh;
+                    right: 1.5vw;
+                    height: 18%;
+                    width: 25%;
+                    display: flex;
+                    justify-content: end;
+                    a{
+                        padding: 0;
+                        width: 20%;
+                        height: 100%;
+                        margin-left: 0.5vw;
+                        background-color: $Laranja;
+                        border-radius: 0.25vw;
+                        img, svg{
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.35vw;
+                        }
+                        &:last-child{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+
+        #ModalCriaMedico{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 40vh;
+                margin: 15vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        width: 100%;
+                        height: 60%;
+                        padding: 1vw;
+                        padding-bottom: 0.5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            width: 100%;
+                            height: 20%;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .BlockBox{
+                            width: 100%;
+                            height: 5vh;
+                            display: flex;
+                            justify-content: center;
+                            align-self: center;
+                            position: relative;
+                            margin: 1.5vh 0;
+                            input, textarea{
+                                width: 85%;
+                                border: none;
+                                font-family: $Second-font;
+                                font-size: 1vw;
+                                font-weight: 300;
+                                color: $Creme;
+                                background: none;
+                                outline: 1px solid $Creme;
+                                z-index: 10 !important;
+                                border-radius: 2vw;
+                                padding: 0 1vw;
+                            }
+                            span{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                left: 11%;
+                                font-family: $Second-font;
+                                position: absolute;
+                                font-size: 1.25vw;
+                                color: $Creme;
+                                font-weight: 500;
+                                transition: 0.5s;
+                            }
+                        }
+                        .BlockBox input:focus ~ span, input:valid ~ span{
+                            transform:translate(-0.5vw, -3.75vh);
+                            font-size: 1vw;
+                            font-weight: 800;
+                        }
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_salvar{
+                            background: $Laranja;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+            }
+            #msg_ModalCriaMedico{
+                position: absolute;
+                top: 57%;
+                width: 50%;
+                left: 25%;
+                min-height: 5vh;
+                max-height: 35vh;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1.25vw;
+                text-align: center;
+                overflow-y: auto;
+                z-index: 9999 !important;
+            }
+        }
+        #ModalDeletMedico{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 35vh;
+                margin: 15vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        width: 100%;
+                        height: 80%;
+                        padding: 1vw;
+                        padding-bottom: 0.5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            width: 100%;
+                            height: 20%;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_excluir{
+                            background: red;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+                #msg_ModalDeletMedico{
+                    position: absolute;
+                    bottom: -7.5vh;
+                    width: 100%;
+                    min-height: 4vh;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.25vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

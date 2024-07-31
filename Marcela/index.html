@@ -38,11 +38,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- SVG Inject -->
-    <script src="js/svg-inject.min.js"></script>
+    <script src="../js/svg-inject.min.js"></script>
 
     <!-- Main files -->
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <script defer src="../js/Base_script.js"></script>
 </head>
 
 <body>
@@ -360,5 +360,75 @@
             <img src="assets/icons/Universo_Farol.svg" onload="SVGInject(this)">
         </a>
     </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            //animation home
+            document.querySelector('header').style.opacity = 1;
+            document.querySelector('header').style.translate = '0 125px';
+            document.querySelector('.imgsBlock').style.opacity = 1;
+            document.querySelector('.imgsBlock').style.translate = '35vw 0';
+            document.querySelector('.infosBlock').style.opacity = 1;
+            document.querySelector('.infosBlock').style.translate = '-55vw 0';
+
+            // fade animation
+            AOS.init();
+
+            // galeria
+            new Splide( '.splide', {
+                type   : 'loop',
+                perPage: 3,
+                focus  : 'center',
+                autoplay: true
+            }).mount();
+        });
+
+        window.addEventListener('scroll', function() {
+            //menu fixo
+            if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
+            else{ document.querySelector(".menu").classList.remove('color'); }
+        });
+
+        //formulario
+        $(document).ready(function () {
+            $('#telefone').mask('(00) 00000 - 0000');
+
+            $('#btn_form').click(function (e) {
+                $('#nome').prop('required',false);
+                $('#email').prop('required',false);
+                $('#telefone').prop('required',false);
+                $('#mensagem').prop('required',false);
+            });
+
+            $('#formulario').submit(function (e) {
+                e.preventDefault();
+                $('#msg_form').text('');
+                $('#msg_form').removeClass('text-danger');
+                $('#msg_form').removeClass('text-success');
+                $.ajax({
+                    url: "email.php",
+                    method: "post",
+                    data: $('form').serialize(),
+                    dataType: "text",
+                    success: function (msg) {
+                        if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
+                            $('#msg_form').addClass('text-success');
+                            $('#msg_form').text(msg);
+                            setTimeout(() => { window.location.reload(); }, 5000)
+                        }
+                        else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!') {
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text(msg);
+                        }
+                        else{
+                            $('#msg_form').removeClass('text-success');
+                            $('#msg_form').addClass('text-danger');
+                            $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
+                        }
+                    }
+                })
+            });
+        });
+    </script>
 </body>
 </html>

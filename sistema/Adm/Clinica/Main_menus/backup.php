@@ -1,7 +1,7 @@
 <?php 
 
 @session_start();
-include('../../configs/conexao.php');
+include('../../../configs/conexao.php');
 
 if(@$_SESSION['id_user'] == null || @$_SESSION['nivel_user'] != 'adm'){
     echo "<script language='javascript'> window.location='../index.php' </script>";
@@ -68,7 +68,7 @@ if(!is_dir($diretorio)){
 
 //Nome do arquivo de backup
 $data = date('Y-m-d-h-i-s');
-$nome_arquivo = $diretorio . "BancoDados_Auto_inove".$data;
+$nome_arquivo = $diretorio . "BancoDados_ClinicaSicuro".$data;
 
 $handle = fopen($nome_arquivo . '.sql', 'w+');
 fwrite($handle, $result);
@@ -87,7 +87,7 @@ if(file_exists($download)){
     header("Content-Length: " . filesize($download));
     readfile($download);
 
-    $_SESSION['Alertas'] = "<div class='alertas' style='color: green;'>Exportado BD com sucesso</div>";
+    $_SESSION['msg_BancoDados'] = "<div id='alertaBD' style='color: green;'>Banco de dados salvo com sucesso!</div>";
     }
-    else{$_SESSION['Alertas'] = "<div class='alertas' style='color: red;'>Erro ao exportar o BD</div>";}
+    else{$_SESSION['msg_BancoDados'] = "<div id='alertaBD' style='color: red;'>Erro ao exportar o Banco de Dados!</div>";}
 ?>
