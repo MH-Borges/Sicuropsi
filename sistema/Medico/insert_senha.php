@@ -20,7 +20,7 @@
 	}
 
     $senha_crip = md5($novaSenha);
-    $senha_temp = '';
+    $senha_temp = 'NULL';
 
 	$res = $pdo->query("SELECT * FROM medicos WHERE id = '$idUser' LIMIT 1"); 
 	$dados = $res->fetchAll(PDO::FETCH_ASSOC);

@@ -104,9 +104,6 @@ body header .menu li .dropdown .dropdown-menu li {
   width: 100%;
   height: 8vh;
 }
-body header .menu li .dropdown .dropdown-menu li:nth-child(2) {
-  margin: 1vh 0;
-}
 body header .menu li .dropdown .dropdown-menu li button, body header .menu li .dropdown .dropdown-menu li a {
   width: 100%;
   height: 100%;
@@ -936,7 +933,6 @@ body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #Me
   color: #E4754A;
 }
 body #Main_Clinica #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm {
-  outline: 1px solid green;
   width: 100%;
   height: 90%;
 }
@@ -1514,12 +1510,14 @@ body #Main_Clinica #Medicos #List_Medicos .espec_card::after {
 }
 body #Main_Clinica #Medicos #List_Medicos .espec_card .imgMedico {
   height: 100%;
-  width: auto;
+  width: 20vh;
   position: absolute;
   border-radius: 50%;
   border: 4px solid #0C1E8E;
   left: 0;
   top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body #Main_Clinica #Medicos #List_Medicos .espec_card .nome, body #Main_Clinica #Medicos #List_Medicos .espec_card .email {
   width: 100%;
@@ -1558,7 +1556,13 @@ body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a img, body #Main_C
   padding: 0.35vw;
 }
 body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes a:last-child {
+  background-color: #7364CB;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes .ativo {
   background-color: red;
+}
+body #Main_Clinica #Medicos #List_Medicos .espec_card .acoes .inativo {
+  background-color: green;
 }
 body #Main_Clinica #Medicos #ModalCriaMedico {
   padding: 0;
@@ -1817,6 +1821,642 @@ body #Main_Clinica #Medicos #ModalDeletMedico .modal-dialog #msg_ModalDeletMedic
   font-size: 1.25vw;
   text-align: center;
 }
+body #Main_Clinica #Medicos #ModalStatusPerfil {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 40vw;
+  height: 35vh;
+  margin: 15vh auto;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 80%;
+  padding: 1vw;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body h4 {
+  width: 100%;
+  height: 20%;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-body h4 span {
+  font-size: 0.9vw;
+  position: absolute;
+  bottom: 15%;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .ativo {
+  background: red;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog .modal-content .modal-footer .inativo {
+  background: green;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Medicos #ModalStatusPerfil .modal-dialog #msg_ModalStatusMedico {
+  position: absolute;
+  bottom: -7.5vh;
+  width: 100%;
+  min-height: 4vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+}
+body #Main_Clinica #Medicos #ModalEditMedico {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 60vw;
+  height: 90vh;
+  margin: 5vh auto;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .CloseBtn::before, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body {
+  outline: 1px solid green;
+  width: 100%;
+  max-height: 92.5%;
+  height: auto;
+  overflow: auto;
+  padding: 1vh 1vw 5vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body h2 {
+  height: auto;
+  width: 100%;
+  padding: 2vh 0;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 2.25vw;
+  color: #EEE8DC;
+  line-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos {
+  display: flex;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block {
+  width: 40%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 5vh 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block .img_user {
+  width: 90%;
+  height: 38vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block .editPen {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 55%;
+  padding: 0.75vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block .editPen path {
+  fill: #EEE8DC;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #imgUser_block::before {
+  content: "";
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 55%;
+  background: #E4754A;
+  border-radius: 50%;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos {
+  width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5vh 3vw;
+  padding-left: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox {
+  width: 100%;
+  height: 5.5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:first-child {
+  margin-top: 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox input, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox textarea {
+  width: 100%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 3%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9), body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(10), body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11), body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(12) {
+  width: 47.5%;
+  margin: 3vh 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9) span svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(10) span svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11) span svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(12) span svg {
+  height: 100%;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.25vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9) span svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(10) span svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11) span svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(12) span svg path {
+  fill: none;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9) span svg path:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(10) span svg path:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11) span svg path:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(12) span svg path:last-child {
+  fill: #E4754A;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9), body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11) {
+  margin-right: 5%;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(9), body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(10) {
+  margin-top: 5vh;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox:nth-child(11) span svg {
+  padding: 0.35vw;
+  padding-bottom: 0.5vw;
+  padding-top: 0.15vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor {
+  width: 50%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select {
+  position: relative;
+  width: 92.5%;
+  height: 100%;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select_input_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select_input_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select_input_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select_input_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select_input_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select_input_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select_input_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select_input_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select_input_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select_input_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select_input_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select_input_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select_input_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select_input_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select_input_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select_input_abordagem {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  font-size: 1vw;
+  z-index: 5;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: none;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button #selected_val_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button #selected_val_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button #selected_val_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button #selected_val_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button #selected_val_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button #selected_val_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button #selected_val_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button #selected_val_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button #selected_val_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button #selected_val_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button #selected_val_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button #selected_val_abordagem, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button #selected_val_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button #selected_val_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button #selected_val_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button #selected_val_abordagem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #EEE8DC;
+  background: none;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+  outline: 1px solid #EEE8DC;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button svg {
+  z-index: 99;
+  position: absolute;
+  right: 1vw;
+  width: 2vw;
+  height: 100%;
+  padding: 0.9vh;
+  transform: rotate(90deg);
+  transition: all ease-in-out 0.1s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select #select-button svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select #select-button svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select #select-button svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select #select-button svg path {
+  fill: #E4754A;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options {
+  z-index: 999;
+  width: 90%;
+  left: 1.5%;
+  height: auto;
+  max-height: 35vh;
+  top: 5.1vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #7364CB;
+  display: none;
+  position: absolute;
+  padding: 1vh 1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_espec, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_estado, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_atendimento, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_abordagem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid #EEE8DC;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_espec span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_estado span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_atendimento span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_abordagem span {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.75vw;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #EEE8DC;
+  z-index: 5;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_espec input[type=radio], body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_estado input[type=radio], body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_atendimento input[type=radio], body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_abordagem input[type=radio] {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_espec:hover::before, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_estado:hover::before, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_atendimento:hover::before, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_abordagem:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #E4754A;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_espec:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_estado:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_atendimento:last-child, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #options .options_abordagem:last-child {
+  border: none;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #select_input_espec:checked + #select-button svg,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #select_input_estado:checked + #select-button svg,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #select_input_atendimento:checked + #select-button svg,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #select_input_abordagem:checked + #select-button svg {
+  transform: rotate(-90deg);
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #especialidades-select:has(#select_input_espec:checked) + #options,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #estado-select:has(#select_input_estado:checked) + #options,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #atendimento-select:has(#select_input_atendimento:checked) + #options,
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .Seletor #abordagem-select:has(#select_input_abordagem:checked) + #options {
+  display: block;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .TextAreaBox {
+  height: 25vh;
+  margin-top: 5vh;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .TextAreaBox textarea {
+  border-radius: 1vw;
+  resize: none;
+  padding: 1vh 1vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .TextAreaBox span {
+  top: -10vh;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos input:valid ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos .BlockBox textarea:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_Infos #infos textarea:valid ~ span {
+  transform: translate(-0.6vw, -4vh);
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca {
+  width: 100%;
+  height: 50vh;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca h4, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca h4 {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: #EEE8DC;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5% 0 2.5%;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .BlockBox, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .BlockBox, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .BlockBox, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .BlockBox input, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .BlockBox input, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .BlockBox input, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .BlockBox span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .BlockBox span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .BlockBox span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .BlockBox .lengthInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .BlockBox .lengthInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .BlockBox .lengthInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser input:valid ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser input:valid ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser input:valid ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .BlockBox input:focus ~ span, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_boxRecup img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_boxRecup img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput #eye_box_RecupRepet svg path {
+  fill: #F6D66F;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput:hover #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput:hover #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #EmailTroca #EditSenhaUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput:hover #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput:hover #eye_box, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-body #Block_SenhaEmail #SenhaTroca #EditSenhaUser .senhaInput:hover #eye_box_RecupRepet {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-footer {
+  border: none;
+  width: 100%;
+  height: 7.5%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-footer .btn_cancel {
+  background: #EEE8DC;
+  color: #0C1E8E;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog .modal-content .modal-footer .btn_salvar {
+  background: #E4754A;
+  margin-left: 2vw;
+}
+body #Main_Clinica #Medicos #ModalEditMedico .modal-dialog #msg_ModalEditMedico {
+  position: absolute;
+  bottom: -7.5vh;
+  width: 100%;
+  min-height: 4vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+}
+body #menuMedico .menu li {
+  width: 12vw;
+  height: 8vh;
+}
+body #menuMedico .menu li button {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  transition: all ease-in-out 0.1s;
+}
+body #menuMedico .menu li button img, body #menuMedico .menu li button svg {
+  height: 40%;
+  width: auto;
+  margin-right: 0.5vw;
+}
+body #menuMedico .menu li button img path, body #menuMedico .menu li button svg path {
+  transition: all ease-in-out 0.1s;
+  fill: #EEE8DC;
+}
+body #menuMedico .menu li button:hover {
+  transform: scale(1.05);
+  color: #E4754A;
+}
+body #menuMedico .menu li button:hover img path, body #menuMedico .menu li button:hover svg path {
+  fill: #E4754A;
+}
+body #menuMedico .menu #logo {
+  height: auto;
+}
 body #Main_Medicos {
   width: 100vw;
   height: 100vh;
@@ -1825,6 +2465,319 @@ body #Main_Medicos {
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+body #Main_Medicos #home {
+  padding: 0 5%;
+  padding-top: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+body #Main_Medicos #home h2 {
+  position: absolute;
+  top: 15%;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1.75vw;
+  color: red;
+}
+body #Main_Medicos #home #Form_DadosMedico {
+  width: 100%;
+  max-height: 77vh;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block {
+  width: 25%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 5vh 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block input {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block .img_user {
+  width: 90%;
+  height: 38vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block .editPen {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 55%;
+  padding: 0.75vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block .editPen path {
+  fill: #EEE8DC;
+}
+body #Main_Medicos #home #Form_DadosMedico #imgUser_block::before {
+  content: "";
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 55%;
+  background: #E4754A;
+  border-radius: 50%;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos {
+  width: 75%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5vh 7.5vw 10vh 4vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox {
+  width: 100%;
+  height: 5.5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:first-child {
+  margin-top: 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox input, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox textarea {
+  width: 100%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  background: none;
+  outline: 1px solid #0C1E8E;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 3%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #0C1E8E;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(10), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(12) {
+  width: 47.5%;
+  margin: 3vh 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(10) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11) span svg, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(12) span svg {
+  height: 100%;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.25vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(10) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11) span svg path, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(12) span svg path {
+  fill: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(10) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11) span svg path:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(12) span svg path:last-child {
+  fill: #E4754A;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11) {
+  margin-right: 5%;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(9), body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(10) {
+  margin-top: 5vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox:nth-child(11) span svg {
+  padding: 0.35vw;
+  padding-bottom: 0.5vw;
+  padding-top: 0.15vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor {
+  width: 50%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select {
+  position: relative;
+  width: 92.5%;
+  height: 100%;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select_input_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select_input_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select_input_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select_input_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select_input_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select_input_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select_input_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select_input_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select_input_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select_input_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select_input_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select_input_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select_input_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select_input_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select_input_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select_input_abordagem {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  font-size: 1vw;
+  z-index: 5;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  outline: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button #selected_val_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button #selected_val_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button #selected_val_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button #selected_val_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button #selected_val_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button #selected_val_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button #selected_val_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button #selected_val_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button #selected_val_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button #selected_val_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button #selected_val_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button #selected_val_abordagem, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button #selected_val_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button #selected_val_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button #selected_val_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button #selected_val_abordagem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #0C1E8E;
+  background: none;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+  outline: 1px solid #0C1E8E;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button img, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button svg, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button img, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button svg, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button img, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button svg, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button img, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button svg {
+  z-index: 99;
+  position: absolute;
+  right: 1vw;
+  width: 2vw;
+  height: 100%;
+  padding: 0.9vh;
+  transform: rotate(90deg);
+  transition: all ease-in-out 0.1s;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button img path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select #select-button svg path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button img path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select #select-button svg path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button img path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select #select-button svg path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button img path, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select #select-button svg path {
+  fill: #E4754A;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options {
+  z-index: 999;
+  width: 90%;
+  left: 1.5%;
+  height: auto;
+  max-height: 35vh;
+  top: 5.1vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #7364CB;
+  display: none;
+  position: absolute;
+  padding: 1vh 1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_estado, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_atendimento, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_abordagem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid #EEE8DC;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec span, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_estado span, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_atendimento span, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_abordagem span {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.75vw;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #EEE8DC;
+  z-index: 5;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec input[type=radio], body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_estado input[type=radio], body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_atendimento input[type=radio], body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_abordagem input[type=radio] {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec:hover::before, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_estado:hover::before, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_atendimento:hover::before, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_abordagem:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #E4754A;
+  opacity: 0.2;
+  z-index: -1;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_espec:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_estado:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_atendimento:last-child, body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #options .options_abordagem:last-child {
+  border: none;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #select_input_espec:checked + #select-button svg,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #select_input_estado:checked + #select-button svg,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #select_input_atendimento:checked + #select-button svg,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #select_input_abordagem:checked + #select-button svg {
+  transform: rotate(-90deg);
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #especialidades-select:has(#select_input_espec:checked) + #options,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #estado-select:has(#select_input_estado:checked) + #options,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #atendimento-select:has(#select_input_atendimento:checked) + #options,
+body #Main_Medicos #home #Form_DadosMedico #infos .Seletor #abordagem-select:has(#select_input_abordagem:checked) + #options {
+  display: block;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox {
+  height: 25vh;
+  margin-top: 5vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox textarea {
+  border-radius: 1vw;
+  resize: none;
+  padding: 1vh 1vw;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .TextAreaBox span {
+  top: -10vh;
+}
+body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox input:focus ~ span, body #Main_Medicos #home #Form_DadosMedico #infos input:valid ~ span, body #Main_Medicos #home #Form_DadosMedico #infos .BlockBox textarea:focus ~ span, body #Main_Medicos #home #Form_DadosMedico #infos textarea:valid ~ span {
+  transform: translate(-0.6vw, -4vh);
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Medicos #home #Form_DadosMedico .btn_salvar {
+  position: absolute;
+  bottom: 1.5vh;
+  left: 51%;
+  width: 15%;
+  height: 5vh;
+  background-color: #E4754A;
+  border-radius: 0.5vw;
+  z-index: 999;
+  font-size: 1.25vw;
+}
+body #Main_Medicos #home #Form_DadosMedico .btn_desativado {
+  opacity: 0.75;
+  pointer-events: none;
+}
+body #Main_Medicos #home #msg_DadosMedico {
+  position: absolute;
+  left: 3%;
+  bottom: 5%;
+  width: 25vw;
+  max-height: 20vh;
+  height: auto;
+  overflow: auto;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  color: #0C1E8E;
 }
 body #Main_Medicos #ModalCriaSenha {
   padding: 0;
@@ -1974,137 +2927,6 @@ body #Main_Medicos #ModalCriaSenha #msg_ModalCriaMedico {
   overflow-y: auto;
   z-index: 9999 !important;
 }
-body #Main_Medicos #home {
-  padding: 0 7.5vw;
-  padding-top: 125px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-body #Main_Medicos #home .Seletor {
-  width: 33.3%;
-  height: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-body #Main_Medicos #home .Seletor #especialidades-select, body #Main_Medicos #home .Seletor #estado-select, body #Main_Medicos #home .Seletor #atendimento-select, body #Main_Medicos #home .Seletor #abordagem-select {
-  position: relative;
-  width: 90%;
-  height: 4vh;
-}
-body #Main_Medicos #home .Seletor #especialidades-select #select_input_espec, body #Main_Medicos #home .Seletor #especialidades-select #select_input_estado, body #Main_Medicos #home .Seletor #especialidades-select #select_input_atendimento, body #Main_Medicos #home .Seletor #especialidades-select #select_input_abordagem, body #Main_Medicos #home .Seletor #estado-select #select_input_espec, body #Main_Medicos #home .Seletor #estado-select #select_input_estado, body #Main_Medicos #home .Seletor #estado-select #select_input_atendimento, body #Main_Medicos #home .Seletor #estado-select #select_input_abordagem, body #Main_Medicos #home .Seletor #atendimento-select #select_input_espec, body #Main_Medicos #home .Seletor #atendimento-select #select_input_estado, body #Main_Medicos #home .Seletor #atendimento-select #select_input_atendimento, body #Main_Medicos #home .Seletor #atendimento-select #select_input_abordagem, body #Main_Medicos #home .Seletor #abordagem-select #select_input_espec, body #Main_Medicos #home .Seletor #abordagem-select #select_input_estado, body #Main_Medicos #home .Seletor #abordagem-select #select_input_atendimento, body #Main_Medicos #home .Seletor #abordagem-select #select_input_abordagem {
-  all: unset;
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-  font-size: 1vw;
-  z-index: 5;
-}
-body #Main_Medicos #home .Seletor #especialidades-select #select-button, body #Main_Medicos #home .Seletor #estado-select #select-button, body #Main_Medicos #home .Seletor #atendimento-select #select-button, body #Main_Medicos #home .Seletor #abordagem-select #select-button {
-  width: 100%;
-  height: 100%;
-  background-color: #7364CB;
-  display: flex;
-  align-items: center;
-  position: relative;
-  outline: none;
-}
-body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #especialidades-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #estado-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #atendimento-select #select-button #selected_val_abordagem, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_espec, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_estado, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_atendimento, body #Main_Medicos #home .Seletor #abordagem-select #select-button #selected_val_abordagem {
-  font-family: "Jost", sans-serif;
-  color: #0C1E8E;
-  font-size: 0.8vw;
-  font-weight: 900;
-  width: 80%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 0.75vw;
-  padding-top: 0.25vh;
-}
-body #Main_Medicos #home .Seletor #especialidades-select #select-button img, body #Main_Medicos #home .Seletor #especialidades-select #select-button svg, body #Main_Medicos #home .Seletor #estado-select #select-button img, body #Main_Medicos #home .Seletor #estado-select #select-button svg, body #Main_Medicos #home .Seletor #atendimento-select #select-button img, body #Main_Medicos #home .Seletor #atendimento-select #select-button svg, body #Main_Medicos #home .Seletor #abordagem-select #select-button img, body #Main_Medicos #home .Seletor #abordagem-select #select-button svg {
-  z-index: 99;
-  position: absolute;
-  right: 0.35vw;
-  width: 2vw;
-  height: 100%;
-  padding: 0.5vh;
-}
-body #Main_Medicos #home .Seletor #especialidades-select #select-button img path, body #Main_Medicos #home .Seletor #especialidades-select #select-button svg path, body #Main_Medicos #home .Seletor #estado-select #select-button img path, body #Main_Medicos #home .Seletor #estado-select #select-button svg path, body #Main_Medicos #home .Seletor #atendimento-select #select-button img path, body #Main_Medicos #home .Seletor #atendimento-select #select-button svg path, body #Main_Medicos #home .Seletor #abordagem-select #select-button img path, body #Main_Medicos #home .Seletor #abordagem-select #select-button svg path {
-  fill: #E4754A;
-}
-body #Main_Medicos #home .Seletor #options {
-  z-index: 999;
-  width: 90%;
-  height: auto;
-  max-height: 35vh;
-  top: 6vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background: #7364CB;
-  display: none;
-  position: absolute;
-  padding: 0.5vw;
-}
-body #Main_Medicos #home .Seletor #options .options_espec, body #Main_Medicos #home .Seletor #options .options_estado, body #Main_Medicos #home .Seletor #options .options_atendimento, body #Main_Medicos #home .Seletor #options .options_abordagem {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 5vh;
-  border-bottom: 1px solid #0C1E8E;
-}
-body #Main_Medicos #home .Seletor #options .options_espec span, body #Main_Medicos #home .Seletor #options .options_estado span, body #Main_Medicos #home .Seletor #options .options_atendimento span, body #Main_Medicos #home .Seletor #options .options_abordagem span {
-  all: unset;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-left: 0.75vw;
-  font-family: "Jost", sans-serif;
-  font-size: 0.75vw;
-  font-weight: 800;
-  color: #0C1E8E;
-  z-index: 5;
-}
-body #Main_Medicos #home .Seletor #options .options_espec input[type=radio], body #Main_Medicos #home .Seletor #options .options_estado input[type=radio], body #Main_Medicos #home .Seletor #options .options_atendimento input[type=radio], body #Main_Medicos #home .Seletor #options .options_abordagem input[type=radio] {
-  all: unset;
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-}
-body #Main_Medicos #home .Seletor #options .options_espec:hover::before, body #Main_Medicos #home .Seletor #options .options_estado:hover::before, body #Main_Medicos #home .Seletor #options .options_atendimento:hover::before, body #Main_Medicos #home .Seletor #options .options_abordagem:hover::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #7364CB;
-  opacity: 0.5;
-  z-index: -1;
-}
-body #Main_Medicos #home .Seletor #options .options_espec:last-child, body #Main_Medicos #home .Seletor #options .options_estado:last-child, body #Main_Medicos #home .Seletor #options .options_atendimento:last-child, body #Main_Medicos #home .Seletor #options .options_abordagem:last-child {
-  border: none;
-}
-body #Main_Medicos #home .Seletor #select_input_espec:checked + #select-button svg,
-body #Main_Medicos #home .Seletor #select_input_estado:checked + #select-button svg,
-body #Main_Medicos #home .Seletor #select_input_atendimento:checked + #select-button svg,
-body #Main_Medicos #home .Seletor #select_input_abordagem:checked + #select-button svg {
-  transform: rotate(180deg);
-}
-body #Main_Medicos #home .Seletor #especialidades-select:has(#select_input_espec:checked) + #options,
-body #Main_Medicos #home .Seletor #estado-select:has(#select_input_estado:checked) + #options,
-body #Main_Medicos #home .Seletor #atendimento-select:has(#select_input_atendimento:checked) + #options,
-body #Main_Medicos #home .Seletor #abordagem-select:has(#select_input_abordagem:checked) + #options {
-  display: block;
-}
 body #Main_Medicos #ModalLogout {
   padding: 0;
   margin: 0;
@@ -2199,4 +3021,218 @@ body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_
 body #Main_Medicos #ModalLogout .modal-dialog .modal-content .modal-footer .btn_salvar {
   background: #E4754A;
   margin-left: 2vw;
+}
+body #Main_Medicos #ModalEditPerfil {
+  padding: 0;
+  margin: 0;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog {
+  border-radius: 1vw;
+  background-color: #0C1E8E;
+  color: #EEE8DC;
+  max-width: 100vw;
+  width: 35vw;
+  height: 70vh;
+  margin: 10vh auto;
+  border: 3px solid #E4754A;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+  border: none;
+  background-color: #7364CB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.75vw;
+  z-index: 10 !important;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::before, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.6vh;
+  border-radius: 10vw;
+  background-color: #EEE8DC;
+  transform: rotate(45deg);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn::after {
+  transform: rotate(-45deg);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .CloseBtn:hover {
+  transform: scale(1.1);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  border-bottom: 3px solid #EEE8DC;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm a:hover {
+  transform: scale(1.1);
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #MenuAdm .active {
+  color: #E4754A;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm {
+  width: 100%;
+  height: 90%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca {
+  width: 100%;
+  height: 100%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca h4, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca h4 {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: #EEE8DC;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5% 0 2.5%;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin: 2vh 0;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input {
+  width: 75%;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  background: none;
+  outline: 1px solid #EEE8DC;
+  z-index: 10 !important;
+  border-radius: 2vw;
+  padding: 0 1.5vw;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16%;
+  font-family: "Jost", sans-serif;
+  position: absolute;
+  font-size: 1.25vw;
+  color: #EEE8DC;
+  font-weight: 500;
+  transition: 0.5s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox .lengthInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox .lengthInput {
+  position: absolute;
+  top: 100%;
+  left: 81%;
+  width: 3.5vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  color: #EEE8DC;
+  font-size: 0.9vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .BlockBox input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .BlockBox input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .BlockBox input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser input:valid ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .BlockBox input:focus ~ span, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser input:valid ~ span {
+  transform: translate(-0.5vw, -3.75vh);
+  font-size: 1vw;
+  font-weight: 800;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput {
+  z-index: 4;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet {
+  position: absolute;
+  height: 100%;
+  width: 5vh;
+  right: 5%;
+  z-index: 12 !important;
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.35vw;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput #eye_box_RecupRepet svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_boxRecup svg path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet img path, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput #eye_box_RecupRepet svg path {
+  fill: #F6D66F;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .senhaInput:hover #eye_box_RecupRepet, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_boxRecup, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .senhaInput:hover #eye_box_RecupRepet {
+  right: 14%;
+  opacity: 1;
+}
+body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditEmailUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #EmailTroca #formEditSenhaUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditEmailUser .btn_salvar, body #Main_Medicos #ModalEditPerfil .modal-dialog .modal-content .modal-body #TabsAdm #SenhaTroca #formEditSenhaUser .btn_salvar {
+  background-color: #E4754A;
+  margin-top: 7.5vh;
+}
+body #Main_Medicos #ModalEditPerfil #msgErro_EditUser {
+  position: absolute;
+  top: 80%;
+  width: 50%;
+  left: 25%;
+  min-height: 5vh;
+  max-height: 18vh;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.25vw;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 9999 !important;
 }/*# sourceMappingURL=style.css.map */

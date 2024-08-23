@@ -7,7 +7,7 @@ $confirmaNovaSenha = $_POST['confirmaNovaSenha'];
 
 $senha_crip = md5($novaSenha);
 
-$idUser = $_POST['idUserSenha'];
+$idUser = $_POST['idUserAlteraSenha'];
 $senhaUserSemAlteracoes = $_POST['senhaUserSemAlteracoes'];
 
 if($senhaAntiga == ""){

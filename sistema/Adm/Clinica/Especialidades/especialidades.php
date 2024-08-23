@@ -142,7 +142,7 @@
 
     <script>
         //CHAMADA DE FUNÇÃO PARA UPLOAD DE IMG BANCO DE DADOS
-        function carregarImgWeb(){ carregarImagem('icon_espec_Input', 'target_imgEspec', "../../assets/icons/Placeholder.svg", 'img_espec_modal'); }
+        function carregarImgWeb(){ carregarImagem('icon_espec_Input', 'target_imgEspec', "../../../assets/sistema/placeholder_icon.svg", 'img_espec_modal'); }
 
         //UPLOAD DAS INFOS NO BANCO DE DADOS
         $("#Form_ModalEspecialidade").submit(function (e) {

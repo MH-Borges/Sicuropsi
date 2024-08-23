@@ -25,6 +25,8 @@ if(@count($dados) > 0){
     $facebook = $dados[0]['facebook'];
     $whatsapp = $dados[0]['whatsapp'];
 
+    $publico = str_replace('<br />', " ", $publico);
+    $descricao = str_replace('<br />', " ", $descricao);
 
     //Tratamento estado
     if($estado == "AC"){ $estado_longo = "Acre - AC"; }
@@ -95,7 +97,7 @@ else {
 </head>
 
 <body>
-    <header>
+    <header id="menuMedico">
         <ul class="menu">
             <li id="logo">
                 <a href="../../../Sicuropsi/">
@@ -104,22 +106,21 @@ else {
             </li>
 
             <li>
-                <button type="button" data-bs-toggle="modal" data-bs-target="#ModalLogout">
-                    <img src="../../assets/sistema/logout.svg" onload="SVGInject(this)">
-                    Sair
-                </button>
-            </li>
-            <li>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#ModalEditPerfil">
                     <img src="../../assets/sistema/user_edit.svg" onload="SVGInject(this)">
                     Editar dados
+                </button>
+            </li>
+            <li>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#ModalLogout">
+                    <img src="../../assets/sistema/logout.svg" onload="SVGInject(this)">
+                    Sair
                 </button>
             </li>
         </ul>
     </header>
 
     <main id="Main_Medicos">
-
         <!-- Modal Cria senha-->
         <div class="modal fade" id="ModalCriaSenha" data-bs-backdrop="static" tabindex="-1">
             <div class="modal-dialog">
@@ -174,26 +175,36 @@ else {
             ?>
             
             <form id="Form_DadosMedico" method="post">
-
                 <div id="imgUser_block">
+                    <input type="file" value="<?php echo @$imagem ?>" id="img_User_Input" name="img_User_Input" onChange="carregarImgWeb();">
                     <?php
-                        if($imagem == "placeholder.webp" || $imagem == ""){
-                            $imagem = "<img class='imgMedico' src='../../Clinica/assets/users/user_placeholder.webp'>";
+                        if(@$imagem == "user_placeholder.webp" || @$imagem == ""){
+                            $imagem = "<img class='img_user' id='target_img' src='../../Clinica/assets/users/user_placeholder.webp'>";
                         }else{
-                            $imagem = "<img class='imgMedico' src='../../Clinica/assets/users/$imagem'>";
+                            $imagem = "<img class='img_user imgSelected' id='target_img' src='../../Clinica/assets/users/$imagem'>";
                         }
-
+                        
                         echo $imagem;
                     ?>
+                    <img class="editPen" onclick="document.getElementById('img_User_Input').click();" src="../../assets/sistema/edit.svg" onload="SVGInject(this)">
                 </div>
 
                 <div id="infos">
+                    <div class="BlockBox">
+                        <input type="text" name="nome" id="nome" value="<?php echo @$nome_user?>" maxlength="100" required>
+                        <span>Seu nome e sobrenome:</span>
+                        <p class="lengthInput NomeInput"></p>
+                    </div>
+                    <div class="BlockBox">
+                        <input type="text" name="doc" id="doc" value="<?php echo @$documento?>" maxlength="100" required>
+                        <span>Numero de documento (CRM/CRP/Outros):</span>
+                    </div>
                     <div class="Seletor">
                         <div id="especialidades-select">
                             <input type="checkbox" id="select_input_espec" onchange="OptionSelection('selected_val_espec', 'select_input_espec', 'options_espec');">
 
                             <div id="select-button">
-                                <div id='selected_val_espec'><?php if($especialidade == ""){ echo "Selecione uma especialidade"; } else{ echo $especialidade; } ?></div>
+                                <div id='selected_val_espec'><?php if($especialidade == ""){ echo "Selecione sua especialidade"; } else{ echo $especialidade; } ?></div>
                                 <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
                             </div>
                         </div>
@@ -224,21 +235,12 @@ else {
                             ?>
                         </ul>
                     </div>
-                    <div class="BlockBox">
-                        <input type="text" name="nome" id="nome" value="<?php echo @$nome_user?>" maxlength="100" required>
-                        <span>Nome e sobrenome:</span>
-                        <p class="lengthInput NomeInput"></p>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="doc" id="doc" value="<?php echo @$documento?>" maxlength="100" required>
-                        <span>Documento:</span>
-                    </div>
                     <div class="Seletor">
                         <div id="estado-select">
                             <input type="checkbox" id="select_input_estado" onchange="OptionSelection('selected_val_estado', 'select_input_estado', 'options_estado');">
 
                             <div id="select-button">
-                                <div id='selected_val_estado'><?php if($estado == ""){ echo "Selecione um estado"; } else{ echo $estado_longo; } ?></div>
+                                <div id='selected_val_estado'><?php if($estado == ""){ echo "Selecione seu estado"; } else{ echo $estado_longo; } ?></div>
                                 <img src="../../assets/sistema/seta_fina.svg" onload="SVGInject(this)">
                             </div>
                         </div>
@@ -247,114 +249,114 @@ else {
                                 if($estado != ""){
                                     echo "
                                         <li class='options_estado'>
-                                            <input type='radio' name='estado' value='$estado' data-label='$estado' checked>
+                                            <input type='radio' name='estado' value='$estado' data-label='$estado_longo' checked>
                                             <span class='label'>$estado_longo</span>
                                         </li>
                                     ";
                                 }
                             ?>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Acre - AC' data-label='Acre - AC'>
+                                <input type='radio' name='estado' value='AC' data-label='Acre - AC'>
                                 <span class='label'>Acre - AC</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Alagoas - AL' data-label='Alagoas - AL'>
+                                <input type='radio' name='estado' value='AL' data-label='Alagoas - AL'>
                                 <span class='label'>Alagoas - AL</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Amapá - AP' data-label='Amapá - AP'>
+                                <input type='radio' name='estado' value='AP' data-label='Amapá - AP'>
                                 <span class='label'>Amapá - AP</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Amazonas - AM' data-label='Amazonas - AM'>
+                                <input type='radio' name='estado' value='AM' data-label='Amazonas - AM'>
                                 <span class='label'>Amazonas - AM</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Bahia - BA' data-label='Bahia - BA'>
+                                <input type='radio' name='estado' value='BA' data-label='Bahia - BA'>
                                 <span class='label'>Bahia - BA</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Ceará - CE' data-label='Ceará - CE'>
+                                <input type='radio' name='estado' value='CE' data-label='Ceará - CE'>
                                 <span class='label'>Ceará - CE</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Distrito Federal - DF' data-label='Distrito Federal - DF'>
+                                <input type='radio' name='estado' value='DF' data-label='Distrito Federal - DF'>
                                 <span class='label'>Distrito Federal - DF</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Espírito Santo - ES' data-label='Espírito Santo - ES'>
+                                <input type='radio' name='estado' value='ES' data-label='Espírito Santo - ES'>
                                 <span class='label'>Espírito Santo - ES</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Goiás - GO' data-label='Goiás - GO'>
+                                <input type='radio' name='estado' value='GO' data-label='Goiás - GO'>
                                 <span class='label'>Goiás - GO</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Mato Grosso - MT' data-label='Mato Grosso - MT'>
+                                <input type='radio' name='estado' value='MT' data-label='Mato Grosso - MT'>
                                 <span class='label'>Mato Grosso - MT</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Mato Grosso do Sul - MS' data-label='Mato Grosso do Sul - MS'>
+                                <input type='radio' name='estado' value='MS' data-label='Mato Grosso do Sul - MS'>
                                 <span class='label'>Mato Grosso do Sul - MS</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Minas Gerais - MG' data-label='Minas Gerais - MG'>
+                                <input type='radio' name='estado' value='MG' data-label='Minas Gerais - MG'>
                                 <span class='label'>Minas Gerais - MG</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Pará - PA' data-label='Pará - PA'>
+                                <input type='radio' name='estado' value='PA' data-label='Pará - PA'>
                                 <span class='label'>Pará - PA</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Paraíba - PB' data-label='Paraíba - PB'>
+                                <input type='radio' name='estado' value='PB' data-label='Paraíba - PB'>
                                 <span class='label'>Paraíba - PB</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Paraná - PR' data-label='Paraná - PR'>
+                                <input type='radio' name='estado' value='PR' data-label='Paraná - PR'>
                                 <span class='label'>Paraná - PR</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Pernambuco - PE' data-label='Pernambuco - PE'>
+                                <input type='radio' name='estado' value='PE' data-label='Pernambuco - PE'>
                                 <span class='label'>Pernambuco - PE</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Piauí - PI' data-label='Piauí - PI'>
+                                <input type='radio' name='estado' value='PI' data-label='Piauí - PI'>
                                 <span class='label'>Piauí - PI</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Rio de Janeiro - RJ' data-label='Rio de Janeiro - RJ'>
+                                <input type='radio' name='estado' value='RJ' data-label='Rio de Janeiro - RJ'>
                                 <span class='label'>Rio de Janeiro - RJ</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Rio Grande do Norte - RN' data-label='Rio Grande do Norte - RN'>
+                                <input type='radio' name='estado' value='RN' data-label='Rio Grande do Norte - RN'>
                                 <span class='label'>Rio Grande do Norte - RN</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Rio Grande do Sul - RS' data-label='Rio Grande do Sul - RS'>
+                                <input type='radio' name='estado' value='RS' data-label='Rio Grande do Sul - RS'>
                                 <span class='label'>Rio Grande do Sul - RS</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Rondônia - RO' data-label='Rondônia - RO'>
+                                <input type='radio' name='estado' value='RO' data-label='Rondônia - RO'>
                                 <span class='label'>Rondônia - RO</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Roraima - RR' data-label='Roraima - RR'>
+                                <input type='radio' name='estado' value='RR' data-label='Roraima - RR'>
                                 <span class='label'>Roraima - RR</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Santa Catarina - SC' data-label='Santa Catarina - SC'>
+                                <input type='radio' name='estado' value='SC' data-label='Santa Catarina - SC'>
                                 <span class='label'>Santa Catarina - SC</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='São Paulo - SP' data-label='São Paulo - SP'>
+                                <input type='radio' name='estado' value='SP' data-label='São Paulo - SP'>
                                 <span class='label'>São Paulo - SP</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Sergipe - SE' data-label='Sergipe - SE'>
+                                <input type='radio' name='estado' value='SE' data-label='Sergipe - SE'>
                                 <span class='label'>Sergipe - SE</span>
                             </li>
                             <li class='options_estado'>
-                                <input type='radio' name='estado' value='Tocantins - TO' data-label='Tocantins - TO'>
+                                <input type='radio' name='estado' value='TO' data-label='Tocantins - TO'>
                                 <span class='label'>Tocantins - TO</span>
                             </li>
                         </ul>
@@ -389,7 +391,7 @@ else {
                                 <span class='label'>Presencial</span>
                             </li>
                             <li class='options_atendimento'>
-                                <input type='radio' name='atendimento' value='Online&Presencial' data-label='Online&Presencial'>
+                                <input type='radio' name='atendimento' value='Online&Presencial' data-label='Online e Presencial'>
                                 <span class='label'>Online e Presencial</span>
                             </li>
                         </ul>
@@ -430,38 +432,50 @@ else {
                             ?>
                         </ul>
                     </div>
-
                     <div class="BlockBox TextAreaBox">
-                        <textarea type="text" name="publico_alvo" id="publico_alvo" maxlength="500" required><?php echo @$publico ?></textarea>
-                        <span>Publico Alvo:</span>
+                        <textarea type="text" name="publico_alvo" id="publico_alvo" maxlength="1500" required><?php echo $publico ?></textarea>
+                        <span>Seu publico alvo:</span>
                     </div>
                     <div class="BlockBox TextAreaBox">
-                        <textarea type="text" name="bio" id="bio" maxlength="2000" required><?php echo @$descricao ?></textarea>
+                        <textarea type="text" name="bio" id="bio" maxlength="5000" required><?php echo $descricao ?></textarea>
                         <span>Sua Biografia:</span>
                     </div>
-
                     <div class="BlockBox">
                         <input type="text" name="linkedin" id="linkedin" value="<?php echo @$linkedin?>" required>
-                        <span>Linkedin:</span>
+                        <span><img src="../../Clinica/assets/icons/linkedin_full.svg" onload="SVGInject(this)"> Linkedin:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="instagram" id="instagram" value="<?php echo @$instagram?>" required>
-                        <span>Instagram:</span>
+                        <span><img src="../../Clinica/assets/icons/instagram_full.svg" onload="SVGInject(this)"> Instagram:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="facebook" id="facebook" value="<?php echo @$facebook?>" required>
-                        <span>Facebook:</span>
+                        <span><img src="../../Clinica/assets/icons/facebook_full.svg" onload="SVGInject(this)"> Facebook:</span>
                     </div>
                     <div class="BlockBox">
                         <input type="text" name="whatsapp" id="whatsapp" value="<?php echo @$whatsapp?>" required>
-                        <span>Whatsapp:</span>
+                        <span><img src="../../Clinica/assets/icons/whatsapp_full.svg" onload="SVGInject(this)"> Whatsapp:</span>
                     </div>
                 </div>
 
-                <input value="<?php echo $idUserSession ?>" class="hide" type="hidden" name="idUser" id="idUser">
-
-                <button class="btns btn_salvar" type="submit">Salvar Senha</button>
+                <?php
+                    if($status == 'inativo' && $nome_user != ""){ 
+                        echo '<button class="btns btn_salvar btn_desativado">Perfil desativado</button>'; 
+                    }
+                    if($status == 'inativo' && $nome_user == ""){ 
+                        echo'<input value="'.$idUserSession.'" class="hide" type="hidden" name="idUser" id="idUser">
+                            <input value="'.$status.'" class="hide" type="hidden" name="status" id="status">
+                            <button class="btns btn_salvar" type="submit">Ativar perfil</button>';
+                    }
+                    else{
+                        echo'<input value="'.$idUserSession.'" class="hide" type="hidden" name="idUser" id="idUser">
+                            <input value="'.$status.'" class="hide" type="hidden" name="status" id="status">
+                            <button class="btns btn_salvar" type="submit">Salvar informações</button>';
+                    }
+                ?>
             </form>
+
+            <div id="msg_DadosMedico"></div>
         </section>
             
         <!-- Modal Logout-->
@@ -547,7 +561,7 @@ else {
                                         </div>
                                         <p class="lengthInput ConfirmaNovaSenhaEditInput"></p>
                                     </div>
-                                    <input value="<?php echo $idUserSession ?>" class="hide" type="hidden" name="idUserSenha" id="idUserSenha">
+                                    <input value="<?php echo $idUserSession ?>" class="hide" type="hidden" name="idUserAlteraSenha" id="idUserAlteraSenha">
                                     <input value="<?php echo $senhaAdm ?>" class="hide" type="hidden" name="senhaUserSemAlteracoes" id="senhaUserSemAlteracoes">
                                     <button class="btns btn_salvar" type="submit">Salvar</button>
                                 </form>
@@ -558,6 +572,8 @@ else {
             </div>
             <div id="msgErro_EditUser"></div>
         </div>
+
+       
     </main>
 
     <script>
@@ -633,6 +649,8 @@ else {
             });
         }
 
+        //INSERT IMG MEDICO
+        function carregarImgWeb(){ carregarImagem('img_User_Input', 'target_img', "../../Clinica/assets/users/user_placeholder.webp", 'img_user'); }
 
         // UPLOAD INFOS
         $(document).ready(function () {
@@ -705,6 +723,46 @@ else {
                             $('#msgErro_EditUser').addClass('text-danger');
                             $('#msgErro_EditUser').text(msg);
                         }
+                    }
+                });
+            });
+
+            $('.btn_salvar').click(function (e) {
+                $('#publico_alvo').prop('required',false);
+                $('#bio').prop('required',false);
+                $('#linkedin').prop('required',false);
+                $('#instagram').prop('required',false);
+                $('#facebook').prop('required',false);
+                $('#whatsapp').prop('required',false);
+            });
+
+            $("#Form_DadosMedico").submit(function (e) {
+                e.preventDefault();
+                $('#msg_DadosMedico').text('');
+                $('#msg_DadosMedico').removeClass('text-danger');
+                $('#msg_DadosMedico').removeClass('text-success');
+                $.ajax({
+                    url: "insert_dados.php",
+                    type: 'POST',
+                    data: new FormData(this),
+                    success: function (msg) {
+                        if (msg.trim() === "Perfil Atualizado com Sucesso!!") {
+                            $('#msg_DadosMedico').addClass('text-success');
+                            $('#msg_DadosMedico').text(msg);
+                            setTimeout(() => { window.location='./index.php'; }, 2000);
+                        }
+                        else {
+                            $('#msg_DadosMedico').addClass('text-danger');
+                            $('#msg_DadosMedico').text(msg);
+                        }
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    xhr: function () {
+                        var myXhr = $.ajaxSettings.xhr();
+                        if (myXhr.upload){ myXhr.upload.addEventListener('progress', function() {}, false); }
+                        return myXhr;
                     }
                 });
             });

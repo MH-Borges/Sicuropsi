@@ -234,7 +234,6 @@
                         }
                     }
                     #TabsAdm{
-                        outline: 1px solid green;
                         width: 100%;
                         height: 90%;
                         #EmailTroca, #SenhaTroca{
@@ -818,12 +817,13 @@
                 }
                 .imgMedico{
                     height: 100%;
-                    width: auto;
+                    width: 20vh;
                     position: absolute;
                     border-radius: 50%;
                     border: 4px solid $Azul;
                     left: 0;
                     top: 0;
+                    object-fit: cover;
                 }
                 .nome, .email{
                     width: 100%;
@@ -860,8 +860,14 @@
                             padding: 0.35vw;
                         }
                         &:last-child{
-                            background-color: red;
+                            background-color: $Roxo;
                         }
+                    }
+                    .ativo{
+                        background-color: red;
+                    }
+                    .inativo{
+                        background-color: green;
                     }
                 }
             }
@@ -1110,6 +1116,618 @@
                     }
                 }
                 #msg_ModalDeletMedico{
+                    position: absolute;
+                    bottom: -7.5vh;
+                    width: 100%;
+                    min-height: 4vh;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.25vw;
+                    text-align: center;
+                }
+            }
+        }
+        #ModalStatusPerfil{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 40vw;
+                height: 35vh;
+                margin: 15vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        width: 100%;
+                        height: 80%;
+                        padding: 1vw;
+                        padding-bottom: 0.5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        h4{
+                            width: 100%;
+                            height: 20%;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            margin: 0;
+                            padding: 0 2vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            span{
+                                font-size: 0.9vw;
+                                position: absolute;
+                                bottom: 15%;
+                            }
+                        }
+                        
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 20%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .ativo{
+                            background: red;
+                            margin-left: 2vw;
+                        }
+                        .inativo{
+                            background: green;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+                #msg_ModalStatusMedico{
+                    position: absolute;
+                    bottom: -7.5vh;
+                    width: 100%;
+                    min-height: 4vh;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.25vw;
+                    text-align: center;
+                }
+            }
+        }
+        #ModalEditMedico{
+            padding: 0;
+            margin: 0;
+            .modal-dialog{
+                border-radius: 1vw;
+                background-color: $Azul;
+                color: $Creme;
+                max-width: 100vw;
+                width: 60vw;
+                height: 90vh;
+                margin: 5vh auto;
+                .modal-content{
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    .CloseBtn{
+                        width: 3vw;
+                        height: 3vw;
+                        position: absolute;
+                        right: -1.5vw;
+                        top: -1.5vw;
+                        border: none;
+                        background-color: $Roxo;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 0.75vw;
+                        z-index: 10 !important;
+                        transition: all ease-in-out .25s;
+                        &::before, &::after{
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 0.6vh;
+                            border-radius: 10vw;
+                            background-color: $Creme;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .modal-body {
+                        outline: 1px solid green;
+                        width: 100%;
+                        max-height: 92.5%;
+                        height: auto;
+                        overflow: auto;
+                        padding: 1vh 1vw 5vh;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h2{
+                            height: auto;
+                            width: 100%;
+                            padding: 2vh 0;
+                            font-family: $Second-font;
+                            font-weight: 700;
+                            font-size: 2.25vw;
+                            color: $Creme;
+                            line-height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 2vh;
+                        }
+                        #Block_Infos{
+                            display: flex;
+                            #imgUser_block{
+                                width: 40%;
+                                height: 75vh;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                padding: 5vh 0;
+                                input{
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    display: none;
+                                }
+                                .img_user{
+                                    width: 90%;
+                                    height: 38vh;
+                                    object-fit: cover;
+                                    border-radius: 1vw;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                .editPen{
+                                    position: absolute;
+                                    width: 3.5vw;
+                                    height: 3.5vw;
+                                    top: 55%;
+                                    padding: 0.75vw;
+                                    path{
+                                        fill: $Creme;
+                                    }
+                                }
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    width: 3.5vw;
+                                    height: 3.5vw;
+                                    top: 55%;
+                                    background: $Laranja;
+                                    border-radius: 50%;
+                                }
+                            }
+                            #infos{
+                                width: 60%;
+                                height: fit-content;
+                                padding: 5vh 3vw;
+                                padding-left: 1vw;
+                                display: flex;
+                                flex-wrap: wrap;
+                                .BlockBox{
+                                    width: 100%;
+                                    height: 5.5vh;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-self: center;
+                                    position: relative;
+                                    margin: 2vh 0;
+                                    &:first-child{
+                                        margin-top: 0;
+                                    }
+                                    input, textarea{
+                                        width: 100%;
+                                        border: none;
+                                        font-family: $Second-font;
+                                        font-size: 1vw;
+                                        font-weight: 400;
+                                        color: $Creme;
+                                        background: none;
+                                        outline: 1px solid $Creme;
+                                        z-index: 10 !important;
+                                        border-radius: 2vw;
+                                        padding: 0 1.5vw;
+                                    }
+                                    span{
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        left: 3%;
+                                        font-family: $Second-font;
+                                        position: absolute;
+                                        font-size: 1.25vw;
+                                        color: $Creme;
+                                        font-weight: 500;
+                                        transition: 0.5s;
+                                    }
+                                    &:nth-child(9), &:nth-child(10), &:nth-child(11), &:nth-child(12){
+                                        width: 47.5%;
+                                        margin: 3vh 0;
+                                        span{
+                                            svg{
+                                                height: 100%;
+                                                width: 2.5vw;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                margin-right: 0.25vw;
+                                                path{
+                                                    fill: none;
+                                                    &:last-child{
+                                                        fill: $Laranja
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(9), &:nth-child(11){
+                                        margin-right: 5%;
+                                    }
+                                    &:nth-child(9), &:nth-child(10){
+                                        margin-top: 5vh;
+                                    }
+                                    &:nth-child(11){
+                                        span{
+                                            svg{
+                                                padding: 0.35vw;
+                                                padding-bottom: 0.5vw;
+                                                padding-top: 0.15vw;
+                                            }
+                                        }
+                                    }
+                                }
+                                .Seletor{
+                                    width: 50%;
+                                    height: 5vh;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    position: relative;
+                                    margin: 2vh 0;
+                                    #especialidades-select, #estado-select, #atendimento-select, #abordagem-select{
+                                        position: relative;
+                                        width: 92.5%;
+                                        height: 100%;
+                                        #select_input_espec, #select_input_estado, #select_input_atendimento, #select_input_abordagem{
+                                            all: unset;
+                                            position: absolute;
+                                            inset: 0;
+                                            cursor: pointer;
+                                            font-size: 1vw;
+                                            z-index:5;
+                                        }
+                                        #select-button {
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            outline: none;
+                                            #selected_val_espec, #selected_val_estado, #selected_val_atendimento, #selected_val_abordagem{
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                white-space: nowrap;                  
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                font-family: $Second-font;
+                                                font-size: 1vw;
+                                                font-weight: 600;
+                                                color: $Creme;
+                                                background: none;
+                                                border-radius: 2vw;
+                                                padding: 0 1.5vw;
+                                                outline: 1px solid $Creme;
+                                            }
+                                            img, svg{
+                                                z-index: 99;
+                                                position: absolute;
+                                                right: 1vw;
+                                                width: 2vw;
+                                                height: 100%;
+                                                padding: 0.9vh;
+                                                transform: rotate(90deg);
+                                                transition: all ease-in-out .1s;
+                                                path{
+                                                    fill: $Laranja;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    #options {
+                                        z-index: 999;
+                                        width: 90%;
+                                        left: 1.5%;
+                                        height: auto;
+                                        max-height: 35vh;
+                                        top: 5.1vh;
+                                        overflow-x: hidden;
+                                        overflow-y: auto;
+                                        background: $Roxo;
+                                        display: none;
+                                        position: absolute;
+                                        padding: 1vh 1vw;
+                                        border-bottom-left-radius: 1vw;
+                                        border-bottom-right-radius: 1vw;
+                                        .options_espec, .options_estado, .options_atendimento, .options_abordagem {
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            width: 100%;
+                                            height: 6vh;
+                                            border-bottom: 1px solid $Creme;
+                                            span{
+                                                all: unset;
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                white-space: nowrap;                  
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                padding-left: 0.75vw;
+                                                font-family: $Second-font;
+                                                font-size: 1vw;
+                                                font-weight: 500;
+                                                color: $Creme;
+                                                z-index: 5;
+                                            }
+                                            input[type="radio"]{
+                                                all: unset;
+                                                position: absolute;
+                                                inset: 0;
+                                                z-index: 10;
+                                            }
+                                            &:hover{
+                                                &::before{
+                                                    content: '';
+                                                    position: absolute;
+                                                    inset: 0;
+                                                    background: $Laranja;
+                                                    opacity: 0.2;
+                                                    z-index: -1;
+                                                }
+                                            }
+                                            &:last-child{
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                    #select_input_espec:checked + #select-button svg,
+                                    #select_input_estado:checked + #select-button svg,
+                                    #select_input_atendimento:checked + #select-button svg,
+                                    #select_input_abordagem:checked + #select-button svg{
+                                        transform: rotate(-90deg);
+                                    }
+                                    #especialidades-select:has(#select_input_espec:checked) + #options,
+                                    #estado-select:has(#select_input_estado:checked) + #options,
+                                    #atendimento-select:has(#select_input_atendimento:checked) + #options, 
+                                    #abordagem-select:has(#select_input_abordagem:checked) + #options{
+                                        display: block;
+                                    }
+                                }
+                                .TextAreaBox{
+                                    height: 25vh;
+                                    margin-top: 5vh;
+                                    textarea{
+                                        border-radius: 1vw;
+                                        resize: none;
+                                        padding: 1vh 1vw;
+                                    }
+                                    span{
+                                        top: -10vh;
+                                    }
+                                }
+                                .BlockBox input:focus ~ span, input:valid ~ span, .BlockBox textarea:focus ~ span, textarea:valid ~ span{
+                                    transform:translate(-0.6vw, -4vh);
+                                    font-size: 0.9vw;
+                                    font-weight: 800;
+                                }
+                            }
+                        }
+                        #Block_SenhaEmail{
+                            #EmailTroca, #SenhaTroca{
+                                width: 100%;
+                                height: 50vh;
+                                h4{
+                                    font-family: $Second-font;
+                                    font-weight: 700;
+                                    font-size: 1.5vw;
+                                    color: $Creme;
+                                    width: 100%;
+                                    height: 10%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 7.5% 0 2.5%;
+                                }
+                                #EditEmailUser, #EditSenhaUser{
+                                    width: 100%;
+                                    height: 70%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    .BlockBox{
+                                        width: 100%;
+                                        height: 5vh;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-self: center;
+                                        position: relative;
+                                        margin: 2vh 0;
+                                        input{
+                                            width: 75%;
+                                            border: none;
+                                            font-family: $Second-font;
+                                            font-size: 1vw;
+                                            font-weight: 300;
+                                            color: $Creme;
+                                            background: none;
+                                            outline: 1px solid $Creme;
+                                            z-index: 10 !important;
+                                            border-radius: 2vw;
+                                            padding: 0 1.5vw;
+                                        }
+                                        span{
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            left: 16%;
+                                            font-family: $Second-font;
+                                            position: absolute;
+                                            font-size: 1.25vw;
+                                            color: $Creme;
+                                            font-weight: 500;
+                                            transition: 0.5s;
+                                        }
+                                        .lengthInput{
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 81%;
+                                            width: 3.5vw;
+                                            height: 75%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-family: $Second-font;
+                                            color: $Creme;
+                                            font-size: 0.9vw;
+                                            font-weight: 800;
+                                        }
+                                    }
+                                    .BlockBox input:focus ~ span, input:valid ~ span{
+                                        transform:translate(-0.5vw, -3.75vh);
+                                        font-size: 1vw;
+                                        font-weight: 800;
+                                    }
+                                    .senhaInput{
+                                        z-index: 4;
+                                        transition: all ease-in-out .25s;
+                                        #eye_box, #eye_boxRecup, #eye_box_RecupRepet{
+                                            position: absolute;
+                                            height: 100%;
+                                            width: 5vh;
+                                            right: 5%;
+                                            z-index: 12 !important;
+                                            opacity: 0;
+                                            transition: all ease-in-out .25s;
+                                            img,svg{
+                                                width: 100%;
+                                                height: 100%;
+                                                padding: 0.35vw;
+                                                path{
+                                                    fill: $Amarelo;
+                                                }
+                                            }
+                                        }
+                                        &:hover{
+                                            #eye_box, #eye_boxRecup, #eye_box_RecupRepet{
+                                                right: 14%;
+                                                opacity: 1;
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    .modal-footer{
+                        border: none;
+                        width: 100%;
+                        height: 7.5%;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn_cancel{
+                            background: $Creme;
+                            color: $Azul;
+                        }
+                        .btn_salvar{
+                            background: $Laranja;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+                #msg_ModalEditMedico{
                     position: absolute;
                     bottom: -7.5vh;
                     width: 100%;
