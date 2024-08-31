@@ -28,6 +28,7 @@
             }
         }
     }
+    
     if($nome_espec == ""){
         echo 'Preencha o campo de nome da Especialidade!';
         exit();

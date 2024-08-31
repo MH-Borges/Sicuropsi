@@ -6,9 +6,9 @@ $senha = '';
 $banco = 'clinica_sicuro';
 
 // $servidor = 'localhost';
-// $usuario = 'univ9223_Main_autoInove';
-// $senha = 'Autoinove123@';
-// $banco = 'univ9223_Auto_Inove';
+// $usuario = '';
+// $senha = '';
+// $banco = '';
 
 date_default_timezone_set('America/Sao_Paulo');
 
